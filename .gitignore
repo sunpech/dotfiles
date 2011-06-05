@@ -1,0 +1,9 @@
+
+# Files to ignore
+
+*~
+*.bak
+*.out
+*.swp
+*.DS_Store
+*.lock
