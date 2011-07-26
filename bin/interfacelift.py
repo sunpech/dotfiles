@@ -2,6 +2,9 @@
 import os
 import urllib2
 
+# Where this script was originally from:
+# http://www.geekyourmind.com/2010/05/20/interfacelift-wallpaper-downloader-script/
+
 
 #############################################
 # 1080p
