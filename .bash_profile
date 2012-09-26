@@ -1,8 +1,9 @@
 
-export PATH=/Users/sunpech/SDK/android-sdk-mac_86/platform-tools:$PATH
+export PATH=/Users/sunpech/SDK/android-sdk-macosx/platform-tools:$PATH
 export PATH=/Users/sunpech/bin/mongo/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/Users/sunpech/bin:$PATH
+export PATH=/usr/local/git/bin:$PATH
 export PATH=/usr/local/Cellar/nginx/1.0.5/sbin:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
