@@ -13,7 +13,7 @@ alias ga='git add'
 alias sp='source ~/.bash_profile'
 alias rmdir="/bin/rm -fdr"
 alias e='emacs'
-alias pgs='postgres -D /usr/local/var/postgres/'
+#alias pgs='postgres -D /usr/local/var/postgres/'
 
 # if [ "$(uname -s)" == "Darwin" ]; then
 # 	# Specific to Mac
