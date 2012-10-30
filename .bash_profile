@@ -5,6 +5,9 @@ export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/Users/sunpech/bin:$PATH
 export PATH=/usr/local/git/bin:$PATH
 export PATH=/usr/local/Cellar/nginx/1.0.5/sbin:$PATH
+export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+export PATH="/usr/local/heroku/bin:$PATH"
+
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
@@ -34,4 +37,5 @@ LIGHT_GRAY="\[\033[0;37m\]"
 COLOR_NONE="\[\033[0m\]"
 
 PS1="${WHITE}\n[${BLUE}\u${WHITE}@${LIGHT_RED}\h${WHITE}] \j ${YELLOW}(\d \T) ${LIGHT_GREEN}[\W$(__git_ps1 " (%s)")]${WHITE}\n! "
+
 
