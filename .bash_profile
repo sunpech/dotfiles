@@ -1,5 +1,5 @@
 
-export PATH=/Users/sunpech/SDK/android-sdk-macosx/platform-tools:$PATH
+export PATH=/Users/sunpech/Development/adt-bundle-mac/sdk/platform-tools:$PATH
 export PATH=/Users/sunpech/bin/mongo/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/Users/sunpech/bin:$PATH
