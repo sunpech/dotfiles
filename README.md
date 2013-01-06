@@ -1,20 +1,12 @@
-Steven Suwatanapongched's Dotfiles
-========
+# Steven's Dotfiles
 
-Always a work in progress.
+Always a work in progress. Hoping to use this between my Mac and Ubuntu machines. This initially started on my Mac OS X, but is being improved to also work on Ubuntu.
 
-Hoping to use this between my Mac and Ubuntu machines.
+## Requirements
+You should have necessary apps installed already. Applications such as Git, Rails, Mongodb, Postgres, Android SDK, MySQL, etc. This repo does not install all that for you. The PATH is set in the .bash_profile file.
 
-TODO
-----
-The repo is a folder named: dotfiles/
-
-Rename this to .dotfiles and place it in your home directory.
-
-Create a symlink between your home directory's .bash_profile and .dotfiles/.bash_profile.
-
-ln -s /Users/sunpech/.bash_profile /Users/sunpech/.dotfiles/.bash_profile
-
-And you're set Future Steven!
-
--Past Steven
+## Installation
+1. Rename dotfiles/  to .dotfiles and place it in your home directory.
+2. cd into .dotfiles directory.
+3. Run chmod u+x install.sh
+4. Run ./install.sh
