@@ -10,6 +10,7 @@ alias gca='git commit -v -a'
 alias ga='git add'
 
 # Other Aliases
+alias ls='ls -G'
 alias sp='source ~/.bash_profile'
 alias rmdir="/bin/rm -fdr"
 alias e='emacs'
