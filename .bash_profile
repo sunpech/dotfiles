@@ -47,4 +47,4 @@ PS1="${WHITE}\n[${BLUE}\u${WHITE}@${LIGHT_RED}\h${WHITE}] \j ${YELLOW}(\d \T) ${
 # Source https://github.com/jimeh/git-aware-prompt
 export GITAWAREPROMPT=~/.dotfiles/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
-export PS1="\u@\h \w \[$LIGHT_GREEN\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+export PS1="${LIGHT_GRAY}\u@\h \w \[$LIGHT_GREEN\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
