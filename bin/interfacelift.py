@@ -11,7 +11,7 @@ import os, urllib2, re, sys, commands, random, time
 #url       = 'http://interfacelift.com/wallpaper/downloads/date/hdtv/1080p/'
 #directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_1080p'
 #############################################
-# 1680x1050
+# 1680x1050 (15" Macbook Pro)
 #url       = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/1680x1050/'
 #directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_1680x1050'
 #############################################
@@ -19,7 +19,7 @@ import os, urllib2, re, sys, commands, random, time
 #url       = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/1920x1200/'
 #directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_1920x1200'
 #############################################
-# 2560x1440 27" Mac display
+# 2560x1440 (27" Mac display)
 url        = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/2560x1440/'
 directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_2560x1440'
 #############################################
@@ -30,6 +30,10 @@ directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_2560x1440'
 # 1400x1050
 #url       = 'http://interfacelift.com/wallpaper/downloads/date/fullscreen/1400x1050/'
 #directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_1400x1050'
+#############################################
+# 1440x900 (13" Macbook air)
+#url        = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/1440x900/'
+#directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_1440x900'
 #############################################
 # iPad
 #url      = 'http://interfacelift.com/wallpaper/downloads/date/apple_devices/ipad_1024x1024/'
