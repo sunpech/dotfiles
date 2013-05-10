@@ -23,6 +23,10 @@ import os, urllib2, re, sys, commands, random, time
 url        = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/2560x1440/'
 directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_2560x1440'
 #############################################
+# 720x1280 (Galaxy Nexus Android)
+#url        = 'http://interfacelift.com/wallpaper/downloads/date/android/720x1280_phone/'
+#directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_720x1280'
+#############################################
 # 960x800
 #url       = 'http://interfacelift.com/wallpaper/downloads/date/google_android/960x800/'
 #directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_960x800'
