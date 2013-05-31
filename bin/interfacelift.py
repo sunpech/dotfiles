@@ -9,43 +9,43 @@ import os, urllib2, re, sys, commands, random, time
 #############################################
 # 1080p
 #url       = 'http://interfacelift.com/wallpaper/downloads/date/hdtv/1080p/'
-#directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_1080p'
+#directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_1080p'
 #############################################
 # 1680x1050 (15" Macbook Pro)
 #url       = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/1680x1050/'
-#directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_1680x1050'
+#directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_1680x1050'
 #############################################
 # 1920x1200
 #url       = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/1920x1200/'
-#directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_1920x1200'
+#directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_1920x1200'
 #############################################
 # 2560x1440 (27" Mac display)
 url        = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/2560x1440/'
-directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_2560x1440'
+directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_2560x1440'
 #############################################
 # 720x1280 (Galaxy Nexus Android)
 #url        = 'http://interfacelift.com/wallpaper/downloads/date/android/720x1280_phone/'
-#directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_720x1280'
+#directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_720x1280'
 #############################################
 # 960x800
 #url       = 'http://interfacelift.com/wallpaper/downloads/date/google_android/960x800/'
-#directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_960x800'
+#directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_960x800'
 #############################################
 # 1400x1050
 #url       = 'http://interfacelift.com/wallpaper/downloads/date/fullscreen/1400x1050/'
-#directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_1400x1050'
+#directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_1400x1050'
 #############################################
 # 1440x900 (13" Macbook air)
 #url        = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/1440x900/'
-#directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_1440x900'
+#directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_1440x900'
 #############################################
 # iPad
 #url      = 'http://interfacelift.com/wallpaper/downloads/date/apple_devices/ipad_1024x1024/'
-#directory = '/Users/sunpech/Pictures/Wallpapers/interfacelift_ipad_1024x1024'
+#directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_ipad_1024x1024'
 #############################################
 # Kindle Fire
 #url     = 'http://interfacelift.com/wallpaper/downloads/date/android/amazon_kindle_fire/'
-#directory   = '/Users/sunpech/Pictures/Wallpapers/interfacelift_kindle_fire'
+#directory   = '/Users/sunpech/Copy/Wallpapers/interfacelift_kindle_fire'
 #############################################
 
 stoponfind      = '1' # Set to 0 to download all files even if the file exists and 1 to stop when it finds where it left off
@@ -62,9 +62,9 @@ while count < 9999999:
         headers    = { 'User-Agent' : useragent }
         request    = urllib2.Request(url + "index" + str(count) + ".html", None, headers)
         data       = urllib2.urlopen(request).read()
-        pictures   = re.findall(pattern, data)
-        urlcount   = len(pictures)
-        for picture in pictures:
+        Copy   = re.findall(pattern, data)
+        urlcount   = len(Copy)
+        for picture in Copy:
                 m = re.search(picturepattern, picture)
                 picturefile=m.group()
                 if os.path.exists(directory + "/" + picturefile):
