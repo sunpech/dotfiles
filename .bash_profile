@@ -8,6 +8,7 @@ export PATH=/usr/local/git/bin:$PATH
 export PATH=/usr/local/Cellar/nginx/1.0.5/sbin:$PATH
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/System/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH"
 
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
@@ -49,3 +50,8 @@ PS1="${WHITE}\n[${BLUE}\u${WHITE}@${LIGHT_RED}\h${WHITE}] \j ${YELLOW}(\d \T) ${
 export GITAWAREPROMPT=~/.dotfiles/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
 export PS1="${LIGHT_GRAY}\u@\h \w \[$LIGHT_GREEN\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+
+# Setting PATH for Python 2.7
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
