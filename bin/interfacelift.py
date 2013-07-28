@@ -15,13 +15,9 @@ import os, urllib2, re, sys, commands, random, time
 #url       = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/1680x1050/'
 #directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_1680x1050'
 #############################################
-# 1920x1200
-#url       = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/1920x1200/'
-#directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_1920x1200'
-#############################################
 # 2560x1440 (27" Mac display)
-url        = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/2560x1440/'
-directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_2560x1440'
+#url        = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/2560x1440/'
+#directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_2560x1440'
 #############################################
 # 720x1280 (Galaxy Nexus Android)
 #url        = 'http://interfacelift.com/wallpaper/downloads/date/android/720x1280_phone/'
@@ -47,6 +43,11 @@ directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_2560x1440'
 #url     = 'http://interfacelift.com/wallpaper/downloads/date/android/amazon_kindle_fire/'
 #directory   = '/Users/sunpech/Copy/Wallpapers/interfacelift_kindle_fire'
 #############################################
+# Nexus 7 (1920x1200)
+url     = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/1920x1200/'
+directory   = '/Users/sunpech/Copy/Wallpapers/interfacelift_1920x1200'
+#############################################
+
 
 stoponfind      = '1' # Set to 0 to download all files even if the file exists and 1 to stop when it finds where it left off
 wgetpath        = '/usr/local/bin/wget' #Default on linux systems /usr/local/bin/wget on freebsd
