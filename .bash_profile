@@ -1,7 +1,7 @@
 
 export PATH=/Users/sunpech/Development/adt-bundle-mac/sdk/platform-tools:$PATH
 #export PATH=/Users/sunpech/bin/mongo/bin:$PATH
-export PATH=/Users/sunpech/bin/mongodb-osx-x86_64-2.4/bin:$PATH
+export PATH=/Users/sunpech/bin/mongodb-osx-x86_64-2.4.5/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/Users/sunpech/bin:$PATH
 export PATH=/usr/local/git/bin:$PATH
