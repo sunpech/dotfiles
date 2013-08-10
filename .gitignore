@@ -24,3 +24,4 @@ capybara-*.html
 **.orig
 rerun.txt
 .idea/
+pg_upgrade*
