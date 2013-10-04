@@ -15,11 +15,8 @@ alias sp='source ~/.bash_profile'
 alias rmdir="/bin/rm -fdr"
 alias e='emacs'
 alias sickbeard='python ~/Applications/Sick-Beard/SickBeard.py'
-<<<<<<< HEAD
 alias subl='subl -n'
-=======
 alias cl='clear'
->>>>>>> c888fd31d87bda2f022c810f593f74aef41597a0
 
 
 
