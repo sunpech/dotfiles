@@ -1,17 +1,31 @@
 
 export PATH=/Users/sunpech/Development/adt-bundle-mac/sdk/platform-tools:$PATH
 #export PATH=/Users/sunpech/bin/mongo/bin:$PATH
-export PATH=/Users/sunpech/bin/mongodb-osx-x86_64-2.4.5/bin:$PATH
-export PATH=/usr/local/mysql/bin:$PATH
+#export PATH=/Users/sunpech/bin/mongodb-osx-x86_64-2.4.5/bin:$PATH
+#export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/Users/sunpech/bin:$PATH
 export PATH=/usr/local/git/bin:$PATH
-export PATH=/usr/local/Cellar/nginx/1.0.5/sbin:$PATH
+#export PATH=/usr/local/Cellar/nginx/1.0.5/sbin:$PATH
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/System/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH"
 
+# Setup for rbenv
+#export RBENV_ROOT=/usr/local/var/rbenv
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#val "$(rbenv init -)"
+# enable shims and autocompletion
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+# Setup for chruby
+if [[ -e /usr/local/opt/chruby ]]; then
+  source /usr/local/opt/chruby/share/chruby/chruby.sh
+  source /usr/local/opt/chruby/share/chruby/auto.sh
+  chruby $(cat ~/.ruby-version)
+fi
+
+# Setup for rvm
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 
 export CLICOLOR=1
