@@ -16,8 +16,8 @@ import os, urllib2, re, sys, commands, random, time
 #directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_1680x1050'
 #############################################
 # 2560x1440 (27" Mac display)
-#url        = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/2560x1440/'
-#directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_2560x1440'
+url        = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/2560x1440/'
+directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_2560x1440'
 #############################################
 # 720x1280 (Galaxy Nexus Android)
 #url        = 'http://interfacelift.com/wallpaper/downloads/date/android/720x1280_phone/'
@@ -44,8 +44,8 @@ import os, urllib2, re, sys, commands, random, time
 #directory   = '/Users/sunpech/Copy/Wallpapers/interfacelift_kindle_fire'
 #############################################
 # Nexus 7 (1920x1200)
-url     = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/1920x1200/'
-directory   = '/Users/sunpech/Copy/Wallpapers/interfacelift_1920x1200'
+#url     = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/1920x1200/'
+#directory   = '/Users/sunpech/Copy/Wallpapers/interfacelift_1920x1200'
 #############################################
 
 
