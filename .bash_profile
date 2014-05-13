@@ -4,9 +4,8 @@ export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/Users/sunpech/bin:$PATH
 export PATH=/usr/local/git/bin:$PATH
 #export PATH=/usr/local/Cellar/nginx/1.0.5/sbin:$PATH
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="/System/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH"
 
 # Setup for rbenv
 #export RBENV_ROOT=/usr/local/var/rbenv
@@ -20,6 +19,11 @@ if [[ -e /usr/local/opt/chruby ]]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
   source /usr/local/opt/chruby/share/chruby/auto.sh
   chruby $(cat ~/.ruby-version)
+fi
+
+# Fortune & Cowsay
+if [ -x /usr/local/bin/cowsay -a -x /usr/local/bin/fortune ]; then
+  fortune | cowsay
 fi
 
 # Setup for rvm
@@ -63,8 +67,13 @@ export GITAWAREPROMPT=~/.dotfiles/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
 #export PS1="\u@\h \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 export PS1="${LIGHT_GRAY}\u@\h \w ${LIGHT_GREEN}\$git_branch${LIGHT_RED}\$git_dirty\[$txtrst\]\$ "
-
+ 
 # Setting PATH for Python 2.7
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+
+# Setting PATH for Python 3.4
+# The orginal version is saved in .bash_profile.pysave
+#PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+
 export PATH
