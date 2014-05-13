@@ -17,7 +17,8 @@ alias e='emacs'
 alias sickbeard='python ~/Applications/Sick-Beard/SickBeard.py'
 alias subl='subl -n'
 alias cl='clear'
-
+#alias sserver='python -m SimpleHTTPServer 8000'
+alias sserver='ruby -run -e httpd . -p 8000'
 
 
 # if [ "$(uname -s)" == "Darwin" ]; then
