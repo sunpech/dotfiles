@@ -1,11 +1,10 @@
-
 export PATH=/Users/sunpech/Development/adt-bundle-mac/sdk/platform-tools:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/Users/sunpech/bin:$PATH
-export PATH=/usr/local/git/bin:$PATH
-#export PATH=/usr/local/Cellar/nginx/1.0.5/sbin:$PATH
 export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 # Setup for rbenv
 #export RBENV_ROOT=/usr/local/var/rbenv
@@ -19,11 +18,6 @@ if [[ -e /usr/local/opt/chruby ]]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
   source /usr/local/opt/chruby/share/chruby/auto.sh
   chruby $(cat ~/.ruby-version)
-fi
-
-# Fortune & Cowsay
-if [ -x /usr/local/bin/cowsay -a -x /usr/local/bin/fortune ]; then
-  fortune | cowsay
 fi
 
 # Setup for rvm
