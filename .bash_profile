@@ -1,18 +1,13 @@
+export PATH=/Users/sunpech/.rbenv/shims:$PATH
 export PATH=/Users/sunpech/Development/adt-bundle-mac/sdk/platform-tools:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/Users/sunpech/bin:$PATH
-export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 
-# Setup for rbenv
-#export RBENV_ROOT=/usr/local/var/rbenv
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#val "$(rbenv init -)"
-# enable shims and autocompletion
-#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
+# Ruby on Rails Settings
 # Setup for chruby
 if [[ -e /usr/local/opt/chruby ]]; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
@@ -20,9 +15,10 @@ if [[ -e /usr/local/opt/chruby ]]; then
   chruby $(cat ~/.ruby-version)
 fi
 
-# Setup for rvm
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-
+# rbenv
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)";
+fi
 
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
@@ -34,13 +30,9 @@ fi
 
 # Git tab completion
 if [ -f ~/.dotfiles/.git-completion.bash ]; then
-	source ~/.dotfiles/.git-completion.bash	
+  source ~/.dotfiles/.git-completion.bash	
 fi
 
-# Git branch in prompt.
-#parse_git_branch() {
-#    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-#}
 
 #PROMPT STUFF
 RED="\[\033[01;31m\]"
@@ -52,9 +44,6 @@ LIGHT_GREEN="\[\033[0;32m\]"
 WHITE="\[\033[1;37m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
 COLOR_NONE="\[\033[0m\]"
-
-#PS1="${WHITE}\n[${BLUE}\u${WHITE}@${LIGHT_RED}\h${WHITE}] \j ${YELLOW}(\d \T) ${LIGHT_GREEN}[\W$(__git_ps1 " (%s)")]${WHITE}\n! "
-#export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 # Source https://github.com/jimeh/git-aware-prompt
 export GITAWAREPROMPT=~/.dotfiles/.bash/git-aware-prompt
