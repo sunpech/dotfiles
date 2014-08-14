@@ -16,8 +16,12 @@ import os, urllib2, re, sys, commands, random, time
 #directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_1680x1050'
 #############################################
 # 2560x1440 (27" Mac display)
-url        = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/2560x1440/'
-directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_2560x1440'
+#url        = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/2560x1440/'
+#directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_2560x1440'
+#############################################
+# 2880x1800 (15" Macbook Pro Retina)
+url        = 'http://interfacelift.com/wallpaper/downloads/date/widescreen/2880x1800/'
+directory = '/Users/sunpech/Copy/Wallpapers/interfacelift_2880x1800'
 #############################################
 # 720x1280 (Galaxy Nexus Android)
 #url        = 'http://interfacelift.com/wallpaper/downloads/date/android/720x1280_phone/'
