@@ -1,20 +1,11 @@
 export PATH=/Users/sunpech/.rbenv/shims:$PATH
 export PATH=/Users/sunpech/Development/adt-bundle-mac/sdk/platform-tools:$PATH
-export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/Users/sunpech/bin:$PATH
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 
 # Ruby on Rails Settings
-# Setup for chruby
-if [[ -e /usr/local/opt/chruby ]]; then
-  source /usr/local/opt/chruby/share/chruby/chruby.sh
-  source /usr/local/opt/chruby/share/chruby/auto.sh
-  chruby $(cat ~/.ruby-version)
-fi
-
 # rbenv
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)";
@@ -48,15 +39,13 @@ COLOR_NONE="\[\033[0m\]"
 # Source https://github.com/jimeh/git-aware-prompt
 export GITAWAREPROMPT=~/.dotfiles/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
-#export PS1="\u@\h \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
-export PS1="${LIGHT_GRAY}\u@\h \w ${LIGHT_GREEN}\$git_branch${LIGHT_RED}\$git_dirty\[$txtrst\]\$ "
- 
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+# PS1="\u@\h \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+# PS1="${LIGHT_GRAY}\u@\h \w ${LIGHT_GREEN}\$git_branch${LIGHT_RED}\$git_dirty\[$txtrst\]\$ "
+PS1="\u@\h \w ${LIGHT_GREEN}\$git_branch${LIGHT_RED}\$git_dirty\[$txtrst\]\$ "
 
-# Setting PATH for Python 3.4
-# The orginal version is saved in .bash_profile.pysave
-#PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+# if [ -f ~/.dotfiles/.git-prompt.sh ]; then
+#   source ~/.dotfiles/.git-prompt.sh
+# fi
+# PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 export PATH
