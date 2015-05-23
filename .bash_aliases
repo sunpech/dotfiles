@@ -1,6 +1,6 @@
 
 # Git Aliases
-alias gst='git status'
+alias gst='git status --ignore-submodules'
 alias gb='git branch'
 alias gpo='git push origin'
 alias gph='git push heroku'
