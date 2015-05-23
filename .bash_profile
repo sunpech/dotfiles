@@ -1,9 +1,16 @@
-export PATH=/Users/sunpech/.rbenv/shims:$PATH
-export PATH=/Users/sunpech/Development/adt-bundle-mac/sdk/platform-tools:$PATH
-export PATH=/Users/sunpech/bin:$PATH
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
+# Default
+PATH=/usr/bin:/bin:/usr/sbin:/sbin
+export PATH
+
+# Custom
+export RBENV_HOME=/Users/sunpech/.rbenv/shims
+export ANDROID_HOME=/Users/sunpech/Development/adt-bundle-mac/sdk/platform-tools
+export LOCAL_HOME=/Users/sunpech/bin
+export POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/9.4/bin
+export HEROKU_HOME=/usr/local/heroku/bin
+export BREW_HOME=/usr/local/bin
+
+export PATH=$PATH:$RBENV_HOME:$ANDROID_HOME:$LOCAL_HOME:$POSTGRES_HOME:$HEROKU_HOME:$BREW_HOME
 
 # Ruby on Rails Settings
 # rbenv
@@ -48,4 +55,3 @@ PS1="\u@\h \w ${LIGHT_GREEN}\$git_branch${LIGHT_RED}\$git_dirty\[$txtrst\]\$ "
 # fi
 # PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
-export PATH
