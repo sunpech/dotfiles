@@ -41,11 +41,25 @@ WHITE="\[\033[1;37m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
 COLOR_NONE="\[\033[0m\]"
 
-# Git Aware
+# Prompt Stuff
+
+# Git Aware (GA)
 export GITAWAREPROMPT=~/.dotfiles/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
-PS1="\u@\h \w ${LIGHT_GREEN}\$git_branch${LIGHT_RED}\$git_dirty\[$txtrst\]\$ "
 
+# Custom GA prompt
+#export PS1="\u@\h \w ${LIGHT_GREEN}\$git_branch${LIGHT_RED}\$git_dirty\[$txtrst\]\$ "
+
+# Mac OS X default GA prompt
+export PS1="\u@\h \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+
+# Ubuntu Standard GA prompt
+#export PS1="\${debian_chroot:+(\$debian_chroot)}\u@\h:\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+
+# Ubuntu Colorized GA prompt
+#export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+
+# Non Git Aware prompt
 # if [ -f ~/.dotfiles/.git-prompt.sh ]; then
 #   source ~/.dotfiles/.git-prompt.sh
 # fi

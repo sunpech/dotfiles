@@ -13,14 +13,18 @@ alias ga='git add'
 alias ls='ls -G'
 alias sp='source ~/.bash_profile'
 alias rmdir="/bin/rm -fdr"
-alias e='emacs'
-alias sickbeard='python ~/Applications/Sick-Beard/SickBeard.py'
-alias subl='subl -n'
 alias cl='clear'
+alias df='df -h'
+
+# Editors
+alias e='emacs'
+alias subl='subl -n'
+
+# Start server in current directory
 #alias sserver='python -m SimpleHTTPServer 8000'
 alias sserver='ruby -run -e httpd . -p 8000'
 
-
+# Todo later
 # if [ "$(uname -s)" == "Darwin" ]; then
 # 	# Specific to Mac
 # 	
