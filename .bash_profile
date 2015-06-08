@@ -12,16 +12,15 @@ export BREW_HOME=/usr/local/bin
 
 export PATH=$PATH:$RBENV_HOME:$ANDROID_HOME:$LOCAL_HOME:$POSTGRES_HOME:$HEROKU_HOME:$BREW_HOME
 
-# Ruby on Rails Settings
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
 # rbenv
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)";
 fi
 
-export CLICOLOR=1
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-
-# SET ALIASES
+# Aliases
 if [ -f ~/.dotfiles/.bash_aliases ]; then
  . ~/.dotfiles/.bash_aliases
 fi
@@ -31,8 +30,7 @@ if [ -f ~/.dotfiles/.git-completion.bash ]; then
   source ~/.dotfiles/.git-completion.bash	
 fi
 
-
-#PROMPT STUFF
+# Colors
 RED="\[\033[01;31m\]"
 YELLOW="\[\033[01;33m\]"
 GREEN="\[\033[01;32m\]"
@@ -43,15 +41,12 @@ WHITE="\[\033[1;37m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
 COLOR_NONE="\[\033[0m\]"
 
-# Source https://github.com/jimeh/git-aware-prompt
+# Git Aware
 export GITAWAREPROMPT=~/.dotfiles/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
-# PS1="\u@\h \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
-# PS1="${LIGHT_GRAY}\u@\h \w ${LIGHT_GREEN}\$git_branch${LIGHT_RED}\$git_dirty\[$txtrst\]\$ "
 PS1="\u@\h \w ${LIGHT_GREEN}\$git_branch${LIGHT_RED}\$git_dirty\[$txtrst\]\$ "
 
 # if [ -f ~/.dotfiles/.git-prompt.sh ]; then
 #   source ~/.dotfiles/.git-prompt.sh
 # fi
 # PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
-
