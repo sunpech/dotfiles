@@ -17,12 +17,14 @@ git clone git@github.com:sunpech/dotfiles.git
 
 mv dotfiles ~/.dotfiles
 
-cd .dotfiles
+cd ~/.dotfiles
 
 chmod u+x install.sh
 
 ./install.sh
 ```
+
+From here make custom changes depending on what kind of dev-box you need.
 
 ## Apps
 
