@@ -1,6 +1,6 @@
 # Steven's Dotfiles
 
-Always a work in progress. Hoping to use this between my Mac and Ubuntu machines. This initially started on my Mac OS X, but is being improved to also work on Ubuntu-- once I consider using an Ubuntu-box for any type of development.
+My dotfiles to be installed on any new Mac/Ubuntu machine I set up-- although mostly geared for Mac. Always a work in progress.
 
 The idea behind how this project is currently structured is to keep everything in the .dotfiles/ folder in the user's home directory. Then to only create a single symbolic link for .bash_profile.
 
@@ -10,15 +10,23 @@ You should have necessary apps installed already. Applications such as Git, Rail
 
 ## Installation
 
-1. Git clone this project.
-2. Rename dotfiles/ to .dotfiles and place it in your home directory.
-3. cd into .dotfiles directory.
-4. Run chmod u+x install.sh
-5. Run ./install.sh
+Run the following, line by line.
 
-## Other Apps
+```
+git clone git@github.com:sunpech/dotfiles.git
 
-Some other apps you may want to set up.
+mv dotfiles ~/.dotfiles
+
+cd .dotfiles
+
+chmod u+x install.sh
+
+./install.sh
+```
+
+## Apps
+
+### Apps paths used in dotfiles
 
 * [rbenv](https://github.com/sstephenson/rbenv) - For managing rubies.
 * [Postgres.app](http://postgresapp.com/) - Postgres for Mac.
@@ -27,7 +35,14 @@ Some other apps you may want to set up.
 * [git-completion](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash) - Already included in this project.
 * [heroku toolbelt](https://toolbelt.heroku.com/)
 
+### Recommended Apps
+
+* [Atom.io](https://atom.io/) - Text editor.
+* [Sublime Text](https://www.sublimetext.com/) - Text editor. Also see [my sublime-text-settings repo](https://github.com/sunpech/sublime-text-settings).
+* [iTerm2](http://www.iterm2.com/) - Terminal. Also see [iTerm2 color schemes](http://iterm2colorschemes.com/).
+
+I have a full list of apps I recommend for software development here: [Best Software Development Tools](http://sunpech.com/best/software-development-tools/)
+
 ### Git Aware Prompt
 
 I really like [Git Aware Prompt](https://github.com/jimeh/git-aware-prompt), but I use my own fork which supresses the dirty flag for submodules. See: [sunpech/git-aware-prompt](https://github.com/sunpech/git-aware-prompt).
-
