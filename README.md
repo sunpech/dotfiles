@@ -45,6 +45,8 @@ From here make custom changes depending on what kind of dev-box you need.
 
 I have a full list of apps I recommend for software development here: [Best Software Development Tools](http://sunpech.com/best/software-development-tools/)
 
+I also have a more up to date repo, [Best Software List](https://github.com/sunpech/best_software_list).
+
 ### Git Aware Prompt
 
 I really like [Git Aware Prompt](https://github.com/jimeh/git-aware-prompt), but I use my own fork which supresses the dirty flag for submodules. See: [sunpech/git-aware-prompt](https://github.com/sunpech/git-aware-prompt).
