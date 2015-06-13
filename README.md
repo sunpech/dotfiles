@@ -48,3 +48,15 @@ I have a full list of apps I recommend for software development here: [Best Soft
 ### Git Aware Prompt
 
 I really like [Git Aware Prompt](https://github.com/jimeh/git-aware-prompt), but I use my own fork which supresses the dirty flag for submodules. See: [sunpech/git-aware-prompt](https://github.com/sunpech/git-aware-prompt).
+
+### Setup Git
+
+I like to use [DiffMerge](https://sourcegear.com/diffmerge/) for merging files.
+
+```
+git config --global diff.tool diffmerge
+git config --global difftool.diffmerge.cmd 'diffmerge "$LOCAL" "$REMOTE"'
+git config --global merge.tool diffmerge
+git config --global mergetool.diffmerge.cmd 'diffmerge --merge --result="$MERGED" "$LOCAL" "$(if test -f "$BASE"; then echo "$BASE"; else echo "$LOCAL"; fi)" "$REMOTE"'
+git config --global mergetool.diffmerge.trustExitCode true
+```
