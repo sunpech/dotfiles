@@ -15,6 +15,12 @@ alias sp='source ~/.bash_profile'
 alias rmdir="/bin/rm -fdr"
 alias cl='clear'
 alias df='df -h'
+alias p='cd ~/Projects'
+alias d='cd ~/Downloads'
+alias a='atom . &'
+alias s='subl . &'
+alias h='history'
+alias cd..='cd ..'
 
 # Editors
 alias e='emacs'
