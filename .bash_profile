@@ -12,8 +12,12 @@ export BREW_HOME=/usr/local/bin
 
 export PATH=$PATH:$RBENV_HOME:$ANDROID_HOME:$LOCAL_HOME:$POSTGRES_HOME:$HEROKU_HOME:$BREW_HOME
 
+# Use iTerm, but in using Terminal
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
+# Set default editor
+export EDITOR=/usr/bin/emacs
 
 # rbenv
 if which rbenv > /dev/null; then
@@ -27,7 +31,7 @@ fi
 
 # Git tab completion
 if [ -f ~/.dotfiles/.git-completion.bash ]; then
-  source ~/.dotfiles/.git-completion.bash	
+  source ~/.dotfiles/.git-completion.bash
 fi
 
 # Colors
