@@ -38,6 +38,14 @@ From here make custom changes depending on what kind of dev-box you need.
 * [heroku toolbelt](https://toolbelt.heroku.com/)
 * [Interfacelift Downloader](https://github.com/stevenbenner/interfacelift-downloader) - Also see [my fork](https://github.com/sunpech/interfacelift-downloader) for improvements
 
+### Brew Installs
+
+Packages to install with [Homebrew](http://brew.sh/).
+
+```
+brew install git node openssl rbenv ruby-build wget
+```
+
 ### Recommended Apps
 
 * [Atom.io](https://atom.io/) - Text editor.
