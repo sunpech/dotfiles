@@ -1,4 +1,4 @@
-# Steven's Dotfiles
+# Sunpech's Dotfiles
 
 My dotfiles to be installed on any new Mac/Ubuntu machine I set up-- although mostly geared for Mac. Always a work in progress.
 
