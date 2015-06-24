@@ -17,8 +17,6 @@ alias cl='clear'
 alias df='df -h'
 alias p='cd ~/Projects'
 alias d='cd ~/Downloads'
-alias a='atom . &'
-alias s='subl . &'
 alias h='history'
 alias cd..='cd ..'                          # Go back 1 directory level (for fast typers)
 alias ..='cd ../'                           # Go back 1 directory level
@@ -44,7 +42,9 @@ alias ild-1920x1200='interfacelift-downloader 1920x1200 ~/Copy/Wallpapers/interf
 
 # Editors
 alias e='emacs'
-alias subl='subl -n'
+# alias subl='subl -n'
+alias a='atom . &'
+alias s='subl . &'
 
 # Start server in current directory
 #alias sserver='python -m SimpleHTTPServer 8000'
