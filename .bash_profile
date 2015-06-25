@@ -10,7 +10,7 @@ export POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/9.4/bin
 export HEROKU_HOME=/usr/local/heroku/bin
 export BREW_HOME=/usr/local/bin
 
-export PATH=$PATH:$RBENV_HOME:$ANDROID_HOME:$LOCAL_HOME:$POSTGRES_HOME:$HEROKU_HOME:$BREW_HOME
+export PATH=$LOCAL_HOME:$BREW_HOME:$RBENV_HOME:$POSTGRES_HOME:$HEROKU_HOME:$ANDROID_HOME:$PATH
 
 # Use iTerm, but in using Terminal
 export CLICOLOR=1
