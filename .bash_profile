@@ -51,8 +51,10 @@ COLOR_NONE="\[\033[0m\]"
 export GITAWAREPROMPT=~/.dotfiles/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
 
-# DotNet
-source dnvm.sh
+# DotNet Version Manager
+if [ -f /usr/local/bin/dnvm.sh ]; then
+  source dnvm.sh
+fi
 
 # Custom GA prompt
 #export PS1="\u@\h \w ${LIGHT_GREEN}\$git_branch${LIGHT_RED}\$git_dirty\[$txtrst\]\$ "
