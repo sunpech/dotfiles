@@ -11,8 +11,9 @@ alias ga='git add'
 
 # Other Aliases
 alias ls='ls -G'
+alias l='ls -lah'
 alias sp='source ~/.bash_profile'
-alias rmdir="/bin/rm -fdr"
+alias rmdir="rm -fdr"
 alias cl='clear'
 alias df='df -h'
 alias p='cd ~/Projects'
