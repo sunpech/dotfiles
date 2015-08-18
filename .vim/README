@@ -3,3 +3,5 @@ colors folder from: https://github.com/flazz/vim-colorschemes:
 
 Be sure to run in home directory:
 git clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim
+
+See: https://kien.github.io/ctrlp.vim/#installation
