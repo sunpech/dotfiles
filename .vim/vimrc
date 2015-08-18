@@ -77,6 +77,9 @@ set number
 set relativenumber
 set showcmd
 
+" CtrlP
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 

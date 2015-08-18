@@ -2,3 +2,8 @@
   path = .bash/git-aware-prompt
   url = git://github.com/sunpech/git-aware-prompt
   ignore = dirty
+
+[submodle "ctrlp.vim"]
+  path = .vim/bundle/ctrlp.vim
+  url = git://github.com/kien/ctrlp.vim
+  ignore = dirty
