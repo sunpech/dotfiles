@@ -43,9 +43,10 @@ alias ild-1920x1200='interfacelift-downloader 1920x1200 ~/Copy/Wallpapers/interf
 
 # Editors
 alias e='emacs'
+alias v='vim'
 # alias subl='subl -n'
-alias a='atom . &'
-alias s='subl . &'
+alias a='atom'
+alias s='subl'
 
 # Start server in current directory
 #alias sserver='python -m SimpleHTTPServer 8000'

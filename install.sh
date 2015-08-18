@@ -6,7 +6,7 @@ if [ -f ~/.bash_profile ]; then
 fi
 
 ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
-ln -s ~/.dotfiles/.vimrc ~/.vimrc
+ln -s ~/.dotfiles/.vim/vimrc ~/.vimrc
 
 # want to source it, but getting error
 # source ~/.bash_profile
