@@ -5,7 +5,7 @@ if [ -f ~/.bash_profile ]; then
   mv ~/.bash_profile ~/.dotfiles/.bash_profile.bak
 fi
 
-ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
+ln -s ~/.dotfiles/bash_profile ~/.bash_profile
 ln -s ~/.dotfiles/.vim/vimrc ~/.vimrc
 
 # want to source it, but getting error
