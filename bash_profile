@@ -36,7 +36,7 @@ fi
 
 # Colors
 if [ -f ~/.dotfiles/bash_colors ]; then
-  . ~/dotfiles/bash_colors
+  . ~/.dotfiles/bash_colors
 fi
 
 # Prompt Stuff
@@ -44,6 +44,7 @@ fi
 # Git Aware (GA)
 export GITAWAREPROMPT=~/.dotfiles/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
+
 
 # DotNet Version Manager
 if [ -f /usr/local/bin/dnvm.sh ]; then
