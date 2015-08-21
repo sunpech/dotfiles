@@ -2,7 +2,7 @@ cd ~/
 
 # Make a backup, hey you never know...
 if [ -f ~/.bash_profile ]; then
-  mv ~/.bash_profile ~/.dotfiles/.bash_profile.bak
+  mv ~/.bash_profile ~/.bash_profile.bak
 fi
 
 ln -s ~/.dotfiles/bash_profile ~/.bash_profile
