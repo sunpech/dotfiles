@@ -46,6 +46,11 @@ export GITAWAREPROMPT=~/.dotfiles/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
 
 
+
+function title {
+  echo -ne "\033]0;"$*"\007"
+}
+
 # DotNet Version Manager
 if [ -f /usr/local/bin/dnvm.sh ]; then
   source dnvm.sh
