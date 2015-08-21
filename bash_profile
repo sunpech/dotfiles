@@ -39,14 +39,6 @@ if [ -f ~/.dotfiles/bash_colors ]; then
   . ~/.dotfiles/bash_colors
 fi
 
-# Prompt Stuff
-
-# Git Aware (GA)
-export GITAWAREPROMPT=~/.dotfiles/.bash/git-aware-prompt
-source $GITAWAREPROMPT/main.sh
-
-
-
 function title {
   echo -ne "\033]0;"$*"\007"
 }
@@ -56,8 +48,11 @@ if [ -f /usr/local/bin/dnvm.sh ]; then
   source dnvm.sh
 fi
 
-# Custom GA prompt
-#export PS1="\u@\h \w ${LIGHT_GREEN}\$git_branch${LIGHT_RED}\$git_dirty\[$txtrst\]\$ "
+# Prompt stuff
+
+# Git Aware (GA)
+export GITAWAREPROMPT=~/.dotfiles/.bash/git-aware-prompt
+source $GITAWAREPROMPT/main.sh
 
 # Mac OS X default GA prompt
 export PS1="\u@\h \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
@@ -69,7 +64,7 @@ export PS1="\u@\h \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 #export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
 # Non Git Aware prompt
-# if [ -f ~/.dotfiles/.git-prompt.sh ]; then
-#   source ~/.dotfiles/.git-prompt.sh
-# fi
-# PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+#if [ -f ~/.dotfiles/git-prompt.sh ]; then
+#  source ~/.dotfiles/git-prompt.sh
+#fi
+#export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
