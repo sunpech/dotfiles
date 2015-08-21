@@ -17,7 +17,7 @@ export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 # Set default editor
-export EDITOR=/usr/bin/emacs
+export EDITOR=/usr/bin/vim
 
 # rbenv
 if which rbenv > /dev/null; then
@@ -26,7 +26,7 @@ fi
 
 # Aliases
 if [ -f ~/.dotfiles/bash_aliases ]; then
- . ~/.dotfiles/bash_aliases
+  . ~/.dotfiles/bash_aliases
 fi
 
 # Git tab completion
@@ -35,15 +35,9 @@ if [ -f ~/.dotfiles/.git-completion.bash ]; then
 fi
 
 # Colors
-RED="\[\033[01;31m\]"
-YELLOW="\[\033[01;33m\]"
-GREEN="\[\033[01;32m\]"
-BLUE="\[\033[01;34m\]"
-LIGHT_RED="\[\033[0;31m\]"
-LIGHT_GREEN="\[\033[0;32m\]"
-WHITE="\[\033[1;37m\]"
-LIGHT_GRAY="\[\033[0;37m\]"
-COLOR_NONE="\[\033[0m\]"
+if [ -f ~/.dotfiles/bash_colors ]; then
+  . ~/dotfiles/bash_colors
+fi
 
 # Prompt Stuff
 
