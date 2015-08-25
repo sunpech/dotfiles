@@ -3,7 +3,12 @@
   url = git://github.com/sunpech/git-aware-prompt
   ignore = dirty
 
-[submodle "ctrlp.vim"]
+[submodule "ctrlp.vim"]
   path = .vim/bundle/ctrlp.vim
   url = git://github.com/kien/ctrlp.vim
+  ignore = dirty
+
+[submodule "nerdtree"]
+  path = .vim/bundle/nerdtree
+  url = git://github.com/scrooloose/nerdtree.git
   ignore = dirty
