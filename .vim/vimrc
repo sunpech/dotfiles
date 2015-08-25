@@ -77,6 +77,8 @@ set number
 set relativenumber
 set showcmd
 
+let g:netrw_liststyle=3
+
 " CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
