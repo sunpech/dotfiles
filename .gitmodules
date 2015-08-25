@@ -8,7 +8,7 @@
   url = git://github.com/kien/ctrlp.vim
   ignore = dirty
 
-[submodule "nerdtree"]
-  path = .vim/bundle/nerdtree
-  url = git://github.com/scrooloose/nerdtree.git
-  ignore = dirty
+
+
+
+
