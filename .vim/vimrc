@@ -387,6 +387,9 @@ map <leader>pp :setlocal paste!<cr>
 let mapleader=" "
 map <leader>k :E<cr> 
 
+" Pathogen.vim
+execute pathogen#infect()
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
