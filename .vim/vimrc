@@ -390,6 +390,8 @@ map <leader>k :E<cr>
 " Pathogen.vim
 execute pathogen#infect()
 
+" Nerdtree shortcut
+map <C-n> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
