@@ -10,3 +10,9 @@ ln -s ~/.dotfiles/.vim/vimrc ~/.vimrc
 
 # want to source it, but getting error
 # source ~/.bash_profile
+
+# Other Mac setup
+
+# disable Apple Photos from auto-launching when plugging in sdcard.
+# See: http://petapixel.com/2015/12/21/stop-apple-photos-from-auto-launching-in-os-x-with-one-command/
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
