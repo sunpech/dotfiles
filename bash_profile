@@ -51,7 +51,7 @@ fi
 # Prompt stuff
 
 # Git Aware (GA)
-export GITAWAREPROMPT=~/.dotfiles/.bash/git-aware-prompt
+export GITAWAREPROMPT=~/.dotfiles/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
 
 # Mac OS X default GA prompt
