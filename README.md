@@ -43,7 +43,7 @@ From here make custom changes depending on what kind of dev-box you need.
 Packages to install with [Homebrew](http://brew.sh/).
 
 ```
-brew install git node openssl rbenv ruby-build wget vim macvim tig rename
+brew install git node openssl rbenv ruby-build wget vim macvim tig rename archey
 ```
 
 ### Recommended Apps
