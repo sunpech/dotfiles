@@ -55,7 +55,7 @@ export GITAWAREPROMPT=~/.dotfiles/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
 
 # Mac OS X default GA prompt
-export PS1="\u@\h \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
 # Ubuntu Standard GA prompt
 #export PS1="\${debian_chroot:+(\$debian_chroot)}\u@\h:\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
