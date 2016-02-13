@@ -6,6 +6,11 @@ if [ -f ~/.bash_profile ]; then
 fi
 
 ln -s ~/.dotfiles/bash_profile ~/.bash_profile
+
+if [ -f ~/.vimrc ]; then
+  mv ~/.vimrc ~/.vimrc.bak
+fi
+
 ln -s ~/.dotfiles/.vim/vimrc ~/.vimrc
 
 # want to source it, but getting error
