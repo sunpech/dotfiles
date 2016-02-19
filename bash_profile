@@ -68,3 +68,12 @@ export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ 
 #  source ~/.dotfiles/git-prompt.sh
 #fi
 #export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+#
+
+# iterm2 Beta 3 Badge
+# bash: Place this in .bashrc.
+function iterm2_print_user_vars() {
+  iterm2_set_user_var gitBranch $((git branch 2> /dev/null) | grep \* | cut -c3-)
+  }
+
+test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
