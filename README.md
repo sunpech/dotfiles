@@ -43,7 +43,7 @@ From here make custom changes depending on what kind of dev-box you need.
 Packages to install with [Homebrew](http://brew.sh/).
 
 ```
-brew install git node openssl rbenv ruby-build wget vim macvim tig rename archey
+brew install git bash node openssl rbenv ruby-build wget vim macvim tig rename archey
 ```
 
 ### Recommended Apps
@@ -71,3 +71,7 @@ git config --global merge.tool diffmerge
 git config --global mergetool.diffmerge.cmd 'diffmerge --merge --result="$MERGED" "$LOCAL" "$(if test -f "$BASE"; then echo "$BASE"; else echo "$LOCAL"; fi)" "$REMOTE"'
 git config --global mergetool.diffmerge.trustExitCode true
 ```
+
+### More Stuff
+
+* [Setup bash with homebrew](https://johndjameson.com/blog/updating-your-shell-with-homebrew/)
