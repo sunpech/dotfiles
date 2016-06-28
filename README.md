@@ -38,6 +38,7 @@ From here make custom changes depending on what kind of dev-box you need.
 * [heroku toolbelt](https://toolbelt.heroku.com/)
 * [Interfacelift Downloader](https://github.com/stevenbenner/interfacelift-downloader) - Also see [my fork](https://github.com/sunpech/interfacelift-downloader) for improvements
 * [.Net Core](https://www.microsoft.com/net/core#macos)
+* [Running VS Code on OS X](https://code.visualstudio.com/docs/setup/osx) - Adding command code to PATH-- to open Visual Studio Code from command line.
 
 ### Brew Installs
 
