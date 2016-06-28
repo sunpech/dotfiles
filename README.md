@@ -37,6 +37,7 @@ From here make custom changes depending on what kind of dev-box you need.
 * [git-completion](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash) - Already included in this project.
 * [heroku toolbelt](https://toolbelt.heroku.com/)
 * [Interfacelift Downloader](https://github.com/stevenbenner/interfacelift-downloader) - Also see [my fork](https://github.com/sunpech/interfacelift-downloader) for improvements
+* [.Net Core](https://www.microsoft.com/net/core#macos)
 
 ### Brew Installs
 
