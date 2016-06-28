@@ -3,6 +3,7 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin
 export PATH
 
 # Custom
+export DOTNET_HOME=/usr/local/share/dotnet
 export RBENV_HOME=/Users/sunpech/.rbenv/shims
 export ANDROID_HOME=/Users/sunpech/Development/adt-bundle-mac/sdk/platform-tools
 export LOCAL_HOME=/Users/sunpech/bin
@@ -10,7 +11,7 @@ export POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/9.5/bin
 export HEROKU_HOME=/usr/local/heroku/bin
 export BREW_HOME=/usr/local/bin
 
-export PATH=$LOCAL_HOME:$BREW_HOME:$RBENV_HOME:$POSTGRES_HOME:$HEROKU_HOME:$ANDROID_HOME:$PATH
+export PATH=$LOCAL_HOME:$DOTNET_HOME:$BREW_HOME:$RBENV_HOME:$POSTGRES_HOME:$HEROKU_HOME:$ANDROID_HOME:$PATH
 
 # Use iTerm, but in using Terminal
 export CLICOLOR=1
