@@ -13,6 +13,10 @@ fi
 
 ln -s ~/.dotfiles/.vim/vimrc ~/.vimrc
 
+# Add for .Net Core
+# ln -s ~/.dotfiles/vscode/launcher.json ~/.vscode/launcher.json
+# ln -s ~/.dotfiles/vscode/tasks.json ~/.vscode/tasks.json
+
 # want to source it, but getting error
 # source ~/.bash_profile
 
