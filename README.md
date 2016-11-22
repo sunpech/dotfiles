@@ -60,7 +60,12 @@ I also have a more up to date repo, [Best Software List](https://github.com/sunp
 
 ### Git Aware Prompt
 
-I really like [Git Aware Prompt](https://github.com/jimeh/git-aware-prompt), but I use my own fork which supresses the dirty flag for submodules. See: [sunpech/git-aware-prompt](https://github.com/sunpech/git-aware-prompt).
+I really like [Git Aware Prompt](https://github.com/jimeh/git-aware-prompt), but I use my own fork which supresses the dirty flag for submodules. See: [sunpech/git-aware-prompt](https://github.com/sunpech/git-aware-prompt). This is a submodule, so you'll need to clone it into this repo.
+
+```
+cd ~/.dotfiles
+git clone git@github.com:sunpech/git-aware-prompt.git
+```
 
 ### Setup Git
 
