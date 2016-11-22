@@ -52,11 +52,25 @@ fi
 # Prompt stuff
 
 # Git Aware (GA)
-export GITAWAREPROMPT=~/.dotfiles/git-aware-prompt
-source $GITAWAREPROMPT/main.sh
+#export GITAWAREPROMPT=~/.dotfiles/git-aware-prompt
+#source $GITAWAREPROMPT/main.sh
 
 # Mac OS X default GA prompt
-export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+#export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+
+
+# configure the git-prompt.sh script
+if [[ -f ~/.dotfiles/git-prompt.sh ]]; then
+  source git-prompt.sh
+fi
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+# MacOS default git prompt
+export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \W\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+
+
+
 
 # Ubuntu Standard GA prompt
 #export PS1="\${debian_chroot:+(\$debian_chroot)}\u@\h:\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
