@@ -60,6 +60,7 @@ fi
 
 
 # configure the git-prompt.sh script
+# source: https://corlewsolutions.com/articles/article-118-enhance-your-git-prompt
 if [[ -f ~/.dotfiles/git-prompt.sh ]]; then
   source git-prompt.sh
 fi
