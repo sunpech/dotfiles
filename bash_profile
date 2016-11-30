@@ -62,7 +62,7 @@ fi
 # configure the git-prompt.sh script
 # source: https://corlewsolutions.com/articles/article-118-enhance-your-git-prompt
 if [[ -f ~/.dotfiles/git-prompt.sh ]]; then
-  source git-prompt.sh
+  source ~/.dotfiles/git-prompt.sh
 fi
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
