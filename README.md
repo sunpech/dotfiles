@@ -67,6 +67,8 @@ cd ~/.dotfiles
 git clone git@github.com:sunpech/git-aware-prompt.git
 ```
 
+I'm moving to use [git-prompt](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh) now.
+
 ### Setup Git
 
 I like to use [DiffMerge](https://sourcegear.com/diffmerge/) for merging files.
