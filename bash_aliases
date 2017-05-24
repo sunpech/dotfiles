@@ -31,15 +31,15 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # Interfacelift Downloader Aliases
 # Default
-alias ild='interfacelift-downloader 2880x1800 ~/Pictures/Wallpapers/interfacelift_2880x1800'
+alias ild='interfacelift-downloader 2880x1800 ~/Pictures/Wallpapers/Interfacelift/interfacelift_2880x1800'
 # MBPr 15"
-alias ild-2880x1800='interfacelift-downloader 2880x1800 ~/Pictures/Wallpapers/interfacelift_2880x1800'
+alias ild-2880x1800='interfacelift-downloader 2880x1800 ~/Pictures/Wallpapers/Interfacelift/interfacelift_2880x1800'
 # 1080p
-alias ild-1080p='interfacelift-downloader 1080p ~/Pictures/Wallpapers/interfacelift_1080p'
+alias ild-1080p='interfacelift-downloader 1080p ~/Pictures/Wallpapers/Interfacelift/interfacelift_1080p'
 # 27" Display
-alias ild-2560x1440='interfacelift-downloader 2560x1440 ~/Pictures/Wallpapers/interfacelift_2560x1440'
+alias ild-2560x1440='interfacelift-downloader 2560x1440 ~/Pictures/Wallpapers/Interfacelift/interfacelift_2560x1440'
 # Nexus 7
-alias ild-1920x1200='interfacelift-downloader 1920x1200 ~/Pictures/Wallpapers/interfacelift_1920x1200'
+alias ild-1920x1200='interfacelift-downloader 1920x1200 ~/Pictures/Wallpapers/Interfacelift/interfacelift_1920x1200'
 
 # Editors
 alias e='emacs'
