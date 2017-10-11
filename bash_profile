@@ -7,7 +7,7 @@ export DOTNET_HOME=/usr/local/share/dotnet
 export RBENV_HOME=/Users/sunpech/.rbenv/shims
 export ANDROID_HOME=/Users/sunpech/Development/adt-bundle-mac/sdk/platform-tools
 export LOCAL_HOME=/Users/sunpech/bin
-export POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/9.6/bin
+export POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/latest/bin
 export HEROKU_HOME=/usr/local/heroku/bin
 export BREW_HOME=/usr/local/bin
 
