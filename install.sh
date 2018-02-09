@@ -7,6 +7,8 @@ fi
 
 ln -s ~/.dotfiles/bash_profile ~/.bash_profile
 
+ln -s ~/.dotfiles/fish/* ~/.config/fish/
+
 if [ -f ~/.vimrc ]; then
   mv ~/.vimrc ~/.vimrc.bak
 fi
