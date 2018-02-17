@@ -51,8 +51,11 @@ brew install git bash node openssl rbenv ruby-build wget vim macvim tig rename a
 ### Recommended Apps
 
 * [Atom.io](https://atom.io/) - Text editor.
+* [Fish Shell](https://fishshell.com/) - A smart and user-friendly command line
+shell for macOS, Linux, and the rest of the family.
 * [Sublime Text](https://www.sublimetext.com/) - Text editor. Also see [my sublime-text-settings repo](https://github.com/sunpech/sublime-text-settings).
 * [iTerm2](http://www.iterm2.com/) - Terminal. Also see [iTerm2 color schemes](http://iterm2colorschemes.com/).
+* [Visual Studio Code](https://code.visualstudio.com/) - A Code editor.
 
 I have a full list of apps I recommend for software development here: [Best Software Development Tools](http://sunpech.com/best/software-development-tools/)
 
