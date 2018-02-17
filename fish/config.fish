@@ -27,7 +27,7 @@ set -x POSTGRES_HOME /Applications/Postgres.app/Contents/Versions/latest/bin
 set -x HEROKU_HOME /usr/local/heroku/bin
 set -x BREW_HOME /usr/local/bin
 
-set -g -x PATH $BREW_HOME $DOTNET_HOME $RBENV_HOME $ANDROID_HOME $LOCAL_HOME $POSTGRES_HOME $HEROKU_HOME $PATH
+set -g -x PATH $RBENV_HOME $BREW_HOME $DOTNET_HOME  $ANDROID_HOME $LOCAL_HOME $POSTGRES_HOME $HEROKU_HOME $PATH
 
 # Customizations (bobthefish Theme)
 set -g theme_display_git yes
