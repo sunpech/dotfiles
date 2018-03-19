@@ -20,6 +20,9 @@ set tacklebox_path ~/.tackle ~/.tacklebox
 
 # Paths
 set -x DOTNET_HOME /usr/local/share/dotnet
+set -x -U GOPATH $HOME/go
+set -x -U GOBIN $GOPATH/bin
+set -x GO_ROOT /usr/local/opt/go/libexec
 set -x RBENV_HOME /Users/sunpech/.rbenv/shims
 set -x ANDROID_HOME /Users/sunpech/Development/adt-bundle-mac/sdk/platform-tools
 set -x LOCAL_HOME /Users/sunpech/bin
@@ -27,7 +30,7 @@ set -x POSTGRES_HOME /Applications/Postgres.app/Contents/Versions/latest/bin
 set -x HEROKU_HOME /usr/local/heroku/bin
 set -x BREW_HOME /usr/local/bin
 
-set -g -x PATH $RBENV_HOME $BREW_HOME $DOTNET_HOME  $ANDROID_HOME $LOCAL_HOME $POSTGRES_HOME $HEROKU_HOME $PATH
+set -g -x PATH $RBENV_HOME $BREW_HOME $DOTNET_HOME $GOPATH $GOBIN $ANDROID_HOME $LOCAL_HOME $POSTGRES_HOME $HEROKU_HOME $PATH
 
 # Customizations (bobthefish Theme)
 set -g theme_display_git yes
@@ -63,3 +66,6 @@ set -g theme_color_scheme terminal-dark
 function gst 
   git status --ignore-submodules
 end
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/sunpech/Development/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/sunpech/Development/google-cloud-sdk/path.fish.inc'; else; . '/Users/sunpech/Development/google-cloud-sdk/path.fish.inc'; end; end

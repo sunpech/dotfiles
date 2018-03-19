@@ -39,6 +39,9 @@ From here make custom changes depending on what kind of dev-box you need.
 * [Interfacelift Downloader](https://github.com/stevenbenner/interfacelift-downloader) - Also see [my fork](https://github.com/sunpech/interfacelift-downloader) for improvements
 * [.Net Core](https://www.microsoft.com/net/core#macos)
 * [Running VS Code on OS X](https://code.visualstudio.com/docs/setup/osx) - Adding command code to PATH-- to open Visual Studio Code from command line.
+* [Google Cloud Platform](https://cloud.google.com/)
+
+Save Android and Google Cloud SDKS to folder ```Development```.
 
 ### Brew Installs
 
@@ -61,16 +64,6 @@ I have a full list of apps I recommend for software development here: [Best Soft
 
 I also have a more up to date repo, [Best Software List](https://github.com/sunpech/best_software_list).
 
-### Git Aware Prompt
-
-I really like [Git Aware Prompt](https://github.com/jimeh/git-aware-prompt), but I use my own fork which supresses the dirty flag for submodules. See: [sunpech/git-aware-prompt](https://github.com/sunpech/git-aware-prompt). This is a submodule, so you'll need to clone it into this repo.
-
-```
-cd ~/.dotfiles
-git clone git@github.com:sunpech/git-aware-prompt.git
-```
-
-I'm moving to use [git-prompt](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh) now.
 
 ### Setup Git
 
@@ -87,3 +80,4 @@ git config --global mergetool.diffmerge.trustExitCode true
 ### More Stuff
 
 * [Setup bash with homebrew](https://johndjameson.com/blog/updating-your-shell-with-homebrew/)
+* [Setup Oh My Fish](https://github.com/oh-my-fish/oh-my-fish)
