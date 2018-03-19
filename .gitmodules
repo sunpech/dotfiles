@@ -1,4 +1,0 @@
-[submodule "git-aware-prompt"]
-  path = git-aware-prompt
-  url = git://github.com/sunpech/git-aware-prompt
-  ignore = dirty
