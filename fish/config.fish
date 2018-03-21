@@ -16,7 +16,8 @@ set tacklebox_path ~/.tackle ~/.tacklebox
 # Load Tacklebox configuration
 . ~/.tacklebox/tacklebox.fish
 
-
+# Editor
+set -Ux EDITOR vim
 
 # Paths
 set -x DOTNET_HOME /usr/local/share/dotnet
