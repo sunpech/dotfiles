@@ -48,7 +48,7 @@ Save Android and Google Cloud SDKS to folder ```Development```.
 Packages to install with [Homebrew](http://brew.sh/).
 
 ```
-brew install git bash node openssl rbenv ruby-build wget vim macvim tig rename archey ssh-copy-id rename toilet figlet tree
+brew install git bash node openssl rbenv ruby-build wget vim macvim tig rename archey ssh-copy-id rename toilet figlet tree imagemagick@6 glances fish go
 ```
 
 ### Recommended Apps
