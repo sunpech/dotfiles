@@ -14,6 +14,7 @@ if [ -f ~/.vimrc ]; then
 fi
 
 ln -s ~/.dotfiles/.vim/vimrc ~/.vimrc
+ln -s ~/.dotfiles/.vim/bundle ~/.vim/bundle
 
 # Add for .Net Core
 # ln -s ~/.dotfiles/vscode/launcher.json ~/.vscode/launcher.json
