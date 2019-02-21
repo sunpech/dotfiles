@@ -1,20 +1,21 @@
 cd ~/
 
-# Make a backup, hey you never know...
+# Make backups
 if [ -f ~/.bash_profile ]; then
   mv ~/.bash_profile ~/.bash_profile.bak
 fi
-
-ln -s ~/.dotfiles/bash_profile ~/.bash_profile
-
-ln -s ~/.dotfiles/fish/* ~/.config/fish/
 
 if [ -f ~/.vimrc ]; then
   mv ~/.vimrc ~/.vimrc.bak
 fi
 
-ln -s ~/.dotfiles/.vim/vimrc ~/.vimrc
-ln -s ~/.dotfiles/.vim/bundle ~/.vim/bundle
+########################
+# Make dynamic links
+########################
+ln -s ~/.dotfiles/bash_profile ~/.bash_profile
+ln -s ~/.dotfiles/fish/* ~/.config/fish/
+ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
+#ln -s ~/.dotfiles/vim/bundle ~/.vim/bundle
 
 # Add for .Net Core
 # ln -s ~/.dotfiles/vscode/launcher.json ~/.vscode/launcher.json
