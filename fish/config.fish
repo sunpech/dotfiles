@@ -69,6 +69,8 @@ function gst
   git status --ignore-submodules
 end
 
+alias sserver='ruby -run -e httpd . -p 8000'
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/sunpech/Development/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/sunpech/Development/google-cloud-sdk/path.fish.inc'; else; . '/Users/sunpech/Development/google-cloud-sdk/path.fish.inc'; end; end
 
