@@ -62,13 +62,21 @@ set -g theme_color_scheme dark
 #set -g theme_project_dir_length 1
 
 
-# Functions (Aliases)
+# Aliases
 
-# Git
-function gst 
-  git status --ignore-submodules
-end
+# Git Aliases
+alias gst='git status --ignore-submodules'
+alias gb='git branch'
+alias gpo='git push origin'
+alias gph='git push heroku'
+alias gc='git commit -v'
+alias gco='git checkout'
+alias gca='git commit -v -a'
+alias ga='git add'
 
+alias cl='clear'
+
+# Start web server in directory
 alias sserver='ruby -run -e httpd . -p 8000'
 
 # The next line updates PATH for the Google Cloud SDK.
