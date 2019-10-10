@@ -15,6 +15,7 @@ fi
 ln -s ~/.dotfiles/bash_profile ~/.bash_profile
 ln -s ~/.dotfiles/fish/* ~/.config/fish/
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
+ln -s ~/.dotfiles/config/nvim ~/.config/nvim/
 #ln -s ~/.dotfiles/vim/bundle ~/.vim/bundle
 
 # Add for .Net Core
