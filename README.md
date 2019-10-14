@@ -26,6 +26,20 @@ chmod u+x install.sh
 
 From here make custom changes depending on what kind of dev-box you need.
 
+## Shells
+
+* [iTerm2](http://www.iterm2.com/) - Terminal emulator.  
+* [iTerm2 color schemes](http://iterm2colorschemes.com/)
+
+### Fish
+* [Fish Shell](https://fishshell.com/) - A smart and user-friendly command line
+* [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
+
+### ZSH
+* Z Shell (MacOS Catalina default)
+* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+* [powerlevel10k theme](https://github.com/romkatv/powerlevel10k)
+
 ## Apps
 
 ### Apps paths used in dotfiles
@@ -48,22 +62,17 @@ Save Android and Google Cloud SDKS to folder ```Development```.
 Packages to install with [Homebrew](http://brew.sh/).
 
 ```
-brew install git bash node openssl rbenv ruby-build wget vim macvim tig rename archey ssh-copy-id rename toilet figlet tree imagemagick@6 glances fish go
+brew install git bash node openssl rbenv ruby-build wget vim macvim tig rename archey ssh-copy-id rename toilet figlet tree imagemagick@6 glances fish go hugo jekyll
 ```
 
 ### Recommended Apps
 
 * [Atom.io](https://atom.io/) - Text editor.
-* [Fish Shell](https://fishshell.com/) - A smart and user-friendly command line
 shell for macOS, Linux, and the rest of the family.
 * [Sublime Text](https://www.sublimetext.com/) - Text editor. Also see [my sublime-text-settings repo](https://github.com/sunpech/sublime-text-settings).
-* [iTerm2](http://www.iterm2.com/) - Terminal. Also see [iTerm2 color schemes](http://iterm2colorschemes.com/).
 * [Visual Studio Code](https://code.visualstudio.com/) - A Code editor.
 
-I have a full list of apps I recommend for software development here: [Best Software Development Tools](http://sunpech.com/best/software-development-tools/)
-
 I also have a more up to date repo, [Best Software List](https://github.com/sunpech/best_software_list).
-
 
 ### Setup Git
 
