@@ -40,6 +40,10 @@ From here make custom changes depending on what kind of dev-box you need.
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [powerlevel10k theme](https://github.com/romkatv/powerlevel10k)
 
+Be sure to read [this](https://stackoverflow.com/questions/11420701/git-submodule-is-returning-blank/40426513). In short, run:
+
+```git submodule update```
+
 ## Apps
 
 ### Apps paths used in dotfiles
