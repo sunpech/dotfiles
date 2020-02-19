@@ -89,6 +89,9 @@ plugins=(
   zsh-syntax-highlighting
   )
 
+#autoload -U compinit && compinit
+#fpath=(/usr/local/share/zsh-completions $fpath) 
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
