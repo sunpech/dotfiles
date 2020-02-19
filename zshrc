@@ -128,3 +128,6 @@ fi
 # powerlevel10k/powerlevel10k theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/sunpech/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
