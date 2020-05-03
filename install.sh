@@ -6,6 +6,12 @@ cd ~/
 # Create symlinks for files/folder in dotfiles to user directory
 ####################################################
 
+# Config folder
+echo "Config folder";
+if [ ! -d ~/.config ] && echo "Directory ~./config DOES NOT exist. Creating directory..."; then
+  mkdir ~/.config
+fi
+
 # bash_profile
 echo "Bash";
 if [ -f ~/.bash_profile ] && echo "File ~/.bash_profile exists. Creating backup..."; then
@@ -29,10 +35,14 @@ ln -s ~/.dotfiles/zshrc ~/.zshrc
 if [ ! -d ~/.oh-my-zsh ] && echo "Directory ~/.oh-my-zsh DOES NOT exist. Creating directory... "; then
   mkdir ~/.oh-my-zsh
 fi
-ln -s ~/.dotfiles/oh-my-zsh/* ~/.oh-my-zsh
+ln -s ~/.dotfiles/oh-my-zsh/* ~/.oh-my-zsh/
 
 echo "Vim";
 # Vim
+if [ ! -d ~/.config/.vim ] && echo "Directory ~/.vim DOES NOT exist. Creating directory..."; then
+  mkdir ~/.vim
+fi
+
 if [ -f ~/.vimrc ] && echo "File ~/.vimrc exists. Creating backup..."; then
   mv ~/.vimrc ~/.vimrc.bak
 fi
