@@ -127,6 +127,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias py="/usr/local/bin/python3"
+
 # rbenv
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)"
@@ -138,3 +140,6 @@ fi
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/sunpech/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+# neofetch
+neofetch
