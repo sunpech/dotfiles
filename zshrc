@@ -11,10 +11,11 @@ export EDITOR=vim
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export ANDROID_HOME="$HOME/Library/Android/sdk/platform-tools"
 export RBENV_HOME="$HOME/.rbenv/bin"
 export POSTGRES_HOME="/Applications/Postgres.app/Contents/Versions/latest/bin"
 
-export PATH=$RBENV_HOME:$POSTGRES_HOME:$PATH
+export PATH=$RBENV_HOME:$POSTGRES_HOME:$ANDROID_HOME:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/sunpech/.oh-my-zsh"
@@ -128,6 +129,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias py="/usr/local/bin/python3"
+alias stree="/Applications/SourceTree.app/Contents/Resources/stree"
 
 # rbenv
 if which rbenv > /dev/null; then
