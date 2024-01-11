@@ -130,6 +130,8 @@ source $ZSH/oh-my-zsh.sh
 
 alias py="/usr/local/bin/python3"
 alias stree="/Applications/SourceTree.app/Contents/Resources/stree"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias smerge="/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge"
 
 # rbenv
 if which rbenv > /dev/null; then
