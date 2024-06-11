@@ -11,7 +11,7 @@ export EDITOR=vim
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export ANDROID_HOME="$HOME/Library/Android/sdk/platform-tools"
+#export ANDROID_HOME="$HOME/Library/Android/sdk/platform-tools"
 export RBENV_HOME="$HOME/.rbenv/bin"
 export POSTGRES_HOME="/Applications/Postgres.app/Contents/Versions/latest/bin"
 
@@ -30,7 +30,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-setopt appendhistory
+#setopt appendhistory
+setopt append_history
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -132,6 +138,11 @@ alias py="/usr/local/bin/python3"
 alias stree="/Applications/SourceTree.app/Contents/Resources/stree"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias smerge="/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge"
+# ---- Eza (better ls) -----
+alias ls="eza --icons=always"
+# ---- Zoxide (better cd) ----
+eval "$(zoxide init zsh)"
+alias cd="z"
 
 # rbenv
 if which rbenv > /dev/null; then
@@ -150,5 +161,9 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 #  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# neofetch
-#neofetch
+# completion using arrow keys (based on history)
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
