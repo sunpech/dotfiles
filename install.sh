@@ -12,33 +12,45 @@ if [ ! -d ~/.config ] && echo "Directory ~./config DOES NOT exist. Creating dire
   mkdir ~/.config
 fi
 
-# bash_profile
+# Alacritty Directory
+if [ ! -d ~/.config/alacritty ] && echo "Directory ~./config/alacritty DOES NOT exist. Creating directory..."; then
+  mkdir ~/.config/alacritty
+fi
+ln -s ~/.dotfiles/config/alacritty/* ~/.config/alacritty/
+
+# bash_profile File
 echo "Bash";
 if [ -f ~/.bash_profile ] && echo "File ~/.bash_profile exists. Creating backup..."; then
   mv ~/.bash_profile ~/.bash_profile.bak
 fi
 ln -s ~/.dotfiles/bash_profile ~/.bash_profile
 
+# Fish shell Directory
 echo "Fish shell";
-# Fish shell
 if [ ! -d ~/.config/fish ] && echo "Directory ~/.config/fish DOES NOT exist. Creating directory..."; then
   mkdir ~/.config/fish
 fi
 ln -s ~/.dotfiles/fish/* ~/.config/fish/
 
+# ZSH File
 echo "ZSH":
-# ZSH
 if [ -f ~/.zshrc ] && echo "File ~/.zshrc exists. Creating backup..."; then
   mv ~/.zshrc ~/.zshrc.bak
 fi
 ln -s ~/.dotfiles/zshrc ~/.zshrc
-if [ ! -d ~/.oh-my-zsh ] && echo "Directory ~/.oh-my-zsh DOES NOT exist. Creating directory... "; then
-  mkdir ~/.oh-my-zsh
+# ZSH Directory (old)
+#if [ ! -d ~/.oh-my-zsh ] && echo "Directory ~/.oh-my-zsh DOES NOT exist. Creating directory... "; then
+#  mkdir ~/.oh-my-zsh
+#fi
+#ln -s ~/.dotfiles/oh-my-zsh/* ~/.oh-my-zsh/
+# ZSH Directory (new)
+if [ ! -d ~/.ohmyzsh ] && echo "Directory ~/.ohmyzsh DOES NOT exist. Creating directory... "; then
+  mkdir ~/.ohmyzsh
 fi
-ln -s ~/.dotfiles/oh-my-zsh/* ~/.oh-my-zsh/
+ln -s ~/.dotfiles/ohmyzsh/* ~/.ohmyzsh/
 
-echo "Vim";
 # Vim
+echo "Vim";
 if [ ! -d ~/.config/.vim ] && echo "Directory ~/.vim DOES NOT exist. Creating directory..."; then
   mkdir ~/.vim
 fi
@@ -52,8 +64,8 @@ if [ ! -d ~/.vim/bundle ] && echo "Directory ~/.vim/bundle DOES NOT exist. Creat
 fi
 ln -s ~/.dotfiles/vim/bundle ~/.vim/bundle
 
-echo "NeoVim";
 # Neovim
+echo "NeoVim";
 if [ ! -d ~/.config/nvim ] && echo "Directory ~/.config/nvim DOES NOT exist. Creating directory... "; then
   mkdir ~/.config/nvim
 fi

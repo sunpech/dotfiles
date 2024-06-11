@@ -18,7 +18,10 @@ export POSTGRES_HOME="/Applications/Postgres.app/Contents/Versions/latest/bin"
 export PATH=$RBENV_HOME:$POSTGRES_HOME:$ANDROID_HOME:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/sunpech/.oh-my-zsh"
+#export ZSH="/Users/sunpech/.oh-my-zsh"
+
+# Path to your new ohmyzsh installation.
+export ZSH="/Users/sunpech/.ohmyzsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

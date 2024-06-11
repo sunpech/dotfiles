@@ -1,3 +1,7 @@
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = git@github.com:robbyrussell/oh-my-zsh.git
+[submodule "ohmyzsh"]
+	path = ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh
+
+[submodule "config/alacritty/themes"]
+	path = config/alacritty/themes
+	url = https://github.com/alacritty/alacritty-theme

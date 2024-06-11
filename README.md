@@ -2,11 +2,11 @@
 
 My dotfiles to be installed on any new Mac/Ubuntu machine I set up-- although mostly geared for Mac. Always a work in progress.
 
-The idea behind how this project is currently structured is to keep everything in the .dotfiles/ folder in the user's home directory. Then to only create a single symbolic link for .bash_profile.
+The idea behind how this project is currently structured is to keep everything in the .dotfiles/ folder in the user's home directory. Then to only create a single symbolic link for .zshrc file.
 
 ## Requirements
 
-You should have necessary apps installed already. Applications such as Git, Rails, Mongodb, Postgres, Android SDK, mySQL, etc. This repo does not install all that for you. The PATH is set in the .bash_profile file.
+You should have necessary apps installed already. Applications such as Git, Rails, Mongodb, Postgres, Android SDK, mySQL, etc. This repo does not install all that for you. The PATH is set in the .zshrc file.
 
 ## Installation
 
@@ -26,12 +26,16 @@ chmod u+x install.sh
 
 From here make custom changes depending on what kind of dev-box you need.
 
-## Shells
+## Terminal Emulators
 
 * [Alacritty](https://alacritty.org/) - Modern cross platform terminal emulator (Linux, macOS, Windows).
 * [Alacritty themes](https://github.com/alacritty/alacritty-theme)
 * [iTerm2](http://www.iterm2.com/) - Terminal emulator.  
 * [iTerm2 color schemes](http://iterm2colorschemes.com/)
+
+## Shells
+
+MacOS's default shell is now Z Shell (zsh).
 
 ### Fish
 * [Fish Shell](https://fishshell.com/) - A smart and user-friendly command line
@@ -41,6 +45,12 @@ From here make custom changes depending on what kind of dev-box you need.
 * Z Shell (MacOS Catalina default)
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [powerlevel10k theme](https://github.com/romkatv/powerlevel10k)
+
+### Submodules
+There should be 2 submodules in this project:
+
+1. [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+2. [alacritty-theme](https://github.com/alacritty/alacritty-theme)
 
 Be sure to read [this](https://stackoverflow.com/questions/11420701/git-submodule-is-returning-blank/40426513). In short, run:
 
@@ -53,7 +63,6 @@ Be sure to read [this](https://stackoverflow.com/questions/11420701/git-submodul
 * [eza](https://github.com/eza-community/eza) - A modern, maintained replacement for ls.
 * [rbenv](https://github.com/sstephenson/rbenv) - For managing rubies.
 * [Postgres.app](http://postgresapp.com/) - Postgres for Mac.
-* [Android SDK](https://developer.android.com/sdk/index.html)
 * [homebrew](http://brew.sh/) - Mac package manager.
 * [git-completion](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash) - Already included in this project.
 * [zoxide](https://github.com/ajeetdsouza/zoxide) - A smarter cd command.
@@ -65,7 +74,7 @@ Save Android and Google Cloud SDKS to folder ```Development```.
 Packages to install with [Homebrew](http://brew.sh/).
 
 ```
-brew install git bash node openssl rbenv ruby-build wget vim tig rename archey ssh-copy-id rename toilet figlet tree imagemagick@6 glances fish go hugo jekyll
+brew install git node openssl rbenv ruby-build wget vim tig rename ssh-copy-id rename toilet tree glances go hugo fastfetch yt-dlp
 ```
 
 ```
