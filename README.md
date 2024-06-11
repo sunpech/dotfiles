@@ -28,6 +28,8 @@ From here make custom changes depending on what kind of dev-box you need.
 
 ## Shells
 
+* [Alacritty](https://alacritty.org/) - Modern cross platform terminal emulator (Linux, macOS, Windows).
+* [Alacritty themes](https://github.com/alacritty/alacritty-theme)
 * [iTerm2](http://www.iterm2.com/) - Terminal emulator.  
 * [iTerm2 color schemes](http://iterm2colorschemes.com/)
 
@@ -48,16 +50,13 @@ Be sure to read [this](https://stackoverflow.com/questions/11420701/git-submodul
 
 ### Apps paths used in dotfiles
 
+* [eza](https://github.com/eza-community/eza) - A modern, maintained replacement for ls.
 * [rbenv](https://github.com/sstephenson/rbenv) - For managing rubies.
 * [Postgres.app](http://postgresapp.com/) - Postgres for Mac.
 * [Android SDK](https://developer.android.com/sdk/index.html)
 * [homebrew](http://brew.sh/) - Mac package manager.
 * [git-completion](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash) - Already included in this project.
-* [heroku toolbelt](https://toolbelt.heroku.com/)
-* [Interfacelift Downloader](https://github.com/stevenbenner/interfacelift-downloader) - Also see [my fork](https://github.com/sunpech/interfacelift-downloader) for improvements
-* [.Net Core](https://www.microsoft.com/net/core#macos)
-* [Running VS Code on OS X](https://code.visualstudio.com/docs/setup/osx) - Adding command code to PATH-- to open Visual Studio Code from command line.
-* [Google Cloud Platform](https://cloud.google.com/)
+* [zoxide](https://github.com/ajeetdsouza/zoxide) - A smarter cd command.
 
 Save Android and Google Cloud SDKS to folder ```Development```.
 
@@ -66,31 +65,22 @@ Save Android and Google Cloud SDKS to folder ```Development```.
 Packages to install with [Homebrew](http://brew.sh/).
 
 ```
-brew install git bash node openssl rbenv ruby-build wget vim macvim tig rename archey ssh-copy-id rename toilet figlet tree imagemagick@6 glances fish go hugo jekyll
+brew install git bash node openssl rbenv ruby-build wget vim tig rename archey ssh-copy-id rename toilet figlet tree imagemagick@6 glances fish go hugo jekyll
+```
+
+```
+brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k font-meslo-lg-nerd-font
 ```
 
 ### Recommended Apps
 
-* [Atom.io](https://atom.io/) - Text editor.
-shell for macOS, Linux, and the rest of the family.
 * [Sublime Text](https://www.sublimetext.com/) - Text editor. Also see [my sublime-text-settings repo](https://github.com/sunpech/sublime-text-settings).
 * [Visual Studio Code](https://code.visualstudio.com/) - A Code editor.
 
 I also have a more up to date repo, [Best Software List](https://github.com/sunpech/best_software_list).
 
-### Setup Git
-
-I like to use [DiffMerge](https://sourcegear.com/diffmerge/) for merging files.
-
-```
-git config --global diff.tool diffmerge
-git config --global difftool.diffmerge.cmd 'diffmerge "$LOCAL" "$REMOTE"'
-git config --global merge.tool diffmerge
-git config --global mergetool.diffmerge.cmd 'diffmerge --merge --result="$MERGED" "$LOCAL" "$(if test -f "$BASE"; then echo "$BASE"; else echo "$LOCAL"; fi)" "$REMOTE"'
-git config --global mergetool.diffmerge.trustExitCode true
-```
-
 ### More Stuff
 
 * [Setup bash with homebrew](https://johndjameson.com/blog/updating-your-shell-with-homebrew/)
 * [Setup Oh My Fish](https://github.com/oh-my-fish/oh-my-fish)
+* [Setup Alacritty](https://www.josean.com/posts/how-to-setup-alacritty-terminal)
