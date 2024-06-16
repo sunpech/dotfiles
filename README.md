@@ -83,7 +83,7 @@ brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k font-mesl
 
 ### Recommended Apps
 
-* [Sublime Text](https://www.sublimetext.com/) - Text editor. Also see [my sublime-text-settings repo](https://github.com/sunpech/sublime-text-settings).
+* [Sublime Text + Merge](https://www.sublimetext.com/) - Text editor. Also see [my sublime-text-settings repo](https://github.com/sunpech/sublime-text-settings).
 * [Visual Studio Code](https://code.visualstudio.com/) - A Code editor.
 
 I also have a more up to date repo, [Best Software List](https://github.com/sunpech/best_software_list).
