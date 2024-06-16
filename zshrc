@@ -15,7 +15,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export RBENV_HOME="$HOME/.rbenv/bin"
 export POSTGRES_HOME="/Applications/Postgres.app/Contents/Versions/latest/bin"
 
-export PATH=$RBENV_HOME:$POSTGRES_HOME:$ANDROID_HOME:$PATH
+#export PATH=$RBENV_HOME:$POSTGRES_HOME:$ANDROID_HOME:$PATH
+export PATH=$RBENV_HOME:$POSTGRES_HOME:$PATH
 
 # Path to your oh-my-zsh installation.
 #export ZSH="/Users/sunpech/.oh-my-zsh"
@@ -27,7 +28,8 @@ export ZSH="/Users/sunpech/.ohmyzsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="random"
 
 # history
 HISTFILE=~/.zsh_history
@@ -102,14 +104,16 @@ setopt hist_verify
 plugins=(
   git
   brew
-  zsh-autosuggestions
-  zsh-syntax-highlighting
   )
+
+# zsh-autosuggestions
+#  zsh-syntax-highlighting
 
 #autoload -U compinit && compinit
 #fpath=(/usr/local/share/zsh-completions $fpath) 
 
-source $ZSH/oh-my-zsh.sh
+# Maybe don't need ohmyzsh anymore.
+#source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -157,8 +161,9 @@ fi
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 # heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/sunpech/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+#HEROKU_AC_ZSH_SETUP_PATH=/Users/sunpech/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
+# Node Version Manager
 # From brew install nvm
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -170,3 +175,4 @@ bindkey '^[[B' history-search-forward
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme

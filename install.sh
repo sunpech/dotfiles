@@ -16,7 +16,7 @@ fi
 if [ ! -d ~/.config/alacritty ] && echo "Directory ~./config/alacritty DOES NOT exist. Creating directory..."; then
   mkdir ~/.config/alacritty
 fi
-ln -s ~/.dotfiles/config/alacritty/* ~/.config/alacritty/
+ln -s ~/.dotfiles/config/alacritty/* ~/.config/alacritty
 
 # bash_profile File
 echo "Bash";
