@@ -74,11 +74,15 @@ Save Android and Google Cloud SDKS to folder ```Development```.
 Packages to install with [Homebrew](http://brew.sh/).
 
 ```
-brew install git node openssl rbenv ruby-build wget vim tig rename ssh-copy-id rename toilet tree glances go hugo fastfetch yt-dlp fd rg lazygit
+brew install git node openssl rbenv ruby-build wget vim tig rename ssh-copy-id rename toilet tree glances go hugo fastfetch yt-dlp
 ```
 
 ```
 brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k font-meslo-lg-nerd-font
+```
+
+```
+brew install neovim fd rg ast-grep lazygit
 ```
 
 ### Recommended Apps

@@ -69,7 +69,7 @@ echo "NeoVim";
 if [ ! -d ~/.config/nvim ] && echo "Directory ~/.config/nvim DOES NOT exist. Creating directory... "; then
   mkdir ~/.config/nvim
 fi
-ln -s ~/.dotfiles/config/nvim ~/.config/nvim/
+ln -s ~/.dotfiles/config/nvim/* ~/.config/nvim/
 
 # Add for .Net Core
 # ln -s ~/.dotfiles/vscode/launcher.json ~/.vscode/launcher.json
