@@ -1,16 +1,18 @@
-# Sunpech's Dotfiles
+# Sunpech's dotfiles
 
-My dotfiles to be installed on any new Mac/Ubuntu machine I set up-- although mostly geared for Mac. Always a work in progress.
+My dotfiles for MacOS. Ubuntu Linux not currently supported.
 
-The idea behind how this project is currently structured is to keep everything in the .dotfiles/ folder in the user's home directory. Then to only create a single symbolic link for .zshrc file.
+I use [GNU stow](https://www.gnu.org/software/stow/) to manage symlinks for configurations.
 
 ## Requirements
 
-You should have necessary apps installed already. Applications such as Git, Rails, Mongodb, Postgres, Android SDK, mySQL, etc. This repo does not install all that for you. The PATH is set in the .zshrc file.
+You should be running ZSH as your default shell.
+
+See Apps section below to install homebrew and other apps.
 
 ## Installation
 
-Run the following, line by line.
+### Clone repo
 
 ```
 git clone git@github.com:sunpech/dotfiles.git
@@ -18,35 +20,33 @@ git clone git@github.com:sunpech/dotfiles.git
 mv dotfiles ~/.dotfiles
 
 cd ~/.dotfiles
-
-chmod u+x install.sh
-
-./install.sh
 ```
 
-From here make custom changes depending on what kind of dev-box you need.
+### Run stow
 
-## Terminal Emulators
+Use stow to create symlinks for config files. I disagree with running ```stow .``` at the top of the project directory to symlink everything. I think it's better to organize by directory where it's more modular.
 
-* [Alacritty](https://alacritty.org/) - Modern cross platform terminal emulator (Linux, macOS, Windows).
-* [Alacritty themes](https://github.com/alacritty/alacritty-theme)
-* [iTerm2](http://www.iterm2.com/) - Terminal emulator.  
-* [iTerm2 color schemes](http://iterm2colorschemes.com/)
+```
+stow zsh ohmyzsh alacritty powerlevel10k nvim git
+```
 
-## Shells
+## Terminals
+
+* [Alacritty](https://alacritty.org/) with [Alacritty themes](https://github.com/alacritty/alacritty-theme)
+* [iTerm2](http://www.iterm2.com/) with [iTerm2 color schemes](http://iterm2colorschemes.com/)
+* [Warp](https://www.warp.dev/)
+
+## ZSH
 
 MacOS's default shell is now Z Shell (zsh).
 
-### Fish
-* [Fish Shell](https://fishshell.com/) - A smart and user-friendly command line
-* [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
-
-### ZSH
-* Z Shell (MacOS Catalina default)
-* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+* [ohmyz.sh](https://ohmyz.sh/)
+* [ohmyzsh Github](https://github.com/ohmyzsh/ohmyzsh)
 * [powerlevel10k theme](https://github.com/romkatv/powerlevel10k)
 
-### Submodules
+I no longer use bash shell. I also no longer use [Fish Shell](https://fishshell.com/) and [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish).
+
+## Submodules
 There should be 2 submodules in this project:
 
 1. [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
@@ -54,7 +54,9 @@ There should be 2 submodules in this project:
 
 Be sure to read [this](https://stackoverflow.com/questions/11420701/git-submodule-is-returning-blank/40426513). In short, run:
 
-```git submodule update```
+```
+git submodule update
+```
 
 ## Apps
 
@@ -69,7 +71,7 @@ Be sure to read [this](https://stackoverflow.com/questions/11420701/git-submodul
 
 Save Android and Google Cloud SDKS to folder ```Development```.
 
-### Brew Installs
+### Homebrew Installs
 
 Packages to install with [Homebrew](http://brew.sh/).
 
@@ -89,10 +91,19 @@ brew install neovim fd rg ast-grep lazygit
 
 * [Sublime Text + Merge](https://www.sublimetext.com/) - Text editor. Also see [my sublime-text-settings repo](https://github.com/sunpech/sublime-text-settings).
 * [Visual Studio Code](https://code.visualstudio.com/) - A Code editor.
+* [Sourcetree](https://www.sourcetreeapp.com/)
 
 I also have a more up to date repo, [Best Software List](https://github.com/sunpech/best_software_list).
 
-### More Stuff
+### Misc
+
+Disable Apple Photos from auto-launching when plugging in sdcard. See: http://petapixel.com/2015/12/21/stop-apple-photos-from-auto-launching-in-os-x-with-one-command/
+
+```
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
+```
+
+Other set up links:
 
 * [Setup bash with homebrew](https://johndjameson.com/blog/updating-your-shell-with-homebrew/)
 * [Setup Oh My Fish](https://github.com/oh-my-fish/oh-my-fish)
