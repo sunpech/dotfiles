@@ -27,7 +27,7 @@ cd ~/.dotfiles
 Use stow to create symlinks for config files. I disagree with running ```stow .``` at the top of the project directory to symlink everything. I think it's better to organize by directory where it's more modular.
 
 ```
-stow zsh ohmyzsh alacritty powerlevel10k nvim git
+stow zsh ohmyzsh alacritty powerlevel10k nvim vim git
 ```
 
 ## Terminals
