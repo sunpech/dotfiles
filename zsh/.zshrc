@@ -172,6 +172,11 @@ export NVM_DIR="$HOME/.nvm"
 # completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
+#bindkey '       ' autosuggest-accept
+#bindkey '^I' expand-or-complete
+bindkey '^I'   complete-word       # tab          | complete
+bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
+bindkey '^I^I' autosuggest-accept  # tab tab      | autosuggest
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
