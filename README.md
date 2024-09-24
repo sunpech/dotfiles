@@ -47,7 +47,7 @@ MacOS's default shell is now Z Shell (zsh).
 I no longer use bash shell. I also no longer use [Fish Shell](https://fishshell.com/) and [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish).
 
 ## Submodules
-There should be 2 submodules in this project:
+There are 2 submodules in this project:
 
 1. [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 2. [alacritty-theme](https://github.com/alacritty/alacritty-theme)
@@ -66,7 +66,6 @@ git submodule update
 * [rbenv](https://github.com/sstephenson/rbenv) - For managing rubies.
 * [Postgres.app](http://postgresapp.com/) - Postgres for Mac.
 * [homebrew](http://brew.sh/) - Mac package manager.
-* [git-completion](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash) - Already included in this project.
 * [zoxide](https://github.com/ajeetdsouza/zoxide) - A smarter cd command.
 
 Save Android and Google Cloud SDKS to folder ```Development```.
