@@ -106,8 +106,10 @@ plugins=(
   brew
   )
 
+
+# zsh-interactive-cd
 # zsh-autosuggestions
-#  zsh-syntax-highlighting
+# zsh-syntax-highlighting
 
 #autoload -U compinit && compinit
 #fpath=(/usr/local/share/zsh-completions $fpath) 
@@ -181,3 +183,6 @@ bindkey '^I^I' autosuggest-accept  # tab tab      | autosuggest
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# Set up fzf key bindings and fuzzy completion
+#source <(fzf --zsh)
