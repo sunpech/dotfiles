@@ -8,7 +8,9 @@ I use [GNU stow](https://www.gnu.org/software/stow/) to manage symlinks for conf
 
 You need to run z shell (zsh), which is default on MacOS since macOS Catalina, in 2019.
 
-You'll need to have [homebrew](https://brew.sh/) installed. Then you'll need git and stow to install this dotfiles repository.
+You'll need to have [homebrew](https://brew.sh/) installed. 
+
+Then you'll need git and stow to install this dotfiles repository.
 
 ```
 brew install git stow
