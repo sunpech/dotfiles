@@ -15,7 +15,7 @@ See Apps section below to install homebrew and other apps.
 ### Clone repo
 
 ```
-git clone git@github.com:sunpech/dotfiles.git
+git clone --recurse-submodules git@github.com:sunpech/dotfiles.git
 
 mv dotfiles ~/.dotfiles
 
@@ -56,6 +56,18 @@ Be sure to read [this](https://stackoverflow.com/questions/11420701/git-submodul
 
 ```
 git submodule update
+```
+
+Other commands:
+
+f you already cloned the repository without submodules, you can manually initialize and update them:
+```
+git submodule update --init --recursive
+```
+
+After pulling changes to the main repository, you may also need to pull updates for submodules if they have changed. You can use the following command:
+```
+git submodule update --remote --merge
 ```
 
 ## Apps
