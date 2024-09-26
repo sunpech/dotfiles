@@ -76,6 +76,8 @@ After pulling changes to the main repository, you may also need to pull updates 
 git submodule update --remote --merge
 ```
 
+**Note**: The ohmyzsh github has the default location at ```~/.oh-my-zsh```. I believe the old project was oh-my-zsh (under robbyrussell), before it got moved to ohmyzsh. I prefer ```~/.ohmyzsh``` to keep the naming structure.
+
 ## Apps
 
 ### Apps paths used in dotfiles
