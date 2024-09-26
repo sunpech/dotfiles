@@ -2,6 +2,6 @@
 	path = ohmyzsh/.ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh
 
-[submodule "config/alacritty/themes"]
-	path = alacritty/config/alacritty/themes
+[submodule ".config/alacritty/themes"]
+	path = alacritty/.config/alacritty/themes
 	url = https://github.com/alacritty/alacritty-theme
