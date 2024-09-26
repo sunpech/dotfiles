@@ -1,12 +1,12 @@
 # Sunpech's dotfiles
 
-My dotfiles for MacOS. This will help you/me get started setting up a fresh new MacOS setup. *(Ubuntu Linux not currently supported).*
+My dotfiles for macOS. This will help you get started setting up a fresh new Mac.
 
 I use [GNU stow](https://www.gnu.org/software/stow/) to manage symlinks for configurations.
 
 ## Requirements
 
-You need to run z shell (zsh), which is default on MacOS since macOS Catalina, in 2019.
+You need to run z shell (zsh), which is default since macOS Catalina, in 2019.
 
 You'll need to have [homebrew](https://brew.sh/) installed. 
 
@@ -32,7 +32,7 @@ cd ~/.dotfiles
 
 Use stow to create symlinks for config files. 
 
-I disagree with running ```stow .``` at the top of the project directory to symlink everything. I think it's better to organize by directory where it's more modular, which is what the approach of this repo.
+I disagree with running ```stow .``` at the top of the project directory to symlink everything. I think it's better to organize by directory where it's more modular, which is the approach of this repo.
 
 ```
 stow zsh ohmyzsh alacritty powerlevel10k nvim vim git
@@ -80,13 +80,14 @@ git submodule update --remote --merge
 
 ### Apps paths used in dotfiles
 
+You'll need to have these installed.
+
 * [eza](https://github.com/eza-community/eza) - A modern, maintained replacement for ls.
 * [rbenv](https://github.com/sstephenson/rbenv) - For managing rubies.
 * [Postgres.app](http://postgresapp.com/) - Postgres for Mac.
+* [Sourcetree](https://www.sourcetreeapp.com/) - Git GUI from Atlassian.
 * [homebrew](http://brew.sh/) - Mac package manager.
 * [zoxide](https://github.com/ajeetdsouza/zoxide) - A smarter cd command.
-
-Save Android and Google Cloud SDKS to folder ```Development```.
 
 ### Homebrew Installs
 
@@ -109,9 +110,8 @@ brew install node openssl rbenv ruby-build wget vim tig rename ssh-copy-id renam
 
 ### Recommended Apps
 
-* [Sublime Text + Merge](https://www.sublimetext.com/). Also see [my sublime-text-settings repo](https://github.com/sunpech/sublime-text-settings)
+* [Sublime Text + Merge](https://www.sublimetext.com/).
 * [Visual Studio Code](https://code.visualstudio.com/)
-* [Sourcetree](https://www.sourcetreeapp.com/)
 
 I also have a more up to date repo, [Best Software List](https://github.com/sunpech/best_software_list).
 
@@ -124,6 +124,14 @@ You may want to:
 
 ```
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
+```
+
+3. Change the Alacritty theme. I like the github_dark theme. Set in: ```~/.config/alacritty/alacritty.toml```.
+
+```
+import = [
+    "~/.config/alacritty/themes/themes/github_dark.toml"
+]
 ```
 
 Other set up links:
