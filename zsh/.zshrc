@@ -106,7 +106,7 @@ plugins=(
   brew
   )
 
-
+# Plugins that are commented out
 # zsh-interactive-cd
 # zsh-autosuggestions
 # zsh-syntax-highlighting
