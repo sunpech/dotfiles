@@ -30,6 +30,7 @@ export ZSH="/Users/sunpech/.ohmyzsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="powerlevel10k/powerlevel10k"
 #ZSH_THEME="random"
+# Using powerlevel10k directly, see sourcing at bottom of config
 
 # history
 HISTFILE=~/.zsh_history
@@ -180,9 +181,13 @@ bindkey '^I'   complete-word       # tab          | complete
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 bindkey '^I^I' autosuggest-accept  # tab tab      | autosuggest
 
+# Source
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Set up powerlevel10k
+# See: https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#homebrew
+# creates ~/.p10k.zsh file with settings
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # Set up fzf key bindings and fuzzy completion
-#source <(fzf --zsh)
+source <(fzf --zsh)
