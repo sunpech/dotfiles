@@ -35,7 +35,7 @@ Use stow to create symlinks for config files.
 I disagree with running ```stow .``` at the top of the project directory to symlink everything. I think it's better to organize by directory where it's more modular, which is the approach of this repo.
 
 ```
-stow zsh ohmyzsh alacritty powerlevel10k nvim vim git
+stow zsh ohmyzsh alacritty powerlevel10k nvim vim git wezterm
 ```
 
 After running stow above, you should be setup with your dotfiles. You may want to install extras, or even update some submodules-- see sections below.
@@ -45,6 +45,7 @@ After running stow above, you should be setup with your dotfiles. You may want t
 * [Alacritty](https://alacritty.org/) with [Alacritty themes](https://github.com/alacritty/alacritty-theme)
 * [iTerm2](http://www.iterm2.com/) with [iTerm2 color schemes](http://iterm2colorschemes.com/)
 * [Warp](https://www.warp.dev/)
+* [WezTerm](https://wezfurlong.org/wezterm/)
 
 ## Z shell (zsh)
 
