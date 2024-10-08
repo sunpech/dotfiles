@@ -111,6 +111,11 @@ brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k font-mesl
 brew install node openssl rbenv ruby-build wget vim tig rename ssh-copy-id rename toilet tree glances go hugo fastfetch yt-dlp
 ```
 
+#### Wezterm
+```
+brew install --cask wezterm
+```
+
 ### Recommended Apps
 
 * [Sublime Text + Merge](https://www.sublimetext.com/).
@@ -129,13 +134,6 @@ You may want to:
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
 ```
 
-3. Change the Alacritty theme. I like the github_dark theme. Set in: ```~/.config/alacritty/alacritty.toml```.
-
-```
-import = [
-    "~/.config/alacritty/themes/themes/github_dark.toml"
-]
-```
 
 Other set up links:
 
