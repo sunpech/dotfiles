@@ -108,7 +108,7 @@ brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k font-mesl
 
 #### Various packages
 ```
-brew install node openssl rbenv ruby-build wget vim tig rename ssh-copy-id rename toilet tree glances go hugo fastfetch yt-dlp
+brew install node openssl rbenv ruby-build wget vim tig rename ssh-copy-id rename toilet tree glances go hugo fastfetch yt-dlp fzf zoxide
 ```
 
 #### Wezterm
