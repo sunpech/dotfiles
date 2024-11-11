@@ -182,12 +182,12 @@ bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 bindkey '^I^I' autosuggest-accept  # tab tab      | autosuggest
 
 # Source
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Set up powerlevel10k
 # See: https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#homebrew
 # creates ~/.p10k.zsh file with settings
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
