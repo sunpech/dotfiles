@@ -18,7 +18,7 @@ config.font_size = 14.0
 -- Seti, Spiderman, The Hulk, Tokyo Night, Tokyo Night Moon, Twilight
 -- Twilight (dark) (terminal.sexy)
 -- Vs Code Dark+ (Gogh)
-config.color_scheme = "Hacktober"
+config.color_scheme = "Seti"
 
 -- Misc
 -- config.hide_tab_bar_if_only_one_tab = true
