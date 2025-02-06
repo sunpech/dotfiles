@@ -10,6 +10,9 @@ local config = wezterm.config_builder()
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
 config.font_size = 14.0
 
+-- Vertical divider line & all lines
+config.underline_thickness = '200%'
+
 -- Color Scheme (favorites)
 -- Atom, Batman, Blue Matrix, , Classic Dark (base16), Dark Ocean (terminal.sexy), Dark+, darkmatrix, darkermatrix
 -- Default (dark) (terminal.sexy)
@@ -28,3 +31,4 @@ config.window_frame = {
 
 -- and finally, return the configuration to wezterm
 return config
+
