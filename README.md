@@ -128,12 +128,18 @@ I also have a more up to date repo, [Best Software List](https://github.com/sunp
 You may want to: 
 
 1. [Change your computer’s name or local hostname on Mac](https://support.apple.com/guide/mac-help/change-computers-local-hostname-mac-mchlp2322/mac#:~:text=On%20your%20Mac%2C%20choose%20Apple,Click%20About.&text=Select%20the%20current%20computer%20name%2C%20then%20type%20a%20new%20name.)
+
 2. [Disable Apple Photos from auto-launching when plugging in sdcard ](http://petapixel.com/2015/12/21/stop-apple-photos-from-auto-launching-in-os-x-with-one-command/). Run command below.
 
 ```
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
 ```
 
+3. Prevent macOS from Creating .DS_Store on Network Drives
+
+```
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+```
 
 Other set up links:
 
