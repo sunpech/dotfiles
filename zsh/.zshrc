@@ -13,10 +13,11 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 #export ANDROID_HOME="$HOME/Library/Android/sdk/platform-tools"
 export RBENV_HOME="$HOME/.rbenv/bin"
-export POSTGRES_HOME="/Applications/Postgres.app/Contents/Versions/latest/bin"
+#export POSTGRES_HOME="/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 #export PATH=$RBENV_HOME:$POSTGRES_HOME:$ANDROID_HOME:$PATH
-export PATH=$RBENV_HOME:$POSTGRES_HOME:$PATH
+#export PATH=$RBENV_HOME:$POSTGRES_HOME:$PATH
+export PATH=$RBENV_HOME:$PATH
 
 # Path to your oh-my-zsh installation.
 #export ZSH="/Users/sunpech/.oh-my-zsh"
