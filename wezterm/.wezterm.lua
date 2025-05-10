@@ -8,7 +8,7 @@ local config = wezterm.config_builder()
 
 -- Font
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
-config.font_size = 14.0
+config.font_size = 12.0
 
 -- Vertical divider line & all lines
 config.underline_thickness = '200%'
@@ -21,7 +21,7 @@ config.underline_thickness = '200%'
 -- Seti, Spiderman, The Hulk, Tokyo Night, Tokyo Night Moon, Twilight
 -- Twilight (dark) (terminal.sexy)
 -- Vs Code Dark+ (Gogh)
-config.color_scheme = "Tokyo Night"
+config.color_scheme = "Google Dark (base16)"
 
 -- Misc
 -- config.hide_tab_bar_if_only_one_tab = true
