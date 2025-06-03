@@ -21,7 +21,7 @@ config.underline_thickness = '200%'
 -- Seti, Spiderman, The Hulk, Tokyo Night, Tokyo Night Moon, Twilight
 -- Twilight (dark) (terminal.sexy)
 -- Vs Code Dark+ (Gogh)
-config.color_scheme = "Google Dark (base16)"
+config.color_scheme = "Dark+"
 
 -- Misc
 -- config.hide_tab_bar_if_only_one_tab = true

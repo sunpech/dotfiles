@@ -156,6 +156,8 @@ alias ls="eza --icons=always"
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
 alias cd="z"
+# ---- Youtube download (best video/audio) ----
+alias yt-download='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best" --merge-output-format mp4 --output "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=$1"'
 
 # rbenv
 if which rbenv > /dev/null; then
