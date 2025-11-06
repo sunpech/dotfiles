@@ -8,7 +8,8 @@ local config = wezterm.config_builder()
 
 -- Font
 config.font = wezterm.font("JetBrains Mono")
-config.font_size = 12.0
+config.font_size = 13.0
+config.line_height = 1.2
 
 -- Vertical divider line & all lines
 config.underline_thickness = '200%'
