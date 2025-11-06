@@ -90,6 +90,7 @@ You'll need to have these installed.
 * [Postgres.app](http://postgresapp.com/) - Postgres for Mac.
 * [Sourcetree](https://www.sourcetreeapp.com/) - Git GUI from Atlassian.
 * [homebrew](http://brew.sh/) - Mac package manager.
+* [JetBrains Mono font](https://www.jetbrains.com/lp/mono/)
 * [zoxide](https://github.com/ajeetdsouza/zoxide) - A smarter cd command.
 
 ### Homebrew Installs
@@ -118,7 +119,7 @@ brew install --cask wezterm
 
 ### Recommended Apps
 
-* [Sublime Text + Merge](https://www.sublimetext.com/).
+* [Sublime Text + Merge](https://www.sublimetext.com/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 I also have a more up to date repo, [Best Software List](https://github.com/sunpech/best_software_list).
