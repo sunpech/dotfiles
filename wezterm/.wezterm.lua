@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- Font
-config.font = wezterm.font("MesloLGS Nerd Font Mono")
+config.font = wezterm.font("JetBrains Mono")
 config.font_size = 12.0
 
 -- Vertical divider line & all lines
