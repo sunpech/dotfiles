@@ -90,7 +90,7 @@ You'll need to have these installed.
 * [Postgres.app](http://postgresapp.com/) - Postgres for Mac.
 * [Sourcetree](https://www.sourcetreeapp.com/) - Git GUI from Atlassian.
 * [homebrew](http://brew.sh/) - Mac package manager.
-* [JetBrains Mono font](https://www.jetbrains.com/lp/mono/)
+* [JetBrains Mono font](https://www.jetbrains.com/lp/mono/) - Great font for your terminal or IDE.
 * [zoxide](https://github.com/ajeetdsouza/zoxide) - A smarter cd command.
 
 ### Homebrew Installs
@@ -104,7 +104,7 @@ brew install neovim fd rg ast-grep lazygit
 
 #### Plugin and theme related
 ```
-brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k font-meslo-lg-nerd-font
+brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k
 ```
 
 #### Various packages
@@ -112,9 +112,14 @@ brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k font-mesl
 brew install node nvm openssl rbenv ruby-build wget vim tig rename ssh-copy-id rename toilet tree glances go hugo fastfetch yt-dlp fzf zoxide eza gitmoji cmatrix ffmpeg
 ```
 
-#### Wezterm
+#### Fonts
 ```
-brew install --cask wezterm
+brew install --cask font-meslo-lg-nerd-font font-jetbrains-mono-nerd-font font-fira-code
+```
+
+#### Terminals - Wezterm and Ghostty
+```
+brew install --cask wezterm ghostty
 ```
 
 ### Recommended Apps
