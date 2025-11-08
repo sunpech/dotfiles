@@ -7,7 +7,12 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- Font
-config.font = wezterm.font("JetBrains Mono")
+config.font = wezterm.font_with_fallback({
+  "JetBrainsMono Nerd Font",
+  "JetBrains Mono",
+  "MesloLGS Nerd Font Mono",
+  "Menlo",
+})
 config.font_size = 13.0
 config.line_height = 1.2
 
