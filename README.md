@@ -67,7 +67,7 @@ git submodule update
 
 Other commands:
 
-f you already cloned the repository without submodules, you can manually initialize and update them:
+If you already cloned the repository without submodules, you can manually initialize and update them:
 ```
 git submodule update --init --recursive
 ```
