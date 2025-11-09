@@ -103,7 +103,10 @@ config.tab_bar_style = {
 }
 
 config.window_padding = {
-  top = 0, right = 0, bottom = 0, left = 0,
+  left = 6,
+  right = 6,
+  top = 4,
+  bottom = 2,
 }
 
 -- ╭───────────────────────────────╮
