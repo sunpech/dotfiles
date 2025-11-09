@@ -1,6 +1,6 @@
 # Sunpech's dotfiles
 
-My dotfiles for macOS. This will help you get started setting up a fresh new Mac.
+My dotfiles for macOS. This will help you (me) get started setting up a fresh new Mac.
 
 I use [GNU stow](https://www.gnu.org/software/stow/) to manage symlinks for configurations.
 
@@ -44,8 +44,9 @@ After running stow above, you should be setup with your dotfiles. You may want t
 
 * [Alacritty](https://alacritty.org/) with [Alacritty themes](https://github.com/alacritty/alacritty-theme)
 * [iTerm2](http://www.iterm2.com/) with [iTerm2 color schemes](http://iterm2colorschemes.com/)
+* [Ghostty](https://ghostty.org) (homebrew cask available)
 * [Warp](https://www.warp.dev/)
-* [WezTerm](https://wezfurlong.org/wezterm/)
+* [WezTerm](https://wezfurlong.org/wezterm/) (homewbrew cask available)
 
 ## Z shell (zsh)
 
@@ -89,8 +90,8 @@ You'll need to have these installed.
 * [rbenv](https://github.com/sstephenson/rbenv) - For managing rubies.
 * [Postgres.app](http://postgresapp.com/) - Postgres for Mac.
 * [Sourcetree](https://www.sourcetreeapp.com/) - Git GUI from Atlassian.
+* [Sublime Merge](https://www.sublimemerge.com) - Git GUI.
 * [homebrew](http://brew.sh/) - Mac package manager.
-* [JetBrains Mono font](https://www.jetbrains.com/lp/mono/) - Great font for your terminal or IDE.
 * [zoxide](https://github.com/ajeetdsouza/zoxide) - A smarter cd command.
 
 ### Homebrew Installs
@@ -113,6 +114,7 @@ brew install node nvm openssl rbenv ruby-build wget vim tig rename ssh-copy-id r
 ```
 
 #### Fonts
+I'm a fan of [JetBrains Mono font](https://www.jetbrains.com/lp/mono/).
 ```
 brew install --cask font-meslo-lg-nerd-font font-jetbrains-mono-nerd-font font-fira-code
 ```
