@@ -109,6 +109,7 @@ config.window_padding = {
   bottom = 2,
 }
 
+
 -- ╭───────────────────────────────╮
 -- │ Effects & Performance Tweaks  │
 -- ╰───────────────────────────────╯
@@ -119,6 +120,27 @@ config.text_background_opacity = 1.0
 config.animation_fps = 120
 config.max_fps = 120
 config.front_end = "WebGpu" -- smoother animations and tab fades
+-- ╭───────────────────────────────╮
+-- │ Dynamic Tab Titles (Directory)│
+-- ╰───────────────────────────────╯
+wezterm.on("format-tab-title", function(tab)
+  local cwd = ""
+  local pane = tab.active_pane
+
+  if pane.current_working_dir then
+    cwd = tostring(pane.current_working_dir)
+    cwd = cwd:gsub("^file://", "")
+    cwd = cwd:gsub("%%(%x%x)", function(h) return string.char(tonumber(h, 16)) end)
+    cwd = cwd:gsub("[/\\]+$", "")
+    cwd = cwd:match("([^/\\]+)$") or cwd
+  end
+
+  local title = string.format("%d: %s", tab.tab_index + 1, cwd or "?")
+  if tab.is_active then
+    title = "★ " .. title
+  end
+  return { { Text = " " .. title .. " " } }
+end)
 
 -- ╭───────────────────────────────╮
 -- │ Return Configuration          │

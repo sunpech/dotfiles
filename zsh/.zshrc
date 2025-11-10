@@ -74,7 +74,13 @@ setopt hist_verify
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+#DISABLE_AUTO_TITLE="true"
+
+# Prevent zsh or Oh-My-Zsh from setting the window/tab title
+DISABLE_AUTO_TITLE="true"
+unset zle_bracketed_paste
+unset PROMPT_COMMAND
+
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
