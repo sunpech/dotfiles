@@ -147,7 +147,7 @@ plugins=(
 
 # Fix Open With - Clears out entries to rebuild again. source: https://osxdaily.com/2013/01/22/fix-open-with-menu-mac-os-x/
 alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
-alias py="/usr/local/bin/python3"
+alias python="python3"
 alias stree="/Applications/SourceTree.app/Contents/Resources/stree"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias smerge="/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge"
