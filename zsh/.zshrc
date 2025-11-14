@@ -5,25 +5,42 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Set editor
-export EDITOR=nvim
+# Use zsh path array to dedupe and control order
+typeset -U path PATH
 
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Ensure HOMEBREW_PREFIX exists
+export HOMEBREW_PREFIX="${HOMEBREW_PREFIX:-$(brew --prefix 2>/dev/null)}"
 
-#export ANDROID_HOME="$HOME/Library/Android/sdk/platform-tools"
-export RBENV_HOME="$HOME/.rbenv/bin"
-#export POSTGRES_HOME="/Applications/Postgres.app/Contents/Versions/latest/bin"
+# Homebrew bin/sbin first
+if [[ -x "$HOMEBREW_PREFIX/bin/brew" ]]; then
+  path=("$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin" $path)
+fi
 
-#export PATH=$RBENV_HOME:$POSTGRES_HOME:$ANDROID_HOME:$PATH
-#export PATH=$RBENV_HOME:$POSTGRES_HOME:$PATH
-export PATH=$RBENV_HOME:$PATH
+# Homebrew Python shims (so python3 is the brew one)
+if [[ -d "$HOMEBREW_PREFIX/opt/python/libexec/bin" ]]; then
+  path=("$HOMEBREW_PREFIX/opt/python/libexec/bin" $path)
+fi
 
-# Path to your oh-my-zsh installation.
-#export ZSH="/Users/sunpech/.oh-my-zsh"
+# Your editor
+export EDITOR="nvim"
 
-# Path to your new ohmyzsh installation.
-export ZSH="/Users/sunpech/.ohmyzsh"
+# rbenv (lets it manage its own shims; don’t hard-prepend ~/.rbenv/*)
+if command -v rbenv >/dev/null 2>&1; then
+  eval "$(rbenv init - zsh)"
+fi
+
+# NVM (brew-managed)
+export NVM_DIR="$HOME/.nvm"
+[[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ]] && . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+[[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ]] && . "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
+
+# Append your personal bin(s) last
+path+=("$HOME/bin" "/usr/local/bin")
+
+##### NVM (brew-managed) #####
+export NVM_DIR="$HOME/.nvm"
+[[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ]] && . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+[[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ]] && . "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -147,9 +164,6 @@ plugins=(
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Fix Open With - Clears out entries to rebuild again. source: https://osxdaily.com/2013/01/22/fix-open-with-menu-mac-os-x/
 alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
@@ -173,15 +187,6 @@ fi
 # powerlevel10k/powerlevel10k theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
-# heroku autocomplete setup
-#HEROKU_AC_ZSH_SETUP_PATH=/Users/sunpech/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
-
-# Node Version Manager
-# From brew install nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
-[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
