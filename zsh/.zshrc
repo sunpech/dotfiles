@@ -30,9 +30,16 @@ if command -v rbenv >/dev/null 2>&1; then
 fi
 
 # NVM (brew-managed)
+#export NVM_DIR="$HOME/.nvm"
+#[[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ]] && . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+#[[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ]] && . "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
 export NVM_DIR="$HOME/.nvm"
-[[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ]] && . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
-[[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ]] && . "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
+
+nvm() {
+  unset -f nvm
+  [[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ]] && . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+  command nvm "$@"
+}
 
 # Append your personal bin(s) last
 path+=("$HOME/bin" "/usr/local/bin")
@@ -179,15 +186,6 @@ alias cd="z"
 # ---- Youtube download (best video/audio) ----
 alias yt-download='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best" --merge-output-format mp4 --output "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=$1"'
 
-# rbenv
-if which rbenv > /dev/null; then
-  eval "$(rbenv init -)"
-fi
-
-# powerlevel10k/powerlevel10k theme
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
 # completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
@@ -197,13 +195,22 @@ bindkey '^I'   complete-word       # tab          | complete
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 bindkey '^I^I' autosuggest-accept  # tab tab      | autosuggest
 
-# Source
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Set up powerlevel10k
 # See: https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#homebrew
 # creates ~/.p10k.zsh file with settings
 source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+# powerlevel10k/powerlevel10k theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+# Zsh Autosuggestions
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+ZSH_AUTOSUGGEST_STRATEGY=(history)
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Zsh Syntax Highlighting MUST BE LAST
+#source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
