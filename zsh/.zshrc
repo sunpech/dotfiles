@@ -214,3 +214,5 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Zsh Syntax Highlighting MUST BE LAST
 #source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Added by Antigravity
+export PATH="/Users/sunpech/.antigravity/antigravity/bin:$PATH"
