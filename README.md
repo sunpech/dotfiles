@@ -8,7 +8,7 @@ I use [GNU stow](https://www.gnu.org/software/stow/) to manage symlinks for conf
 
 You need to run z shell (zsh), which is default since macOS Catalina, in 2019.
 
-You'll need to have [homebrew](https://brew.sh/) installed. 
+You'll need to have [homebrew](https://brew.sh/) installed.
 
 Then you'll need git and stow to install this dotfiles repository.
 
@@ -30,9 +30,9 @@ cd ~/.dotfiles
 
 ### Run stow
 
-Use stow to create symlinks for config files. 
+Use stow to create symlinks for config files.
 
-I disagree with running ```stow .``` at the top of the project directory to symlink everything. I think it's better to organize by directory where it's more modular, which is the approach of this repo.
+I disagree with running `stow .` at the top of the project directory to symlink everything. I think it's better to organize by directory where it's more modular, which is the approach of this repo.
 
 ```
 stow zsh ohmyzsh alacritty powerlevel10k nvim vim git wezterm
@@ -42,11 +42,11 @@ After running stow above, you should be setup with your dotfiles. You may want t
 
 ## Terminals
 
-* [Alacritty](https://alacritty.org/) with [Alacritty themes](https://github.com/alacritty/alacritty-theme)
-* [iTerm2](http://www.iterm2.com/) with [iTerm2 color schemes](http://iterm2colorschemes.com/)
-* [Ghostty](https://ghostty.org) (homebrew cask available)
-* [Warp](https://www.warp.dev/)
-* [WezTerm](https://wezfurlong.org/wezterm/) (homewbrew cask available)
+- [Alacritty](https://alacritty.org/) with [Alacritty themes](https://github.com/alacritty/alacritty-theme)
+- [iTerm2](http://www.iterm2.com/) with [iTerm2 color schemes](http://iterm2colorschemes.com/)
+- [Ghostty](https://ghostty.org) (homebrew cask available)
+- [Warp](https://www.warp.dev/)
+- [WezTerm](https://wezfurlong.org/wezterm/) (homewbrew cask available)
 
 ## Z shell (zsh)
 
@@ -55,6 +55,7 @@ I use [ohmyz.sh](https://ohmyz.sh/) (Also see: [ohmyzsh Github](https://github.c
 I no longer use bash, or [Fish Shell](https://fishshell.com/) with [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish).
 
 ## Submodules
+
 There are 2 submodules in this project:
 
 1. [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
@@ -69,16 +70,18 @@ git submodule update
 Other commands:
 
 If you already cloned the repository without submodules, you can manually initialize and update them:
+
 ```
 git submodule update --init --recursive
 ```
 
 After pulling changes to the main repository, you may also need to pull updates for submodules if they have changed. You can use the following command:
+
 ```
 git submodule update --remote --merge
 ```
 
-**Note**: The ohmyzsh github has the default location at ```~/.oh-my-zsh```. I believe the old project was oh-my-zsh (under robbyrussell), before it got moved to ohmyzsh. I prefer ```~/.ohmyzsh``` to keep the naming structure.
+**Note**: The ohmyzsh github has the default location at `~/.oh-my-zsh`. I believe the old project was oh-my-zsh (under robbyrussell), before it got moved to ohmyzsh. I prefer `~/.ohmyzsh` to keep the naming structure.
 
 ## Apps
 
@@ -86,54 +89,61 @@ git submodule update --remote --merge
 
 You'll need to have these installed.
 
-* [eza](https://github.com/eza-community/eza) - A modern, maintained replacement for ls.
-* [rbenv](https://github.com/sstephenson/rbenv) - For managing rubies.
-* [Postgres.app](http://postgresapp.com/) - Postgres for Mac.
-* [Sourcetree](https://www.sourcetreeapp.com/) - Git GUI from Atlassian.
-* [Sublime Merge](https://www.sublimemerge.com) - Git GUI.
-* [homebrew](http://brew.sh/) - Mac package manager.
-* [zoxide](https://github.com/ajeetdsouza/zoxide) - A smarter cd command.
+- [eza](https://github.com/eza-community/eza) - A modern, maintained replacement for ls.
+- [rbenv](https://github.com/sstephenson/rbenv) - For managing rubies.
+- [Postgres.app](http://postgresapp.com/) - Postgres for Mac.
+- [Sourcetree](https://www.sourcetreeapp.com/) - Git GUI from Atlassian.
+- [Sublime Merge](https://www.sublimemerge.com) - Git GUI.
+- [homebrew](http://brew.sh/) - Mac package manager.
+- [zoxide](https://github.com/ajeetdsouza/zoxide) - A smarter cd command.
 
 ### Homebrew Installs
 
 These are some other important homebrew packages.
 
 #### Neovim related
+
 ```
 brew install neovim fd rg ast-grep lazygit
 ```
 
 #### Plugin and theme related
+
 ```
 brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k
 ```
 
 #### Various packages
+
 ```
 brew install node nvm openssl rbenv ruby-build wget vim tig rename ssh-copy-id rename toilet tree glances go hugo fastfetch yt-dlp fzf zoxide eza gitmoji cmatrix ffmpeg exiftool
 ```
 
 #### Fonts
+
 I'm a fan of [JetBrains Mono font](https://www.jetbrains.com/lp/mono/).
+
 ```
 brew install --cask font-meslo-lg-nerd-font font-jetbrains-mono-nerd-font font-fira-code
 ```
 
 #### Terminals - Wezterm and Ghostty
+
 ```
 brew install --cask wezterm ghostty
 ```
 
 ### Recommended Apps
 
-* [Sublime Text + Merge](https://www.sublimetext.com/)
-* [Visual Studio Code](https://code.visualstudio.com/)
+- [Google Antigravity](https://antigravity.google)
+- [Sublime Text + Merge](https://www.sublimetext.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 I also have a more up to date repo, [Best Software List](https://github.com/sunpech/best_software_list).
 
 ### Misc
 
-You may want to: 
+You may want to:
 
 1. [Change your computer’s name or local hostname on Mac](https://support.apple.com/guide/mac-help/change-computers-local-hostname-mac-mchlp2322/mac#:~:text=On%20your%20Mac%2C%20choose%20Apple,Click%20About.&text=Select%20the%20current%20computer%20name%2C%20then%20type%20a%20new%20name.)
 
@@ -151,6 +161,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 
 Other set up links:
 
-* [Setup bash with homebrew](https://johndjameson.com/blog/updating-your-shell-with-homebrew/)
-* [Setup Oh My Fish](https://github.com/oh-my-fish/oh-my-fish)
-* [Setup Alacritty](https://www.josean.com/posts/how-to-setup-alacritty-terminal)
+- [Setup bash with homebrew](https://johndjameson.com/blog/updating-your-shell-with-homebrew/)
+- [Setup Oh My Fish](https://github.com/oh-my-fish/oh-my-fish)
+- [Setup Alacritty](https://www.josean.com/posts/how-to-setup-alacritty-terminal)
