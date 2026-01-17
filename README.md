@@ -153,10 +153,11 @@ You may want to:
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
 ```
 
-3. Prevent macOS from Creating .DS_Store on Network Drives
+3. Prevent macOS from Creating .DS_Store on Network and USB/external Drives
 
 ```
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
 ```
 
 Other set up links:
