@@ -46,7 +46,7 @@ After running stow above, you should be setup with your dotfiles. You may want t
 - [iTerm2](http://www.iterm2.com/) with [iTerm2 color schemes](http://iterm2colorschemes.com/)
 - [Ghostty](https://ghostty.org) (homebrew cask available)
 - [Warp](https://www.warp.dev/)
-- [WezTerm](https://wezfurlong.org/wezterm/) (homewbrew cask available)
+- [WezTerm](https://wezfurlong.org/wezterm/) (homebrew cask available)
 
 ## Z shell (zsh)
 
