@@ -36,7 +36,7 @@ fi
 path+=("$HOME/bin")
 path+=("/usr/local/bin") # Legacy Fallback
 # 4. Antigravity
-export PATH="/Users/sunpech/.antigravity/antigravity/bin:$PATH"
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 # =============================================================================
 # SHELL OPTIONS & HISTORY
 # =============================================================================
@@ -44,10 +44,11 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 # History settings
-setopt append_history           # Append to history file immediately
-setopt share_history            # Share history between sessions
+setopt share_history            # Share history between sessions (implies inc_append_history)
 setopt hist_expire_dups_first   # Expire duplicates first when trimming
 setopt hist_ignore_dups         # Ignore consecutive duplicates
+setopt hist_ignore_space        # Don't save commands starting with space (useful for secrets)
+setopt hist_reduce_blanks       # Strip extra blanks from history
 setopt hist_verify              # Show command with history expansion to user before running
 # Prevent zsh from setting the window/tab title
 DISABLE_AUTO_TITLE="true"
@@ -104,21 +105,15 @@ fi
 # Lazy load NVM for faster startup
 export NVM_DIR="$HOME/.nvm"
 nvm() {
-  unset -f nvm
+  unset -f nvm node npm
   [[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ]] && . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
   command nvm "$@"
 }
+node() { unset -f node; nvm use default >/dev/null 2>&1; node "$@"; }
+npm()  { unset -f npm;  nvm use default >/dev/null 2>&1; npm "$@"; }
 # --- Zoxide ---
-# Ensure zoxide is in the path or specify full path if needed, but the PATH fix above should handle it.
 if command -v zoxide >/dev/null 2>&1; then
   eval "$(zoxide init zsh)"
-else
-  # Fallback: Try straight absolute path if PATH is still not catching it
-  if [[ -x /opt/homebrew/bin/zoxide ]]; then
-    eval "$(/opt/homebrew/bin/zoxide init zsh)"
-  else
-    echo "Zoxide not found. Please ensure it is installed."
-  fi
 fi
 # --- FZF ---
 # Set up fzf key bindings and fuzzy completion
@@ -127,9 +122,9 @@ if command -v fzf >/dev/null 2>&1; then
 fi
 # --- Zsh Autosuggestions ---
 ZSH_AUTOSUGGEST_USE_ASYNC=1
-ZSH_AUTOSUGGEST_STRATEGY=(history)
-if [[ -f "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
-  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+if [[ -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
+  source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 fi
 # --- Zsh Syntax Highlighting ---
 # Ensure this is sourced AFTER compinit/etc.
@@ -138,8 +133,8 @@ fi
 # THEME (Powerlevel10k)
 # =============================================================================
 # See: https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#homebrew
-if [[ -f "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" ]]; then
-  source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+if [[ -f "$HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme" ]]; then
+  source "$HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme"
 fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
