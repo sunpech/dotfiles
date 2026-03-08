@@ -56,6 +56,16 @@ unset PROMPT_COMMAND
 # Uncomment if pasting URLs is messy
 # DISABLE_MAGIC_FUNCTIONS=true
 # =============================================================================
+# COMPLETION
+# =============================================================================
+autoload -Uz compinit
+# Regenerate compdump at most once per day; use cached dump otherwise
+if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
+# =============================================================================
 # ALIASES
 # =============================================================================
 # System & General
