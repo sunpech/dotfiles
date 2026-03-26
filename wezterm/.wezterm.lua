@@ -36,22 +36,6 @@ config.underline_position = -2
 config.color_scheme = "Dark+"
 
 config.colors = {
-  foreground = "#D4D4D4",
-  background = "#1E1E1E",
-  cursor_bg = "#AEAFAD",
-  cursor_border = "#AEAFAD",
-  cursor_fg = "#1E1E1E",
-  selection_bg = "#264F78",
-  selection_fg = "#D4D4D4",
-
-  ansi = {
-    "#000000", "#CD3131", "#0DBC79", "#E5E510",
-    "#2472C8", "#BC3FBC", "#11A8CD", "#E5E5E5",
-  },
-  brights = {
-    "#666666", "#F14C4C", "#23D18B", "#F5F543",
-    "#3B8EEA", "#D670D6", "#29B8DB", "#E5E5E5",
-  },
 
   tab_bar = {
     background = "#1E1E1E",
