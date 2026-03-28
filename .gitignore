@@ -4,26 +4,7 @@
 *~
 *.bak
 *.out
-*.swp
-*.DS_Store
+.DS_Store
 *.lock
 
-*.rbc
-*.sassc
-.sass-cache
-capybara-*.html
-.rspec
-/.bundle
-/vendor/bundle
-/log/*
-/tmp/*
-/db/*.sqlite3
-/public/system/*
-/coverage/
-/spec/tmp/*
 **.orig
-rerun.txt
-.idea/
-pg_upgrade*
-\#*#
-/git-aware-prompt/
