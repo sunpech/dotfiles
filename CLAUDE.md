@@ -15,7 +15,7 @@ mv dotfiles ~/.dotfiles
 cd ~/.dotfiles
 
 # Symlink all configs
-stow zsh ohmyzsh alacritty powerlevel10k nvim vim git wezterm
+stow zsh ohmyzsh alacritty powerlevel10k nvim vim git wezterm ghostty
 
 # Update submodules after pulling
 git submodule update --remote --merge
@@ -35,6 +35,7 @@ Each directory is a stow package — files inside mirror the path structure rela
 - `powerlevel10k/` — `.p10k.zsh` powerlevel10k prompt config
 - `ohmyzsh/` — oh-my-zsh installation (git submodule)
 - `wezterm/` — WezTerm terminal config
+- `ghostty/` — Ghostty terminal config
 
 ## Submodules
 
@@ -49,4 +50,5 @@ Two git submodules are included:
 - **Neovim**: LazyVim-based; add plugins in `nvim/.config/nvim/lua/plugins/`; `example.lua` is disabled by default (`if true then return {} end`)
 - **Font**: MesloLGS Nerd Font Mono (required for powerlevel10k glyphs and alacritty)
 - **Alacritty**: opacity 0.7, blur enabled, `option_as_alt = "Both"`, `github_dark` theme
+- **Ghostty**: JetBrainsMono Nerd Font, opacity 0.9, blur enabled, `Dark+` theme
 - **git status alias**: `gst` runs `git status --ignore-submodules` to avoid noise from the ohmyzsh submodule

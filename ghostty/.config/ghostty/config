@@ -1,0 +1,25 @@
+# https://ghostty.org/docs/config/reference
+
+font-family = JetBrainsMono Nerd Font
+font-size = 13
+cursor-style = block
+cursor-style-blink = false
+#cursor-invert-fg-bg = true
+scrollback-limit = 10000
+
+theme = Dark+
+
+# --- From WezTerm ---
+
+# Font fallbacks
+font-family = JetBrains Mono
+font-family = MesloLGS Nerd Font Mono
+font-family = Menlo
+
+adjust-cell-height = 20%
+
+background-opacity = 0.9
+background-blur-radius = 20
+
+window-padding-x = 6
+window-padding-y = 4
