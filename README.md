@@ -35,7 +35,7 @@ Use stow to create symlinks for config files.
 I disagree with running `stow .` at the top of the project directory to symlink everything. I think it's better to organize by directory where it's more modular, which is the approach of this repo.
 
 ```
-stow zsh ohmyzsh alacritty powerlevel10k nvim vim git wezterm
+stow zsh ohmyzsh alacritty powerlevel10k nvim vim git wezterm ghostty
 ```
 
 After running stow above, you should be setup with your dotfiles. You may want to install extras, or even update some submodules-- see sections below.
@@ -43,16 +43,12 @@ After running stow above, you should be setup with your dotfiles. You may want t
 ## Terminals
 
 - [Alacritty](https://alacritty.org/) with [Alacritty themes](https://github.com/alacritty/alacritty-theme)
-- [iTerm2](http://www.iterm2.com/) with [iTerm2 color schemes](http://iterm2colorschemes.com/)
 - [Ghostty](https://ghostty.org) (homebrew cask available)
-- [Warp](https://www.warp.dev/)
 - [WezTerm](https://wezfurlong.org/wezterm/) (homebrew cask available)
 
 ## Z shell (zsh)
 
 I use [ohmyz.sh](https://ohmyz.sh/) (Also see: [ohmyzsh Github](https://github.com/ohmyzsh/ohmyzsh)) and [powerlevel10k theme](https://github.com/romkatv/powerlevel10k).
-
-I no longer use bash, or [Fish Shell](https://fishshell.com/) with [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish).
 
 ## Submodules
 
@@ -61,13 +57,11 @@ There are 2 submodules in this project:
 1. [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 2. [alacritty-theme](https://github.com/alacritty/alacritty-theme)
 
-Be sure to read [this](https://stackoverflow.com/questions/11420701/git-submodule-is-returning-blank/40426513). In short, run:
+If submodules appear empty after cloning, run:
 
 ```
 git submodule update
 ```
-
-Other commands:
 
 If you already cloned the repository without submodules, you can manually initialize and update them:
 
@@ -159,9 +153,3 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
 ```
-
-Other set up links:
-
-- [Setup bash with homebrew](https://johndjameson.com/blog/updating-your-shell-with-homebrew/)
-- [Setup Oh My Fish](https://github.com/oh-my-fish/oh-my-fish)
-- [Setup Alacritty](https://www.josean.com/posts/how-to-setup-alacritty-terminal)
