@@ -9,16 +9,12 @@ Personal dotfiles for macOS managed with [GNU stow](https://www.gnu.org/software
 ## Setup Commands
 
 ```bash
-# Clone with submodules
-git clone --recurse-submodules git@github.com:sunpech/dotfiles.git
+git clone git@github.com:sunpech/dotfiles.git
 mv dotfiles ~/.dotfiles
 cd ~/.dotfiles
 
 # Symlink all configs
-stow zsh alacritty powerlevel10k nvim vim git wezterm ghostty
-
-# Update submodules after pulling
-git submodule update --remote --merge
+stow zsh powerlevel10k nvim vim git wezterm ghostty
 ```
 
 ## Repository Structure
@@ -31,22 +27,14 @@ Each directory is a stow package — files inside mirror the path structure rela
 - `git-misc/` — git completion and prompt scripts (bash/zsh)
 - `nvim/` — Neovim config using [LazyVim](https://lazyvim.github.io/) starter template
 - `vim/` — Vim config with Pathogen plugin manager and a large collection of color schemes
-- `alacritty/` — Alacritty terminal config; uses `github_dark` theme from the alacritty-theme submodule
 - `powerlevel10k/` — `.p10k.zsh` powerlevel10k prompt config
 - `wezterm/` — WezTerm terminal config
 - `ghostty/` — Ghostty terminal config
-
-## Submodules
-
-One git submodule is included:
-1. `alacritty/.config/alacritty/themes` — [alacritty/alacritty-theme](https://github.com/alacritty/alacritty-theme)
 
 ## Key Details
 
 - **Shell**: zsh (primary), bash configs retained but no longer actively used
 - **Prompt**: powerlevel10k theme via Homebrew
 - **Neovim**: LazyVim-based; add plugins in `nvim/.config/nvim/lua/plugins/`; `example.lua` is disabled by default (`if true then return {} end`)
-- **Font**: MesloLGS Nerd Font Mono (required for powerlevel10k glyphs and alacritty)
-- **Alacritty**: opacity 0.7, blur enabled, `option_as_alt = "Both"`, `github_dark` theme
+- **Font**: MesloLGS Nerd Font Mono (required for powerlevel10k glyphs)
 - **Ghostty**: JetBrainsMono Nerd Font, opacity 0.9, blur enabled, `Dark+` theme
-- **git status alias**: `gst` runs `git status --ignore-submodules` to avoid noise from the alacritty-theme submodule

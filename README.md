@@ -35,38 +35,19 @@ Use stow to create symlinks for config files.
 I disagree with running `stow .` at the top of the project directory to symlink everything. I think it's better to organize by directory where it's more modular, which is the approach of this repo.
 
 ```
-stow zsh alacritty powerlevel10k nvim vim git wezterm ghostty
+stow zsh powerlevel10k nvim vim git wezterm ghostty
 ```
 
-After running stow above, you should be setup with your dotfiles. You may want to install extras, or even update some submodules-- see sections below.
+After running stow above, you should be setup with your dotfiles.
 
 ## Terminals
 
-- [Alacritty](https://alacritty.org/) with [Alacritty themes](https://github.com/alacritty/alacritty-theme)
 - [Ghostty](https://ghostty.org) (homebrew cask available)
 - [WezTerm](https://wezfurlong.org/wezterm/) (homebrew cask available)
 
 ## Z shell (zsh)
 
 Uses [powerlevel10k theme](https://github.com/romkatv/powerlevel10k) and zsh-autosuggestions, both installed via Homebrew.
-
-## Submodules
-
-There is 1 submodule in this project:
-
-1. [alacritty-theme](https://github.com/alacritty/alacritty-theme)
-
-If the submodule appears empty after cloning, run:
-
-```
-git submodule update --init --recursive
-```
-
-After pulling changes to the main repository, you may also need to pull updates for submodules if they have changed. You can use the following command:
-
-```
-git submodule update --remote --merge
-```
 
 ## Apps
 
