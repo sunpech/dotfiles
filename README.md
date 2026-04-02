@@ -35,7 +35,7 @@ Use stow to create symlinks for config files.
 I disagree with running `stow .` at the top of the project directory to symlink everything. I think it's better to organize by directory where it's more modular, which is the approach of this repo.
 
 ```
-stow zsh ohmyzsh alacritty powerlevel10k nvim vim git wezterm ghostty
+stow zsh alacritty powerlevel10k nvim vim git wezterm ghostty
 ```
 
 After running stow above, you should be setup with your dotfiles. You may want to install extras, or even update some submodules-- see sections below.
@@ -48,22 +48,15 @@ After running stow above, you should be setup with your dotfiles. You may want t
 
 ## Z shell (zsh)
 
-I use [ohmyz.sh](https://ohmyz.sh/) (Also see: [ohmyzsh Github](https://github.com/ohmyzsh/ohmyzsh)) and [powerlevel10k theme](https://github.com/romkatv/powerlevel10k).
+Uses [powerlevel10k theme](https://github.com/romkatv/powerlevel10k) and zsh-autosuggestions, both installed via Homebrew.
 
 ## Submodules
 
-There are 2 submodules in this project:
+There is 1 submodule in this project:
 
-1. [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
-2. [alacritty-theme](https://github.com/alacritty/alacritty-theme)
+1. [alacritty-theme](https://github.com/alacritty/alacritty-theme)
 
-If submodules appear empty after cloning, run:
-
-```
-git submodule update
-```
-
-If you already cloned the repository without submodules, you can manually initialize and update them:
+If the submodule appears empty after cloning, run:
 
 ```
 git submodule update --init --recursive
@@ -74,8 +67,6 @@ After pulling changes to the main repository, you may also need to pull updates 
 ```
 git submodule update --remote --merge
 ```
-
-**Note**: The ohmyzsh github has the default location at `~/.oh-my-zsh`. I believe the old project was oh-my-zsh (under robbyrussell), before it got moved to ohmyzsh. I prefer `~/.ohmyzsh` to keep the naming structure.
 
 ## Apps
 
