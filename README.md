@@ -35,7 +35,7 @@ Use stow to create symlinks for config files.
 I disagree with running `stow .` at the top of the project directory to symlink everything. I think it's better to organize by directory where it's more modular, which is the approach of this repo.
 
 ```
-stow zsh powerlevel10k nvim vim git wezterm ghostty
+stow zsh powerlevel10k starship nvim vim git wezterm ghostty
 ```
 
 After running stow above, you should be setup with your dotfiles.
@@ -47,7 +47,7 @@ After running stow above, you should be setup with your dotfiles.
 
 ## Z shell (zsh)
 
-Uses [powerlevel10k theme](https://github.com/romkatv/powerlevel10k) and zsh-autosuggestions, both installed via Homebrew.
+Uses [powerlevel10k](https://github.com/romkatv/powerlevel10k) or [Starship](https://github.com/starship/starship), and zsh-autosuggestions, all installed via Homebrew.
 
 ## Apps
 
@@ -76,7 +76,7 @@ brew install neovim fd rg ast-grep lazygit
 #### Plugin and theme related
 
 ```
-brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k
+brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k starship
 ```
 
 #### Various packages

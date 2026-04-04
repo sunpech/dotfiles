@@ -1,0 +1,157 @@
+# ~/.config/starship.toml
+# Recreates the p10k powerline style from screenshot:
+#   [~/.dotfiles] [develop !1 ?1] ············· [system node] [09:53:22 AM]
+#   >
+#
+# Requires a Nerd Font with powerline glyphs (MesloLGS NF, JetBrains Mono NF, etc.)
+
+# ── Global ────────────────────────────────────────────────────────────────────
+
+add_newline = true
+command_timeout = 1000
+
+# ── Prompt layout ─────────────────────────────────────────────────────────────
+# Left:  dir segment → git segment → fill dots
+# Right: node context → time
+# Line 2: character (>)
+
+format = """
+[](fg:dir_bg)\
+$directory\
+[](fg:dir_bg bg:git_bg)\
+$git_branch\
+$git_status\
+[](fg:git_bg)\
+$fill\
+$cmd_duration\
+$line_break\
+$character"""
+
+right_format = """$nodejs$python$rust$golang[](fg:ctx_bg)$time[](fg:time_bg)"""
+
+# ── Palette ───────────────────────────────────────────────────────────────────
+
+palette = "p10k_clone"
+
+[palettes.p10k_clone]
+dir_bg    = "#4285F4"   # Google Blue  — directory segment
+dir_fg    = "#ffffff"
+git_bg    = "#34A853"   # Google Green — git segment
+git_fg    = "#ffffff"
+ctx_bg    = "#EA4335"   # Google Red   — language context segment
+ctx_fg    = "#ffffff"
+time_bg   = "#FBBC05"   # Google Yellow — time segment
+time_fg   = "#1c1c1c"   # dark text on yellow for contrast
+fill_fg   = "#888888"   # mid-grey dots
+ok_green  = "#34A853"   # Google Green
+err_red   = "#EA4335"   # Google Red
+
+# ── Directory ─────────────────────────────────────────────────────────────────
+
+[directory]
+style = "bold fg:dir_fg bg:dir_bg"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+read_only = " 󰌾"
+read_only_style = "fg:err_red bg:dir_bg"
+
+# ── Git branch ────────────────────────────────────────────────────────────────
+
+[git_branch]
+style = "bold fg:git_fg bg:git_bg"
+symbol = ""            # no extra symbol — matches p10k lean look
+format = "[ $symbol$branch ]($style)"
+
+# ── Git status ────────────────────────────────────────────────────────────────
+# Matches p10k: !1 for modified, ?1 for untracked, +1 staged, ⇡/⇣ ahead/behind
+
+[git_status]
+style = "bold fg:git_fg bg:git_bg"
+format = '([$modified$untracked$staged$ahead_behind]($style) )'
+modified   = "!${count}"
+untracked  = "?${count}"
+staged     = "+${count}"
+ahead      = "⇡${count}"
+behind     = "⇣${count}"
+diverged   = "⇕⇡${ahead_count}⇣${behind_count}"
+stashed    = "≡"
+renamed    = "»${count}"
+deleted    = "✘${count}"
+conflicted = "~${count}"
+
+# ── Fill (the dotted line between left and right) ─────────────────────────────
+
+[fill]
+symbol = "·"
+style = "fg:fill_fg"
+
+# ── Right prompt: language context pill ──────────────────────────────────────
+# Shows whichever runtime is active — mirrors "system node" in your screenshot
+
+[nodejs]
+style = "fg:ctx_fg bg:ctx_bg"
+symbol = "node"
+format = "[ $symbol $version]($style)"
+detect_files = ["package.json", ".nvmrc", ".node-version"]
+detect_folders = ["node_modules"]
+version_format = ""           # hide version number for cleaner look
+
+[python]
+style = "fg:ctx_fg bg:ctx_bg"
+symbol = "python"
+format = '[ $symbol($version )(\($virtualenv\))]($style)'
+detect_extensions = ["py"]
+detect_files = ["pyproject.toml", "requirements.txt", ".python-version", "Pipfile"]
+version_format = ""
+
+[rust]
+style = "fg:ctx_fg bg:ctx_bg"
+symbol = "rust"
+format = "[ $symbol($version)]($style)"
+version_format = ""
+
+[golang]
+style = "fg:ctx_fg bg:ctx_bg"
+symbol = "go"
+format = "[ $symbol($version)]($style)"
+version_format = ""
+
+# ── Time ──────────────────────────────────────────────────────────────────────
+
+[time]
+disabled = false
+style = "fg:time_fg bg:time_bg"
+format = "[ $time ]($style)"
+time_format = "%I:%M:%S %p"   # matches "09:53:22 AM" from your screenshot
+
+# ── Command duration ──────────────────────────────────────────────────────────
+
+[cmd_duration]
+min_time = 2_000
+style = "bold yellow"
+format = "[took $duration ]($style)"
+
+# ── Prompt character ──────────────────────────────────────────────────────────
+
+[character]
+success_symbol = "[>](bold fg:ok_green)"
+error_symbol   = "[>](bold fg:err_red)"
+vimcmd_symbol  = "[<](bold fg:ctx_bg)"
+
+# ── Disabled / noisy modules ──────────────────────────────────────────────────
+
+[package]
+disabled = true
+
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[azure]
+disabled = true
+
+[docker_context]
+disabled = true
