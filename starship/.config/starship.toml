@@ -108,8 +108,9 @@ format = "[ $symbol$branch ]($style)"
 # Matches p10k: !1 for modified, ?1 for untracked, +1 staged, ⇡/⇣ ahead/behind
 
 [git_status]
-style = "bold fg:git_fg bg:git_bg"
-format = '([$modified$untracked$staged$ahead_behind]($style) )'
+style = "bold fg:white bg:err_red"
+# When dirty: green→red bubble inside the green block; hidden when clean
+format = '([](fg:git_bg bg:err_red)[ $all_status$ahead_behind ]($style)[](fg:err_red bg:git_bg))'
 modified   = "✎${count}"
 untracked  = "?${count}"
 staged     = "✚${count}"
