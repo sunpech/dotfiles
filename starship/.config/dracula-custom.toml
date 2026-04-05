@@ -79,7 +79,7 @@ Unknown = ''
 Windows = ''
 
 [directory]
-format = '[─](fg:current_line)[](fg:blue)[󰷏 ](fg:primary bg:blue)[](fg:blue bg:box)[ $read_only$truncation_symbol$path](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:blue)[󰉋 ](fg:primary bg:blue)[](fg:blue bg:box)[ $read_only$truncation_symbol$path](fg:foreground bg:box)[](fg:box)'
 home_symbol = " ~/"
 truncation_symbol = ' '
 truncation_length = 2
@@ -88,7 +88,7 @@ read_only_style = ''
 
 [git_branch]
 format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $branch](fg:foreground bg:box)'
-symbol = ' '
+symbol = ' '
 
 [git_status]
 format = '[( $all_status)](fg:foreground bg:box)[](fg:box)'
