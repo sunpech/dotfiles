@@ -42,36 +42,41 @@ stow zsh powerlevel10k starship nvim vim git wezterm ghostty
 
 After running stow above, you should be setup with your dotfiles.
 
-## Terminals
+## Applications
+
+### Terminals
 
 Homebrew cask available for these.
 
 - [Ghostty](https://ghostty.org)
 - [WezTerm](https://wezfurlong.org/wezterm/)
 
-## Z shell (zsh) Customizations
+```
+brew install --cask wezterm ghostty
+```
+
+### Z shell (zsh) Customizations
 
 Installed via homebrew.
 
 * [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 * [Starship](https://github.com/starship/starship)
-* zsh-autosuggestions
+* zsh-autosuggestions and zsh-syntax-highlighting
 
-## Apps
+```
+brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k starship
+```
 
-### Apps paths used in dotfiles
+### Applicaiton paths used in dotfiles
 
 You'll need to have these installed.
 
 - [eza](https://github.com/eza-community/eza) - A modern, maintained replacement for ls.
 - [rbenv](https://github.com/sstephenson/rbenv) - For managing rubies.
-- [Postgres.app](http://postgresapp.com/) - Postgres for Mac.
-- [Sourcetree](https://www.sourcetreeapp.com/) - Git GUI from Atlassian.
-- [Sublime Merge](https://www.sublimemerge.com) - Git GUI.
 - [homebrew](http://brew.sh/) - Mac package manager.
 - [zoxide](https://github.com/ajeetdsouza/zoxide) - A smarter cd command.
 
-### Homebrew Installs
+### Other Homebrew Installs
 
 These are some other important homebrew packages.
 
@@ -79,12 +84,6 @@ These are some other important homebrew packages.
 
 ```
 brew install neovim fd rg ast-grep lazygit
-```
-
-#### Plugin and theme related
-
-```
-brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k starship
 ```
 
 #### Various packages
@@ -101,21 +100,20 @@ I'm a fan of [JetBrains Mono font](https://www.jetbrains.com/lp/mono/).
 brew install --cask font-meslo-lg-nerd-font font-jetbrains-mono-nerd-font font-fira-code
 ```
 
-#### Terminals - Wezterm and Ghostty
+### Recommended Applications
 
-```
-brew install --cask wezterm ghostty
-```
-
-### Recommended Apps
-
-- [Google Antigravity](https://antigravity.google)
-- [Sublime Text + Merge](https://www.sublimetext.com/)
-- [Visual Studio Code](https://code.visualstudio.com/)
+- [Git Fork](https://git-fork.com/) - A fast and friendly git client.
+- [Github Desktop](https://desktop.github.com/download/) - Github Git GUI.
+- [Google Antigravity](https://antigravity.google) - Google's AI IDE.
+- [Microsoft Visual Studio Code](https://code.visualstudio.com/) - Microsoft's AI IDE.
+- [pgAdmin](https://www.pgadmin.org/) - Popular PostgreSQL admin tool.
+- [Postgres.app](http://postgresapp.com/) - Postgres for Mac.
+- [Sourcetree](https://www.sourcetreeapp.com/) - Git GUI from Atlassian.
+- [Sublime Text](https://www.sublimetext.com/) and [Sublime Merge](https://www.sublimemerge.com) - Text Editor and Git GUI.
 
 I also have a more up to date repo, [Best Software List](https://github.com/sunpech/best_software_list).
 
-### Misc
+## Misc
 
 You may want to:
 
