@@ -20,6 +20,8 @@ brew install git stow
 
 ### Clone repo (with submodules)
 
+There are currently no submodules.
+
 ```
 git clone --recurse-submodules git@github.com:sunpech/dotfiles.git
 
@@ -45,9 +47,11 @@ After running stow above, you should be setup with your dotfiles.
 - [Ghostty](https://ghostty.org) (homebrew cask available)
 - [WezTerm](https://wezfurlong.org/wezterm/) (homebrew cask available)
 
-## Z shell (zsh)
+## Z shell (zsh) Customizations
 
-Uses [powerlevel10k](https://github.com/romkatv/powerlevel10k) or [Starship](https://github.com/starship/starship), and zsh-autosuggestions, all installed via Homebrew.
+* [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+* [Starship](https://github.com/starship/starship)
+* zsh-autosuggestions, all installed via Homebrew.
 
 ## Apps
 
