@@ -44,14 +44,18 @@ After running stow above, you should be setup with your dotfiles.
 
 ## Terminals
 
-- [Ghostty](https://ghostty.org) (homebrew cask available)
-- [WezTerm](https://wezfurlong.org/wezterm/) (homebrew cask available)
+Homebrew cask available for these.
+
+- [Ghostty](https://ghostty.org)
+- [WezTerm](https://wezfurlong.org/wezterm/)
 
 ## Z shell (zsh) Customizations
 
+Installed via homebrew.
+
 * [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 * [Starship](https://github.com/starship/starship)
-* zsh-autosuggestions, all installed via Homebrew.
+* zsh-autosuggestions
 
 ## Apps
 
