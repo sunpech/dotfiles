@@ -1,0 +1,199 @@
+# ~/.config/starship.toml
+# Recreates the p10k powerline style from screenshot:
+#   [~/.dotfiles] [develop !1 ?1] ············· [system node] [09:53:22 AM]
+#   >
+#
+# Requires a Nerd Font with powerline glyphs (MesloLGS NF, JetBrains Mono NF, etc.)
+
+# ── Global ────────────────────────────────────────────────────────────────────
+
+add_newline = true
+command_timeout = 1000
+
+# ── Prompt layout ─────────────────────────────────────────────────────────────
+# Left:  os → dir segment → git segment → fill dots
+# Right: node context → time
+# Line 2: character (❯)
+
+format = """
+[](fg:os_bg)\
+$os\
+[](fg:os_bg bg:dir_bg)\
+$directory\
+[](fg:dir_bg bg:git_bg)\
+$git_branch\
+$git_status\
+[](fg:git_bg)\
+$fill\
+$cmd_duration\
+$line_break\
+$character"""
+
+right_format = """$nodejs$python$rust$golang[](fg:ctx_bg)$time[](fg:time_bg)"""
+
+# ── Palette ───────────────────────────────────────────────────────────────────
+
+palette = "p10k_clone"
+
+[palettes.p10k_clone]
+os_bg     = "#555555"   # dark grey    — OS segment
+os_fg     = "#ffffff"   # white icon
+dir_bg    = "#4285F4"   # Google Blue  — directory segment
+dir_fg    = "#ffffff"
+git_bg    = "#34A853"   # Google Green — git segment
+git_fg    = "#ffffff"
+ctx_bg    = "#FBBC05"   # Google Yellow — language context segment
+ctx_fg    = "#000000"
+time_bg   = "#ffffff"   # white — time segment
+time_fg   = "#000000"   # black text
+fill_fg   = "#888888"   # mid-grey dots
+ok_green  = "#34A853"   # Google Green
+err_red   = "#EA4335"   # Google Red
+
+# ── OS identifier ────────────────────────────────────────────────────────────
+
+[os]
+disabled = false
+style = "bold fg:os_fg bg:os_bg"
+format = "[ $symbol ]($style)"
+
+[os.symbols]
+Alpine           = ""   # Alpine Linux
+Amazon           = ""   # Amazon Linux
+Android          = ""   # Android robot
+Arch             = ""   # Arch Linux
+CentOS           = ""   # CentOS
+Debian           = ""   # Debian swirl
+DragonFly        = ""   # DragonFly BSD
+EndeavourOS      = ""   # EndeavourOS
+Fedora           = ""   # Fedora infinity
+FreeBSD          = ""   # FreeBSD demon
+Garuda           = "🦅"       # Garuda Linux
+Gentoo           = ""   # Gentoo
+Linux            = ""   # Generic Linux penguin (Tux)
+Macos            = ""   # Apple
+Manjaro          = ""   # Manjaro logo
+Mint             = "󰂭"   # Linux Mint
+NetBSD           = ""   # NetBSD flag
+NixOS            = ""   # NixOS snowflake
+OpenBSD          = "󰈸"   # OpenBSD puffer fish
+openSUSE         = ""   # openSUSE
+Pop              = ""   # Pop!_OS
+Raspbian         = ""   # Raspberry Pi
+Redhat           = ""   # Red Hat
+RedHatEnterprise = "󰤛"   # RHEL
+Solus            = "ϕ"        # Solus
+Ubuntu           = ""   # Ubuntu circle
+Unknown          = ""   # Generic Linux penguin (Tux)
+Windows          = "󰍲"   # Windows flag
+
+# ── Directory ─────────────────────────────────────────────────────────────────
+
+[directory]
+style = "bold fg:dir_fg bg:dir_bg"
+format = "[ 󰉋 $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+read_only = " 󰌾"
+read_only_style = "fg:err_red bg:dir_bg"
+
+# ── Git branch ────────────────────────────────────────────────────────────────
+
+[git_branch]
+style = "bold fg:git_fg bg:git_bg"
+symbol = " "   #  git logo +  branch icon
+format = "[ $symbol$branch ]($style)"
+
+# ── Git status ────────────────────────────────────────────────────────────────
+# Matches p10k: !1 for modified, ?1 for untracked, +1 staged, ⇡/⇣ ahead/behind
+
+[git_status]
+style = "bold fg:white bg:err_red"
+# When dirty: green→red bubble inside the green block; hidden when clean
+format = '([](fg:git_bg bg:err_red)[ $all_status$ahead_behind ]($style)[](fg:err_red bg:git_bg))'
+modified   = "✎${count}"
+untracked  = "?${count}"
+staged     = "✚${count}"
+ahead      = "⇡${count}"
+behind     = "⇣${count}"
+diverged   = "⇕⇡${ahead_count}⇣${behind_count}"
+stashed    = "󰏗 "
+renamed    = "»${count}"
+deleted    = "✘${count}"
+conflicted = "󱢒 ${count}"
+
+# ── Fill (the dotted line between left and right) ─────────────────────────────
+
+[fill]
+symbol = "·"
+style = "fg:fill_fg"
+
+# ── Right prompt: language context pill ──────────────────────────────────────
+# Shows whichever runtime is active — mirrors "system node" in your screenshot
+
+[nodejs]
+style = "fg:ctx_fg bg:ctx_bg"
+symbol = " "
+format = "[ $symbol$version ]($style)"
+detect_files = ["package.json", ".nvmrc", ".node-version"]
+detect_folders = ["node_modules"]
+version_format = "v${raw}"
+
+[python]
+style = "fg:ctx_fg bg:ctx_bg"
+symbol = " "
+format = '[ $symbol$version(\($virtualenv\)) ]($style)'
+detect_extensions = ["py"]
+detect_files = ["pyproject.toml", "requirements.txt", ".python-version", "Pipfile"]
+version_format = "v${raw}"
+
+[rust]
+style = "fg:ctx_fg bg:ctx_bg"
+symbol = " "
+format = "[ $symbol$version ]($style)"
+version_format = "v${raw}"
+
+[golang]
+style = "fg:ctx_fg bg:ctx_bg"
+symbol = " "
+format = "[ $symbol$version ]($style)"
+version_format = "v${raw}"
+
+# ── Time ──────────────────────────────────────────────────────────────────────
+
+[time]
+disabled = false
+style = "fg:time_fg bg:time_bg"
+format = "[ 󰥔 $time ]($style)"
+time_format = "%I:%M:%S %p"   # matches "09:53:22 AM" from your screenshot
+
+# ── Command duration ──────────────────────────────────────────────────────────
+
+[cmd_duration]
+min_time = 2_000
+style = "bold yellow"
+format = "[took $duration ]($style)"
+
+# ── Prompt character ──────────────────────────────────────────────────────────
+
+[character]
+success_symbol = "[❯](bold fg:ok_green)"
+error_symbol   = "[❯](bold fg:err_red)"
+vimcmd_symbol  = "[❮](bold fg:ctx_bg)"
+
+# ── Disabled / noisy modules ──────────────────────────────────────────────────
+
+[package]
+disabled = true
+
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[azure]
+disabled = true
+
+[docker_context]
+disabled = true
