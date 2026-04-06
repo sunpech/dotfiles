@@ -86,8 +86,6 @@ alias smerge="/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge
 alias ag="antigravity"
 # Eza (better ls)
 alias ls="eza --icons=always"
-# Zoxide (better cd) - alias 'cd' to 'z'
-alias cd="z"
 # Youtube download
 alias yt-download='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best" --merge-output-format mp4 --output "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=$1"'
 # =============================================================================
@@ -119,7 +117,7 @@ node() { unset -f node; nvm use default >/dev/null 2>&1; node "$@"; }
 npm()  { unset -f npm;  nvm use default >/dev/null 2>&1; npm "$@"; }
 # --- Zoxide ---
 if command -v zoxide >/dev/null 2>&1; then
-  eval "$(zoxide init zsh)"
+  eval "$(zoxide init zsh --cmd cd)"
 fi
 # --- FZF ---
 # Set up fzf key bindings and fuzzy completion
