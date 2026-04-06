@@ -78,12 +78,10 @@ Unknown = ''
 Windows = ''
 
 [directory]
-format = '[─](fg:current_line)[](fg:blue)[󰉋 ](fg:primary bg:blue)[](fg:blue bg:box)[ $read_only$truncation_symbol$path](fg:foreground bg:box)[](fg:box)'
-home_symbol = " ~/"
-truncation_symbol = ' '
-truncation_length = 2
-read_only = '󱧵 '
-read_only_style = ''
+format = '[─](fg:current_line)[](fg:blue)[󰉋 ](fg:primary bg:blue)[](fg:blue bg:box)[ $read_only$path](fg:foreground bg:box)[](fg:box)'
+truncation_length = 0
+truncate_to_repo = true
+fish_style_pwd_dir_length = 1
 
 [git_branch]
 format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $branch](fg:foreground bg:box)'
