@@ -3,7 +3,6 @@
 # Source: https://github.com/starship/starship/discussions/1107?sort=top#discussioncomment-11130385
 #
 format = """
-[╭](fg:current_line)\
 $os\
 $directory\
 $git_branch\
@@ -131,8 +130,6 @@ format = '[─](fg:current_line)[](fg:yellow)[ ](fg:primary bg:yellow)[
 show_always = true
 
 [character]
-format = """
-[│](fg:current_line)
-[╰─$symbol](fg:current_line) """
-success_symbol = '[](fg:bold green)'
-error_symbol = '[](fg:bold red)'
+format = "\n$symbol "
+success_symbol = '[❯](fg:bold green)'
+error_symbol = '[❯](fg:bold red)'
