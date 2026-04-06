@@ -40,7 +40,7 @@ yellow       = '#FBBC05'   # Google Yellow
 gray         = '#9AA0A6'   # Google Grey — secondary UI text
 
 [os]
-format = '(fg:current_line)[](fg:red)[$symbol ](fg:primary bg:red)[](fg:red)'
+format = '(fg:current_line)[](fg:orange)[$symbol ](fg:primary bg:orange)[](fg:orange)'
 disabled = false
 
 [os.symbols]
@@ -89,6 +89,16 @@ symbol = ' '
 
 [git_status]
 format = '[( $all_status)](fg:foreground bg:box)[](fg:box)'
+conflicted = "✖"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?${count}"
+stashed = "$${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
 
 [nodejs]
 format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
