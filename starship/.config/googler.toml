@@ -11,6 +11,13 @@ $fill\
 $nodejs\
 $bun\
 $deno\
+$golang\
+$ruby\
+$python\
+$rust\
+$java\
+$docker_context\
+$terraform\
 $aws\
 $cmd_duration\
 $shell\
@@ -100,6 +107,10 @@ staged = "+${count}"
 renamed = "»${count}"
 deleted = "✘${count}"
 
+[fill]
+symbol = '─'
+style = 'fg:current_line'
+
 [nodejs]
 format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
 detect_files = ["package.json", ".node-version", "!bunfig.toml", "!bun.lockb"]
@@ -112,13 +123,38 @@ symbol = '🥟'
 format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
 symbol = '🦕'
 
+[golang]
+format = '[─](fg:current_line)[](fg:cyan)[󰓓 ](fg:primary bg:cyan)[](fg:cyan bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = '󰓓 '
+
+[ruby]
+format = '[─](fg:current_line)[](fg:red)[󰜭 ](fg:primary bg:red)[](fg:red bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = '󰜭 '
+
+[python]
+format = '[─](fg:current_line)[](fg:yellow)[󰌠 ](fg:primary bg:yellow)[](fg:yellow bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = '󰌠 '
+
+[rust]
+format = '[─](fg:current_line)[](fg:orange)[󱙗 ](fg:primary bg:orange)[](fg:orange bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = '󱙗 '
+
+[java]
+format = '[─](fg:current_line)[](fg:red)[󻈷 ](fg:primary bg:red)[](fg:red bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+symbol = '󻈷 '
+
+[docker_context]
+format = '[─](fg:current_line)[](fg:blue)[󰡨 ](fg:primary bg:blue)[](fg:blue bg:box)[ $context](fg:foreground bg:box)[](fg:box)'
+symbol = '󰡨 '
+
+[terraform]
+format = '[─](fg:current_line)[](fg:purple)[󱁢 ](fg:primary bg:purple)[](fg:purple bg:box)[ $workspace](fg:foreground bg:box)[](fg:box)'
+symbol = '󱁢 '
+
 [aws]
 format = '[─](fg:current_line)[](fg:purple)[$symbol](fg:primary bg:purple)[](fg:purple bg:box)[ $profile](fg:foreground bg:box)[](fg:box)'
 symbol = '☁️'
 
-[fill]
-symbol = '─'
-style = 'fg:current_line'
 
 [cmd_duration]
 min_time = 500
