@@ -35,7 +35,6 @@ foreground   = '#ffffff'   # Google white — text
 background   = '#202124'   # Google dark — background
 current_line = '#5F6368'   # Google mid grey — dashes / borders
 primary      = '#202124'   # Google dark — icon foreground
-box          = '#303134'   # Google dark grey — content box background
 blue         = '#4285F4'   # Google Blue
 cyan         = '#24C1E0'   # Google Teal
 green        = '#34A853'   # Google Green
@@ -85,7 +84,7 @@ Unknown = ''
 Windows = ''
 
 [directory]
-format = '[─](fg:current_line)[](fg:blue)[󰉋  $read_only$path](bold fg:foreground bg:blue)[](fg:blue bg:box)'
+format = '[─](fg:current_line)[](fg:blue)[󰉋  $read_only$path](bold fg:foreground bg:blue)[](fg:blue)'
 truncation_length = 0
 truncate_to_repo = true
 fish_style_pwd_dir_length = 1
@@ -95,7 +94,7 @@ format = '[─](fg:current_line)[](fg:green)[$symbol $branch](bold fg:foregro
 symbol = ' '
 
 [git_status]
-format = '[( $all_status$ahead_behind)](fg:foreground bg:green)[](fg:green bg:box)'
+format = '[( $all_status$ahead_behind)](fg:foreground bg:green)[](fg:green)'
 conflicted = "✖"
 ahead = "⇡${count}"
 behind = "⇣${count}"
@@ -112,67 +111,67 @@ symbol = '─'
 style = 'fg:current_line'
 
 [nodejs]
-format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green bg:box)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
 detect_files = ["package.json", ".node-version", "!bunfig.toml", "!bun.lockb"]
 symbol = 'node'
 
 [bun]
-format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green bg:box)'
-symbol = '🥟'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
+symbol = 'bun'
 
 [deno]
-format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green bg:box)'
-symbol = '🦕'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
+symbol = 'deno'
 
 [golang]
-format = '[─](fg:current_line)[](fg:cyan)[$symbol $version](fg:primary bg:cyan)[](fg:cyan bg:box)'
+format = '[─](fg:current_line)[](fg:cyan)[$symbol $version](fg:primary bg:cyan)[](fg:cyan)'
 symbol = 'go'
 
 [ruby]
-format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red bg:box)'
+format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
 symbol = 'ruby'
 
 [python]
-format = '[─](fg:current_line)[](fg:yellow)[$symbol $version](fg:primary bg:yellow)[](fg:yellow bg:box)'
+format = '[─](fg:current_line)[](fg:yellow)[$symbol $version](fg:primary bg:yellow)[](fg:yellow)'
 symbol = 'python'
 
 [rust]
-format = '[─](fg:current_line)[](fg:orange)[$symbol $version](fg:primary bg:orange)[](fg:orange bg:box)'
+format = '[─](fg:current_line)[](fg:orange)[$symbol $version](fg:primary bg:orange)[](fg:orange)'
 symbol = 'rust'
 
 [java]
-format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red bg:box)'
+format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
 symbol = 'java'
 
 [docker_context]
-format = '[─](fg:current_line)[](fg:blue)[$symbol $context](fg:primary bg:blue)[](fg:blue bg:box)'
-symbol = '󰡨 '
+format = '[─](fg:current_line)[](fg:blue)[$symbol $context](fg:primary bg:blue)[](fg:blue)'
+symbol = 'docker'
 
 [terraform]
-format = '[─](fg:current_line)[](fg:purple)[$symbol $workspace](fg:primary bg:purple)[](fg:purple bg:box)'
-symbol = '󱁢 '
+format = '[─](fg:current_line)[](fg:purple)[$symbol $workspace](fg:primary bg:purple)[](fg:purple)'
+symbol = 'tf'
 
 [aws]
-format = '[─](fg:current_line)[](fg:purple)[$symbol $profile](fg:primary bg:purple)[](fg:purple bg:box)'
-symbol = '☁️'
+format = '[─](fg:current_line)[](fg:purple)[$symbol $profile](fg:primary bg:purple)[](fg:purple)'
+symbol = 'aws'
 
 
 [cmd_duration]
 min_time = 500
-format = '[─](fg:current_line)[](fg:orange)[ $duration ](fg:primary bg:orange)[](fg:orange bg:box)'
+format = '[─](fg:current_line)[](fg:orange)[ $duration ](fg:primary bg:orange)[](fg:orange)'
 
 [shell]
-format = '[─](fg:current_line)[](fg:gray)[  $indicator](fg:primary bg:gray)[](fg:gray bg:box)'
+format = '[─](fg:current_line)[](fg:gray)[  $indicator](fg:primary bg:gray)[](fg:gray)'
 disabled = false
 
 [time]
-format = '[─](fg:current_line)[](fg:purple)[󰦖 $time](fg:foreground bg:purple)[](fg:purple bg:box)'
+format = '[─](fg:current_line)[](fg:purple)[󰦖 $time](fg:foreground bg:purple)[](fg:purple)'
 use_12hr = true
 time_format = '%I:%M:%S%P'
 disabled = false
 
 [username]
-format = '[─](fg:current_line)[](fg:yellow)[ $user](fg:primary bg:yellow)[](fg:yellow bg:box) '
+format = '[─](fg:current_line)[](fg:yellow)[ $user](fg:primary bg:yellow)[](fg:yellow) '
 show_always = true
 
 [character]
