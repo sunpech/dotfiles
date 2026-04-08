@@ -112,65 +112,67 @@ symbol = '─'
 style = 'fg:current_line'
 
 [nodejs]
-format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green bg:box)'
 detect_files = ["package.json", ".node-version", "!bunfig.toml", "!bun.lockb"]
+symbol = 'node'
 
 [bun]
-format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green bg:box)'
 symbol = '🥟'
 
 [deno]
-format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green bg:box)'
 symbol = '🦕'
 
 [golang]
-format = '[─](fg:current_line)[](fg:cyan)[󰓓 ](fg:primary bg:cyan)[](fg:cyan bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
-symbol = '󰓓 '
+format = '[─](fg:current_line)[](fg:cyan)[$symbol $version](fg:primary bg:cyan)[](fg:cyan bg:box)'
+symbol = 'go'
 
 [ruby]
-format = '[─](fg:current_line)[](fg:red)[󰜭 ](fg:primary bg:red)[](fg:red bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
-symbol = '󰜭 '
+format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red bg:box)'
+symbol = 'ruby'
 
 [python]
-format = '[─](fg:current_line)[](fg:yellow)[󰌠 ](fg:primary bg:yellow)[](fg:yellow bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
-symbol = '󰌠 '
+format = '[─](fg:current_line)[](fg:yellow)[$symbol $version](fg:primary bg:yellow)[](fg:yellow bg:box)'
+symbol = 'python'
 
 [rust]
-format = '[─](fg:current_line)[](fg:orange)[󱙗 ](fg:primary bg:orange)[](fg:orange bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
-symbol = '󱙗 '
+format = '[─](fg:current_line)[](fg:orange)[$symbol $version](fg:primary bg:orange)[](fg:orange bg:box)'
+symbol = 'rust'
 
 [java]
-format = '[─](fg:current_line)[](fg:red)[󻈷 ](fg:primary bg:red)[](fg:red bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
-symbol = '󻈷 '
+format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red bg:box)'
+symbol = 'java'
 
 [docker_context]
-format = '[─](fg:current_line)[](fg:blue)[󰡨 ](fg:primary bg:blue)[](fg:blue bg:box)[ $context](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:blue)[$symbol $context](fg:primary bg:blue)[](fg:blue bg:box)'
 symbol = '󰡨 '
 
 [terraform]
-format = '[─](fg:current_line)[](fg:purple)[󱁢 ](fg:primary bg:purple)[](fg:purple bg:box)[ $workspace](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:purple)[$symbol $workspace](fg:primary bg:purple)[](fg:purple bg:box)'
 symbol = '󱁢 '
 
 [aws]
-format = '[─](fg:current_line)[](fg:purple)[$symbol](fg:primary bg:purple)[](fg:purple bg:box)[ $profile](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:purple)[$symbol $profile](fg:primary bg:purple)[](fg:purple bg:box)'
 symbol = '☁️'
 
 
 [cmd_duration]
 min_time = 500
-format = '[─](fg:current_line)[](fg:orange)[ ](fg:primary bg:orange)[](fg:orange bg:box)[ $duration ](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:orange)[ $duration ](fg:primary bg:orange)[](fg:orange bg:box)'
 
 [shell]
-format = '[─](fg:current_line)[](fg:gray)[ ](fg:primary bg:gray)[](fg:gray bg:box)[ $indicator](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:gray)[  $indicator](fg:primary bg:gray)[](fg:gray bg:box)'
 disabled = false
 
 [time]
-format = '[─](fg:current_line)[](fg:purple)[󰦖 ](fg:primary bg:purple)[](fg:purple bg:box)[ $time](fg:foreground bg:box)[](fg:box)'
-time_format = '%H:%M'
+format = '[─](fg:current_line)[](fg:purple)[󰦖 $time](fg:foreground bg:purple)[](fg:purple bg:box)'
+use_12hr = true
+time_format = '%I:%M:%S%P'
 disabled = false
 
 [username]
-format = '[─](fg:current_line)[](fg:yellow)[ ](fg:primary bg:yellow)[](fg:yellow bg:box)[ $user](fg:foreground bg:box)[](fg:box) '
+format = '[─](fg:current_line)[](fg:yellow)[ $user](fg:primary bg:yellow)[](fg:yellow bg:box) '
 show_always = true
 
 [character]
