@@ -47,7 +47,7 @@ yellow       = '#FBBC05'   # Google Yellow
 gray         = '#9AA0A6'   # Google Grey — secondary UI text
 
 [os]
-format = '(fg:current_line)[](fg:orange)[$symbol ](fg:primary bg:orange)[](fg:orange)'
+format = '(fg:current_line)[](fg:orange)[$symbol ](bold fg:foreground bg:orange)[](fg:orange)'
 disabled = false
 
 [os.symbols]
@@ -85,17 +85,17 @@ Unknown = ''
 Windows = ''
 
 [directory]
-format = '[─](fg:current_line)[](fg:blue)[󰉋 ](fg:primary bg:blue)[](fg:blue bg:box)[ $read_only$path](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:blue)[󰉋  $read_only$path](bold fg:foreground bg:blue)[](fg:blue bg:box)'
 truncation_length = 0
 truncate_to_repo = true
 fish_style_pwd_dir_length = 1
 
 [git_branch]
-format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $branch](fg:foreground bg:box)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $branch](bold fg:foreground bg:green)'
 symbol = ' '
 
 [git_status]
-format = '[( $all_status)](fg:foreground bg:box)[](fg:box)'
+format = '[( $all_status)](fg:foreground bg:green)[](fg:green bg:box)'
 conflicted = "✖"
 ahead = "⇡${count}"
 behind = "⇣${count}"
