@@ -95,7 +95,7 @@ format = '[─](fg:current_line)[](fg:green)[$symbol $branch](bold fg:foregro
 symbol = ' '
 
 [git_status]
-format = '[( $all_status)](fg:foreground bg:green)[](fg:green bg:box)'
+format = '[( $all_status$ahead_behind)](fg:foreground bg:green)[](fg:green bg:box)'
 conflicted = "✖"
 ahead = "⇡${count}"
 behind = "⇣${count}"
