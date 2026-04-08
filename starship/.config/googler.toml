@@ -36,7 +36,9 @@ background   = '#202124'   # Google dark — background
 current_line = '#5F6368'   # Google mid grey — dashes / borders
 primary      = '#202124'   # Google dark — icon foreground
 blue         = '#4285F4'   # Google Blue
-cyan         = '#24C1E0'   # Google Teal
+blue2        = '#1A73E8'   # Google Blue — newer interactive/button blue
+cyan         = '#24C1E0'   # Google Teal (light)
+teal         = '#129EAF'   # Google Teal (dark)
 green        = '#34A853'   # Google Green
 orange       = '#FA7B17'   # Google Orange
 pink         = '#E52592'   # Google Pink
@@ -158,7 +160,7 @@ symbol = 'aws'
 
 [cmd_duration]
 min_time = 500
-format = '[─](fg:current_line)[](fg:orange)[ $duration ](fg:primary bg:orange)[](fg:orange)'
+format = '[─](fg:current_line)[](fg:teal)[ $duration ](fg:primary bg:teal)[](fg:teal)'
 
 [shell]
 format = '[─](fg:current_line)[](fg:gray)[  $indicator](fg:primary bg:gray)[](fg:gray)'
