@@ -8,17 +8,17 @@ $directory\
 $git_branch\
 $git_status\
 $fill\
-$nodejs\
+$aws\
 $bun\
 $deno\
-$golang\
-$ruby\
-$python\
-$rust\
-$java\
 $docker_context\
+$golang\
+$java\
+$nodejs\
+$python\
+$ruby\
+$rust\
 $terraform\
-$aws\
 $cmd_duration\
 $shell\
 $time\
@@ -113,51 +113,50 @@ deleted = "✘${count}"
 symbol = '─'
 style = 'fg:current_line'
 
-[nodejs]
-format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
-detect_files = ["package.json", ".node-version", "!bunfig.toml", "!bun.lockb"]
-symbol = 'node'
+[aws]
+format = '[─](fg:current_line)[](fg:purple)[$symbol $profile](fg:primary bg:purple)[](fg:purple)'
+symbol = 'aws'
 
 [bun]
-format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
 symbol = 'bun'
 
 [deno]
-format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
 symbol = 'deno'
 
-[golang]
-format = '[─](fg:current_line)[](fg:cyan)[$symbol $version](fg:primary bg:cyan)[](fg:cyan)'
-symbol = 'go'
-
-[ruby]
-format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
-symbol = 'ruby'
-
-[python]
-format = '[─](fg:current_line)[](fg:yellow)[$symbol $version](fg:primary bg:yellow)[](fg:yellow)'
-symbol = 'python'
-
-[rust]
-format = '[─](fg:current_line)[](fg:orange)[$symbol $version](fg:primary bg:orange)[](fg:orange)'
-symbol = 'rust'
-
-[java]
-format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
-symbol = 'java'
-
 [docker_context]
-format = '[─](fg:current_line)[](fg:blue)[$symbol $context](fg:primary bg:blue)[](fg:blue)'
+format = '[─](fg:current_line)[](fg:blue)[$symbol $context](fg:primary bg:blue)[](fg:blue)'
 symbol = 'docker'
 
+[golang]
+format = '[─](fg:current_line)[](fg:cyan)[$symbol $version](fg:primary bg:cyan)[](fg:cyan)'
+symbol = 'go'
+
+[java]
+format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
+symbol = 'java'
+
+[nodejs]
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
+detect_files = ["package.json", ".node-version", "!bunfig.toml", "!bun.lockb"]
+symbol = 'node'
+
+[python]
+format = '[─](fg:current_line)[](fg:yellow)[$symbol $version](fg:primary bg:yellow)[](fg:yellow)'
+symbol = 'python'
+
+[ruby]
+format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
+symbol = 'ruby'
+
+[rust]
+format = '[─](fg:current_line)[](fg:orange)[$symbol $version](fg:primary bg:orange)[](fg:orange)'
+symbol = 'rust'
+
 [terraform]
-format = '[─](fg:current_line)[](fg:purple)[$symbol $workspace](fg:primary bg:purple)[](fg:purple)'
+format = '[─](fg:current_line)[](fg:purple)[$symbol $workspace](fg:primary bg:purple)[](fg:purple)'
 symbol = 'tf'
-
-[aws]
-format = '[─](fg:current_line)[](fg:purple)[$symbol $profile](fg:primary bg:purple)[](fg:purple)'
-symbol = 'aws'
-
 
 [cmd_duration]
 min_time = 500

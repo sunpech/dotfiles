@@ -8,21 +8,22 @@ $directory\
 $git_branch\
 $git_status\
 $fill\
-$nodejs\
+$aws\
 $bun\
 $deno\
-$golang\
-$ruby\
-$python\
-$rust\
-$java\
 $docker_context\
+$golang\
+$java\
+$nodejs\
+$python\
+$ruby\
+$rust\
 $terraform\
-$aws\
 $cmd_duration\
 $shell\
 $time\
 $username\
+$hostname\
 $line_break\
 $character\
 """
@@ -35,9 +36,10 @@ foreground   = '#ffffff'   # Google white — text
 background   = '#202124'   # Google dark — background
 current_line = '#5F6368'   # Google mid grey — dashes / borders
 primary      = '#202124'   # Google dark — icon foreground
-box          = '#303134'   # Google dark grey — content box background
 blue         = '#4285F4'   # Google Blue
-cyan         = '#24C1E0'   # Google Teal
+blue2        = '#1A73E8'   # Google Blue — newer interactive/button blue
+cyan         = '#24C1E0'   # Google Teal (light)
+teal         = '#129EAF'   # Google Teal (dark)
 green        = '#34A853'   # Google Green
 orange       = '#FA7B17'   # Google Orange
 pink         = '#E52592'   # Google Pink
@@ -47,7 +49,7 @@ yellow       = '#FBBC05'   # Google Yellow
 gray         = '#9AA0A6'   # Google Grey — secondary UI text
 
 [os]
-format = '(fg:current_line)[](fg:orange)[$symbol ](fg:primary bg:orange)[](fg:orange)'
+format = '(fg:current_line)[](fg:orange)[$symbol ](bold fg:foreground bg:orange)[](fg:orange)'
 disabled = false
 
 [os.symbols]
@@ -85,17 +87,17 @@ Unknown = ''
 Windows = ''
 
 [directory]
-format = '[─](fg:current_line)[](fg:blue)[󰉋 ](fg:primary bg:blue)[](fg:blue bg:box)[ $read_only$path](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:blue)[󰉋  $read_only$path](bold fg:foreground bg:blue)[](fg:blue)'
 truncation_length = 0
 truncate_to_repo = true
 fish_style_pwd_dir_length = 1
 
 [git_branch]
-format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $branch](fg:foreground bg:box)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $branch](bold fg:foreground bg:green)'
 symbol = ' '
 
 [git_status]
-format = '[( $all_status)](fg:foreground bg:box)[](fg:box)'
+format = '[( $all_status$ahead_behind)](fg:foreground bg:green)[](fg:green)'
 conflicted = "✖"
 ahead = "⇡${count}"
 behind = "⇣${count}"
@@ -111,67 +113,74 @@ deleted = "✘${count}"
 symbol = '─'
 style = 'fg:current_line'
 
-[nodejs]
-format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
-detect_files = ["package.json", ".node-version", "!bunfig.toml", "!bun.lockb"]
+[aws]
+format = '[─](fg:current_line)[](fg:purple)[$symbol $profile](fg:primary bg:purple)[](fg:purple)'
+symbol = 'aws'
 
 [bun]
-format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
-symbol = '🥟'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
+symbol = 'bun'
 
 [deno]
-format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
-symbol = '🦕'
-
-[golang]
-format = '[─](fg:current_line)[](fg:cyan)[󰓓 ](fg:primary bg:cyan)[](fg:cyan bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
-symbol = '󰓓 '
-
-[ruby]
-format = '[─](fg:current_line)[](fg:red)[󰜭 ](fg:primary bg:red)[](fg:red bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
-symbol = '󰜭 '
-
-[python]
-format = '[─](fg:current_line)[](fg:yellow)[󰌠 ](fg:primary bg:yellow)[](fg:yellow bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
-symbol = '󰌠 '
-
-[rust]
-format = '[─](fg:current_line)[](fg:orange)[󱙗 ](fg:primary bg:orange)[](fg:orange bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
-symbol = '󱙗 '
-
-[java]
-format = '[─](fg:current_line)[](fg:red)[󻈷 ](fg:primary bg:red)[](fg:red bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
-symbol = '󻈷 '
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
+symbol = 'deno'
 
 [docker_context]
-format = '[─](fg:current_line)[](fg:blue)[󰡨 ](fg:primary bg:blue)[](fg:blue bg:box)[ $context](fg:foreground bg:box)[](fg:box)'
-symbol = '󰡨 '
+format = '[─](fg:current_line)[](fg:blue)[$symbol $context](fg:primary bg:blue)[](fg:blue)'
+symbol = 'docker'
+
+[golang]
+format = '[─](fg:current_line)[](fg:cyan)[$symbol $version](fg:primary bg:cyan)[](fg:cyan)'
+symbol = 'go'
+
+[java]
+format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
+symbol = 'java'
+
+[nodejs]
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
+detect_files = ["package.json", ".node-version", "!bunfig.toml", "!bun.lockb"]
+symbol = 'node'
+
+[python]
+format = '[─](fg:current_line)[](fg:yellow)[$symbol $version](fg:primary bg:yellow)[](fg:yellow)'
+symbol = 'python'
+
+[ruby]
+format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
+symbol = 'ruby'
+
+[rust]
+format = '[─](fg:current_line)[](fg:orange)[$symbol $version](fg:primary bg:orange)[](fg:orange)'
+symbol = 'rust'
 
 [terraform]
-format = '[─](fg:current_line)[](fg:purple)[󱁢 ](fg:primary bg:purple)[](fg:purple bg:box)[ $workspace](fg:foreground bg:box)[](fg:box)'
-symbol = '󱁢 '
-
-[aws]
-format = '[─](fg:current_line)[](fg:purple)[$symbol](fg:primary bg:purple)[](fg:purple bg:box)[ $profile](fg:foreground bg:box)[](fg:box)'
-symbol = '☁️'
-
+format = '[─](fg:current_line)[](fg:purple)[$symbol $workspace](fg:primary bg:purple)[](fg:purple)'
+symbol = 'tf'
 
 [cmd_duration]
 min_time = 500
-format = '[─](fg:current_line)[](fg:orange)[ ](fg:primary bg:orange)[](fg:orange bg:box)[ $duration ](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:teal)[ $duration ](fg:primary bg:teal)[](fg:teal)'
 
 [shell]
-format = '[─](fg:current_line)[](fg:gray)[ ](fg:primary bg:gray)[](fg:gray bg:box)[ $indicator](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:gray)[  $indicator](fg:primary bg:gray)[](fg:gray)'
 disabled = false
 
 [time]
-format = '[─](fg:current_line)[](fg:purple)[󰦖 ](fg:primary bg:purple)[](fg:purple bg:box)[ $time](fg:foreground bg:box)[](fg:box)'
-time_format = '%H:%M'
+format = '[─](fg:current_line)[](fg:purple)[󰦖 $time](fg:foreground bg:purple)[](fg:purple)'
+use_12hr = true
+time_format = '%I:%M:%S%P'
 disabled = false
 
 [username]
-format = '[─](fg:current_line)[](fg:yellow)[ ](fg:primary bg:yellow)[](fg:yellow bg:box)[ $user](fg:foreground bg:box)[](fg:box) '
+format = '[─](fg:current_line)[](fg:yellow)[ $user](fg:primary bg:yellow)[](fg:yellow)'
 show_always = true
+
+[hostname]
+format = '[─](fg:current_line)[](fg:cyan)[  $hostname](fg:primary bg:cyan)[](fg:cyan) '
+ssh_only = false
+#ssh_symbol = '🌐 '
+
 
 [character]
 format = "\n$symbol "
