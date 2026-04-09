@@ -23,6 +23,7 @@ $cmd_duration\
 $shell\
 $time\
 $username\
+$hostname\
 $line_break\
 $character\
 """
@@ -173,8 +174,14 @@ time_format = '%I:%M:%S%P'
 disabled = false
 
 [username]
-format = '[─](fg:current_line)[](fg:yellow)[ $user](fg:primary bg:yellow)[](fg:yellow) '
+format = '[─](fg:current_line)[](fg:yellow)[ $user](fg:primary bg:yellow)[](fg:yellow)'
 show_always = true
+
+[hostname]
+format = '[─](fg:current_line)[](fg:cyan)[  $hostname](fg:primary bg:cyan)[](fg:cyan) '
+ssh_only = false
+#ssh_symbol = '🌐 '
+
 
 [character]
 format = "\n$symbol "
