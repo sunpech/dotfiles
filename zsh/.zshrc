@@ -85,6 +85,7 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias smerge="/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge"
 alias ag="antigravity"
 # Eza (better ls)
+export EZA_CONFIG_DIR="$HOME/.config/eza"
 alias ls="eza --icons=always"
 # Youtube download
 alias yt-download='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best" --merge-output-format mp4 --output "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=$1"'

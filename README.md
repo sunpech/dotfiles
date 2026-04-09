@@ -37,7 +37,7 @@ Use stow to create symlinks for config files.
 I disagree with running `stow .` at the top of the project directory to symlink everything. I think it's better to organize by directory where it's more modular, which is the approach of this repo.
 
 ```
-stow zsh powerlevel10k starship nvim vim git wezterm ghostty
+stow zsh powerlevel10k starship eza nvim vim git wezterm ghostty
 ```
 
 After running stow above, you should be setup with your dotfiles.
