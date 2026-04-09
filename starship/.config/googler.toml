@@ -17,6 +17,7 @@ ${custom.hugo}\
 $java\
 $nodejs\
 $python\
+${custom.rails}\
 $ruby\
 $rust\
 $terraform\
@@ -153,6 +154,14 @@ symbol = 'node'
 [python]
 format = '[─](fg:current_line)[](fg:yellow)[$symbol $version](fg:primary bg:yellow)[](fg:yellow)'
 symbol = 'python'
+
+[custom.rails]
+command = "rails --version | grep -Eo '[0-9]+\\.[0-9]+\\.[0-9]+' | head -1"
+detect_files = ["Gemfile"]
+detect_folders = ["app"]
+symbol = 'rails'
+#format = "[$symbol(v$output)]($style) "
+format = '[─](fg:current_line)[](fg:red)[$symbol v($output)](fg:foreground bg:red)[](fg:red)'
 
 [ruby]
 format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
