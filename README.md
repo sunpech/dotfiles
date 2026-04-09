@@ -20,7 +20,7 @@ brew install git stow
 
 ### Clone repo (with submodules)
 
-There are currently no submodules.
+*There are currently no submodules.*
 
 ```
 git clone --recurse-submodules git@github.com:sunpech/dotfiles.git
