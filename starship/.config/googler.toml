@@ -13,6 +13,7 @@ $bun\
 $deno\
 $docker_context\
 $golang\
+${custom.hugo}\
 $java\
 $nodejs\
 $python\
@@ -114,52 +115,59 @@ symbol = '─'
 style = 'fg:current_line'
 
 [aws]
-format = '[─](fg:current_line)[](fg:purple)[$symbol $profile](fg:primary bg:purple)[](fg:purple)'
+format = '[─](fg:current_line)[](fg:purple)[$symbol $profile](fg:primary bg:purple)[](fg:purple)'
 symbol = 'aws'
 
 [bun]
-format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
 symbol = 'bun'
 
 [deno]
-format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
 symbol = 'deno'
 
 [docker_context]
-format = '[─](fg:current_line)[](fg:blue)[$symbol $context](fg:primary bg:blue)[](fg:blue)'
+format = '[─](fg:current_line)[](fg:blue)[$symbol $context](fg:primary bg:blue)[](fg:blue)'
 symbol = 'docker'
 
 [golang]
-format = '[─](fg:current_line)[](fg:cyan)[$symbol $version](fg:primary bg:cyan)[](fg:cyan)'
+format = '[─](fg:current_line)[](fg:cyan)[$symbol $version](fg:primary bg:cyan)[](fg:cyan)'
 symbol = 'go'
 
+[custom.hugo]
+command = "hugo version | grep -Eo '[0-9]+\\.[0-9]+\\.[0-9]+' | head -1"
+detect_files = ["hugo.toml", "hugo.yaml", "hugo.json", "config.toml"]
+detect_folders = ["content"]
+symbol = 'hugo'
+format = '[─](fg:current_line)[](fg:pink)[$symbol v($output)](fg:primary bg:pink)[](fg:pink)'
+
 [java]
-format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
+format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
 symbol = 'java'
 
 [nodejs]
-format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
 detect_files = ["package.json", ".node-version", "!bunfig.toml", "!bun.lockb"]
 symbol = 'node'
 
 [python]
-format = '[─](fg:current_line)[](fg:yellow)[$symbol $version](fg:primary bg:yellow)[](fg:yellow)'
+format = '[─](fg:current_line)[](fg:yellow)[$symbol $version](fg:primary bg:yellow)[](fg:yellow)'
 symbol = 'python'
 
 [ruby]
-format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
+format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
 symbol = 'ruby'
 
 [rust]
-format = '[─](fg:current_line)[](fg:orange)[$symbol $version](fg:primary bg:orange)[](fg:orange)'
+format = '[─](fg:current_line)[](fg:orange)[$symbol $version](fg:primary bg:orange)[](fg:orange)'
 symbol = 'rust'
 
 [terraform]
-format = '[─](fg:current_line)[](fg:purple)[$symbol $workspace](fg:primary bg:purple)[](fg:purple)'
+format = '[─](fg:current_line)[](fg:purple)[$symbol $workspace](fg:primary bg:purple)[](fg:purple)'
 symbol = 'tf'
 
 [cmd_duration]
-min_time = 500
+min_time = 2000
 format = '[─](fg:current_line)[](fg:teal)[ $duration ](fg:primary bg:teal)[](fg:teal)'
 
 [shell]
@@ -180,7 +188,6 @@ show_always = true
 format = '[─](fg:current_line)[](fg:cyan)[  $hostname](fg:primary bg:cyan)[](fg:cyan) '
 ssh_only = false
 #ssh_symbol = '🌐 '
-
 
 [character]
 format = "\n$symbol "
