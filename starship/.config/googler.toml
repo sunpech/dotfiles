@@ -7,6 +7,7 @@ $os\
 $directory\
 $git_branch\
 $git_status\
+$git_metrics\
 $fill\
 $aws\
 $bun\
@@ -32,6 +33,7 @@ $character\
 
 palette = 'google'
 add_newline = true
+command_timeout = 2000
 
 [palettes.google]
 foreground   = '#ffffff'   # Google white — text
@@ -95,11 +97,13 @@ truncate_to_repo = true
 fish_style_pwd_dir_length = 1
 
 [git_branch]
+disabled = false
 format = '[─](fg:current_line)[](fg:green)[$symbol $branch](bold fg:foreground bg:green)'
 symbol = ' '
 
 [git_status]
-format = '[( $all_status$ahead_behind)](fg:foreground bg:green)[](fg:green)'
+disabled = false
+format = '[( $all_status$ahead_behind )](fg:foreground bg:green)'
 conflicted = "✖"
 ahead = "⇡${count}"
 behind = "⇣${count}"
@@ -110,6 +114,13 @@ modified = "!${count}"
 staged = "+${count}"
 renamed = "»${count}"
 deleted = "✘${count}"
+
+[git_metrics]
+disabled = false
+added_style = 'fg:foreground bg:green'
+#deleted_style = 'fg:red bg:green'
+#format = '([+$added ]($added_style))([-$deleted]($deleted_style))[](fg:green)'
+format = '([\(+$added -$deleted\) ]($added_style))[](fg:green)'
 
 [fill]
 symbol = '─'
