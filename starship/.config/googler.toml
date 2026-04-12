@@ -1,7 +1,8 @@
-# ~/.config/starship.toml
+# ~/.config/googler.toml
 # A custom Starship prompt configuration that is based off Dracula theme using Google color scheme.
 # Source: https://github.com/starship/starship/discussions/1107?sort=top#discussioncomment-11130385
-#
+
+# ── Global ────────────────────────────────────────────────────────────────────
 format = """
 $os\
 $directory\
@@ -35,6 +36,7 @@ palette = 'google'
 add_newline = true
 command_timeout = 2000
 
+# ── Palette ───────────────────────────────────────────────────────────────────
 [palettes.google]
 foreground   = '#ffffff'   # Google white — text
 background   = '#202124'   # Google dark — background
@@ -51,9 +53,11 @@ purple       = '#A142F4'   # Google Purple
 red          = '#EA4335'   # Google Red
 yellow       = '#FBBC05'   # Google Yellow
 gray         = '#9AA0A6'   # Google Grey — secondary UI text
+dark_gray    = '#3C4043'   # Google Dark Grey — between mid grey and background
 
+# ── OS ────────────────────────────────────────────────────────────────────────
 [os]
-format = '(fg:current_line)[](fg:orange)[$symbol ](bold fg:foreground bg:orange)[](fg:orange)'
+format = '[](fg:dark_gray)[$symbol ](bold fg:foreground bg:dark_gray)[](fg:dark_gray)'
 disabled = false
 
 [os.symbols]
@@ -90,12 +94,14 @@ Ubuntu = ''
 Unknown = ''
 Windows = ''
 
+# ── Directory ─────────────────────────────────────────────────────────────────
 [directory]
 format = '[─](fg:current_line)[](fg:blue)[󰉋  $read_only$path](bold fg:foreground bg:blue)[](fg:blue)'
 truncation_length = 0
 truncate_to_repo = true
 fish_style_pwd_dir_length = 1
 
+# ── Git (branch/status/metrics share one pill — all three must stay enabled) ──
 [git_branch]
 disabled = false
 format = '[─](fg:current_line)[](fg:green)[$symbol $branch](bold fg:foreground bg:green)'
@@ -118,14 +124,15 @@ deleted = "✘${count}"
 [git_metrics]
 disabled = false
 added_style = 'fg:foreground bg:green'
-#deleted_style = 'fg:red bg:green'
-#format = '([+$added ]($added_style))([-$deleted]($deleted_style))[](fg:green)'
-format = '([\(+$added -$deleted\) ]($added_style))[](fg:green)'
+deleted_style = 'fg:foreground bg:green'
+format = '([+$added ]($added_style))([-$deleted]($deleted_style))[](fg:green)'
 
+# ── Fill (divider) ────────────────────────────────────────────────────────────
 [fill]
 symbol = '─'
 style = 'fg:current_line'
 
+# ── Languages & Tools ─────────────────────────────────────────────────────────
 [aws]
 format = '[─](fg:current_line)[](fg:purple)[$symbol $profile](fg:primary bg:purple)[](fg:purple)'
 symbol = 'aws'
@@ -171,7 +178,6 @@ command = "rails --version | grep -Eo '[0-9]+\\.[0-9]+\\.[0-9]+' | head -1"
 detect_files = ["Gemfile"]
 detect_folders = ["app"]
 symbol = 'rails'
-#format = "[$symbol(v$output)]($style) "
 format = '[─](fg:current_line)[](fg:red)[$symbol v($output)](fg:foreground bg:red)[](fg:red)'
 
 [ruby]
@@ -186,6 +192,7 @@ symbol = 'rust'
 format = '[─](fg:current_line)[](fg:purple)[$symbol $workspace](fg:primary bg:purple)[](fg:purple)'
 symbol = 'tf'
 
+# ── Prompt Info ───────────────────────────────────────────────────────────────
 [cmd_duration]
 min_time = 2000
 format = '[─](fg:current_line)[](fg:teal)[ $duration ](fg:primary bg:teal)[](fg:teal)'
@@ -205,11 +212,13 @@ format = '[─](fg:current_line)[](fg:yellow)[ $user](fg:primary bg:yellow
 show_always = true
 
 [hostname]
-format = '[─](fg:current_line)[](fg:cyan)[  $hostname](fg:primary bg:cyan)[](fg:cyan) '
+format = '[─](fg:current_line)[](fg:orange)[  $hostname](fg:primary bg:orange)[](fg:orange) '
 ssh_only = false
 #ssh_symbol = '🌐 '
 
+# ── Character ─────────────────────────────────────────────────────────────────
 [character]
 format = "\n$symbol "
 success_symbol = '[❯](fg:bold green)'
 error_symbol = '[❯](fg:bold red)'
+vimcmd_symbol = "[❮](fg:bold yellow)"
