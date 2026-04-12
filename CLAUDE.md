@@ -14,7 +14,7 @@ mv dotfiles ~/.dotfiles
 cd ~/.dotfiles
 
 # Symlink all configs
-stow zsh powerlevel10k starship nvim vim git wezterm ghostty
+stow zsh powerlevel10k starship nvim vim git wezterm ghostty eza
 ```
 
 ## Repository Structure
@@ -28,9 +28,10 @@ Each directory is a stow package — files inside mirror the path structure rela
 - `nvim/` — Neovim config using [LazyVim](https://lazyvim.github.io/) starter template
 - `vim/` — Vim config with Pathogen plugin manager and a large collection of color schemes
 - `powerlevel10k/` — `.p10k.zsh` powerlevel10k prompt config
-- `starship/` — `.config/starship.toml` Starship prompt config (Google-color powerline theme)
+- `starship/` — `.config/googler.toml` active Starship prompt config (Google-color powerline theme); `starship.toml` and `p10k-custom.toml` are alternate configs
 - `wezterm/` — WezTerm terminal config
 - `ghostty/` — Ghostty terminal config
+- `eza/` — `.config/eza/` eza theme files (darkplus, onedark, default)
 
 ## Key Details
 
