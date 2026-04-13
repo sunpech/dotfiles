@@ -1,12 +1,12 @@
 # Sunpech's dotfiles
 
-My dotfiles for macOS. This will help you (me) get started setting up a fresh new Mac.
+My dotfiles for macOS, for setting up a fresh machine.
 
 I use [GNU stow](https://www.gnu.org/software/stow/) to manage symlinks for configurations.
 
 ## Requirements
 
-You need to run z shell (zsh), which is default since macOS Catalina, in 2019.
+You need to run z shell (zsh), which has been the default shell on macOS since Catalina.
 
 You'll need to have [homebrew](https://brew.sh/) installed.
 
@@ -67,7 +67,7 @@ Installed via homebrew.
 brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k starship
 ```
 
-### Applicaiton paths used in dotfiles
+### Dependencies
 
 You'll need to have these installed.
 
