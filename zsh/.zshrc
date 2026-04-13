@@ -147,7 +147,7 @@ fi
 # THEME (Starship)
 # =============================================================================
 # See: https://starship.rs/
-export STARSHIP_CONFIG=~/.config/googler.toml
+export STARSHIP_CONFIG=~/.config/capsule.toml
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi

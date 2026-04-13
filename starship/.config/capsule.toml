@@ -1,5 +1,5 @@
-# ~/.config/googler.toml
-# A custom Starship prompt configuration that is based off Dracula theme using Google color scheme.
+# ~/.config/capsule.toml
+# Capsule — a Starship prompt theme with Google-inspired colors in a powerline pill style.
 # Source: https://github.com/starship/starship/discussions/1107?sort=top#discussioncomment-11130385
 
 # ── Global ────────────────────────────────────────────────────────────────────
@@ -32,32 +32,31 @@ $line_break\
 $character\
 """
 
-palette = 'google'
+palette = 'capsule'
 add_newline = true
 command_timeout = 2000
 
 # ── Palette ───────────────────────────────────────────────────────────────────
-[palettes.google]
-foreground   = '#ffffff'   # Google white — text
-background   = '#202124'   # Google dark — background
-current_line = '#5F6368'   # Google mid grey — dashes / borders
-primary      = '#202124'   # Google dark — icon foreground
-blue         = '#4285F4'   # Google Blue
-blue2        = '#1A73E8'   # Google Blue — newer interactive/button blue
-cyan         = '#24C1E0'   # Google Teal (light)
-teal         = '#129EAF'   # Google Teal (dark)
-green        = '#34A853'   # Google Green
-orange       = '#FA7B17'   # Google Orange
-pink         = '#E52592'   # Google Pink
-purple       = '#A142F4'   # Google Purple
-red          = '#EA4335'   # Google Red
-yellow       = '#FBBC05'   # Google Yellow
-gray         = '#9AA0A6'   # Google Grey — secondary UI text
-dark_gray    = '#3C4043'   # Google Dark Grey — between mid grey and background
+[palettes.capsule]
+text_light   = '#ffffff'   # white — pill text on dark backgrounds
+text_dark    = '#202124'   # near-black — pill text on bright backgrounds
+current_line = '#5F6368'   # mid grey — dividers (─) and fill
+blue         = '#1967d2'   # dark blue — directory, docker pills
+blue2        = '#4285F4'   # original Google Blue — unused (too bright for white text)
+cyan         = '#24C1E0'   # light cyan — golang pill
+teal         = '#129EAF'   # dark teal — cmd_duration pill
+green        = '#188038'   # dark green — git, bun, deno, nodejs pills
+orange       = '#FA7B17'   # orange — aws, java, rust, hostname pills
+pink         = '#B0197C'   # dark pink — hugo pill
+purple       = '#A142F4'   # purple — terraform, time pills
+red          = '#D93025'   # dark red — rails, ruby pills
+yellow       = '#FBBC05'   # yellow — python, username pills
+gray         = '#9AA0A6'   # light grey — shell pill
+dark_gray    = '#3C4043'   # dark grey — os pill
 
 # ── OS ────────────────────────────────────────────────────────────────────────
 [os]
-format = '[](fg:dark_gray)[$symbol ](bold fg:foreground bg:dark_gray)[](fg:dark_gray)'
+format = '[](fg:dark_gray)[$symbol ](bold fg:text_light bg:dark_gray)[](fg:dark_gray)'
 disabled = false
 
 [os.symbols]
@@ -96,7 +95,7 @@ Windows = ''
 
 # ── Directory ─────────────────────────────────────────────────────────────────
 [directory]
-format = '[─](fg:current_line)[](fg:blue)[󰉋  $read_only$path](bold fg:foreground bg:blue)[](fg:blue)'
+format = '[─](fg:current_line)[](fg:blue)[󰉋  $read_only$path](bold fg:text_light bg:blue)[](fg:blue)'
 truncation_length = 0
 truncate_to_repo = true
 fish_style_pwd_dir_length = 1
@@ -104,27 +103,27 @@ fish_style_pwd_dir_length = 1
 # ── Git (branch/status/metrics share one pill — all three must stay enabled) ──
 [git_branch]
 disabled = false
-format = '[─](fg:current_line)[](fg:green)[$symbol $branch](bold fg:foreground bg:green)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $branch](bold fg:text_light bg:green)'
 symbol = ' '
 
 [git_status]
 disabled = false
-format = '[( $all_status$ahead_behind )](fg:foreground bg:green)'
-conflicted = "✖"
-ahead = "⇡${count}"
-behind = "⇣${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-untracked = "?${count}"
-stashed = "$${count}"
-modified = "!${count}"
-staged = "+${count}"
-renamed = "»${count}"
-deleted = "✘${count}"
+format = '[( $all_status$ahead_behind )](fg:text_light bg:green)'
+conflicted = "✖${count} "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+untracked = "?${count} "
+stashed = "$${count} "
+modified = "!${count} "
+staged = "+${count} "
+renamed = "»${count} "
+deleted = "✘${count} "
 
 [git_metrics]
 disabled = false
-added_style = 'fg:foreground bg:green'
-deleted_style = 'fg:foreground bg:green'
+added_style = 'fg:text_light bg:green'
+deleted_style = 'fg:text_light bg:green'
 format = '([+$added ]($added_style))([-$deleted]($deleted_style))[](fg:green)'
 
 # ── Fill (divider) ────────────────────────────────────────────────────────────
@@ -134,23 +133,23 @@ style = 'fg:current_line'
 
 # ── Languages & Tools ─────────────────────────────────────────────────────────
 [aws]
-format = '[─](fg:current_line)[](fg:purple)[$symbol $profile](fg:primary bg:purple)[](fg:purple)'
+format = '[─](fg:current_line)[](fg:orange)[$symbol $profile](fg:text_dark bg:orange)[](fg:orange)'
 symbol = 'aws'
 
 [bun]
-format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:text_light bg:green)[](fg:green)'
 symbol = 'bun'
 
 [deno]
-format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:text_light bg:green)[](fg:green)'
 symbol = 'deno'
 
 [docker_context]
-format = '[─](fg:current_line)[](fg:blue)[$symbol $context](fg:primary bg:blue)[](fg:blue)'
+format = '[─](fg:current_line)[](fg:blue)[$symbol $context](fg:text_light bg:blue)[](fg:blue)'
 symbol = 'docker'
 
 [golang]
-format = '[─](fg:current_line)[](fg:cyan)[$symbol $version](fg:primary bg:cyan)[](fg:cyan)'
+format = '[─](fg:current_line)[](fg:cyan)[$symbol $version](fg:text_dark bg:cyan)[](fg:cyan)'
 symbol = 'go'
 
 [custom.hugo]
@@ -158,19 +157,19 @@ command = "hugo version | grep -Eo '[0-9]+\\.[0-9]+\\.[0-9]+' | head -1"
 detect_files = ["hugo.toml", "hugo.yaml", "hugo.json", "config.toml"]
 detect_folders = ["content"]
 symbol = 'hugo'
-format = '[─](fg:current_line)[](fg:pink)[$symbol v($output)](fg:primary bg:pink)[](fg:pink)'
+format = '[─](fg:current_line)[](fg:pink)[$symbol v($output)](fg:text_light bg:pink)[](fg:pink)'
 
 [java]
-format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
+format = '[─](fg:current_line)[](fg:orange)[$symbol $version](fg:text_dark bg:orange)[](fg:orange)'
 symbol = 'java'
 
 [nodejs]
-format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:primary bg:green)[](fg:green)'
+format = '[─](fg:current_line)[](fg:green)[$symbol $version](fg:text_light bg:green)[](fg:green)'
 detect_files = ["package.json", ".node-version", "!bunfig.toml", "!bun.lockb"]
 symbol = 'node'
 
 [python]
-format = '[─](fg:current_line)[](fg:yellow)[$symbol $version](fg:primary bg:yellow)[](fg:yellow)'
+format = '[─](fg:current_line)[](fg:yellow)[$symbol $version](fg:text_dark bg:yellow)[](fg:yellow)'
 symbol = 'python'
 
 [custom.rails]
@@ -178,41 +177,42 @@ command = "rails --version | grep -Eo '[0-9]+\\.[0-9]+\\.[0-9]+' | head -1"
 detect_files = ["Gemfile"]
 detect_folders = ["app"]
 symbol = 'rails'
-format = '[─](fg:current_line)[](fg:red)[$symbol v($output)](fg:foreground bg:red)[](fg:red)'
+ignore_timeout = true
+format = '[─](fg:current_line)[](fg:red)[$symbol v($output)](fg:text_light bg:red)[](fg:red)'
 
 [ruby]
-format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:primary bg:red)[](fg:red)'
+format = '[─](fg:current_line)[](fg:red)[$symbol $version](fg:text_light bg:red)[](fg:red)'
 symbol = 'ruby'
 
 [rust]
-format = '[─](fg:current_line)[](fg:orange)[$symbol $version](fg:primary bg:orange)[](fg:orange)'
+format = '[─](fg:current_line)[](fg:orange)[$symbol $version](fg:text_dark bg:orange)[](fg:orange)'
 symbol = 'rust'
 
 [terraform]
-format = '[─](fg:current_line)[](fg:purple)[$symbol $workspace](fg:primary bg:purple)[](fg:purple)'
+format = '[─](fg:current_line)[](fg:purple)[$symbol $workspace](fg:text_light bg:purple)[](fg:purple)'
 symbol = 'tf'
 
 # ── Prompt Info ───────────────────────────────────────────────────────────────
 [cmd_duration]
 min_time = 2000
-format = '[─](fg:current_line)[](fg:teal)[ $duration ](fg:primary bg:teal)[](fg:teal)'
+format = '[─](fg:current_line)[](fg:teal)[ $duration ](fg:text_dark bg:teal)[](fg:teal)'
 
 [shell]
-format = '[─](fg:current_line)[](fg:gray)[  $indicator](fg:primary bg:gray)[](fg:gray)'
+format = '[─](fg:current_line)[](fg:gray)[  $indicator](fg:text_dark bg:gray)[](fg:gray)'
 disabled = false
 
 [time]
-format = '[─](fg:current_line)[](fg:purple)[󰦖 $time](fg:foreground bg:purple)[](fg:purple)'
+format = '[─](fg:current_line)[](fg:purple)[󰦖 $time](fg:text_light bg:purple)[](fg:purple)'
 use_12hr = true
 time_format = '%I:%M:%S%P'
 disabled = false
 
 [username]
-format = '[─](fg:current_line)[](fg:yellow)[ $user](fg:primary bg:yellow)[](fg:yellow)'
+format = '[─](fg:current_line)[](fg:yellow)[ $user](fg:text_dark bg:yellow)[](fg:yellow)'
 show_always = true
 
 [hostname]
-format = '[─](fg:current_line)[](fg:orange)[  $hostname](fg:primary bg:orange)[](fg:orange) '
+format = '[─](fg:current_line)[](fg:orange)[  $hostname](fg:text_dark bg:orange)[](fg:orange) '
 ssh_only = false
 #ssh_symbol = '🌐 '
 
