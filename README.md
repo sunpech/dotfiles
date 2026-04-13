@@ -40,7 +40,7 @@ I disagree with running `stow .` at the top of the project directory to symlink 
 stow zsh powerlevel10k starship eza nvim vim git wezterm ghostty
 ```
 
-After running stow above, you should be setup with your dotfiles.
+After running stow above, you should be setup with your dotfiles. If you should add other configs, you'll need to run stow again to symlink from the dotfiles directory to the home directory path.
 
 ## Applications
 
@@ -60,8 +60,8 @@ brew install --cask wezterm ghostty
 Installed via homebrew.
 
 * [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-* [Starship](https://github.com/starship/starship)
-* zsh-autosuggestions and zsh-syntax-highlighting
+* [Starship](https://github.com/starship/starship) - I currently use my own theme: [capsule.toml](/starship/.config/capsule.toml)
+* [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) and [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ```
 brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k starship
