@@ -133,7 +133,7 @@ if [[ -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]
 fi
 # --- Zsh Syntax Highlighting ---
 # Ensure this is sourced AFTER compinit/etc.
-# source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # =============================================================================
 # THEME (Powerlevel10k) -- temporarily disabled to test Starship
 # =============================================================================
