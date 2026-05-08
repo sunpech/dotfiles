@@ -11,15 +11,6 @@ fi
 #   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 # fi
 # =============================================================================
-# ENVIRONMENT VARIABLES
-# =============================================================================
-# Language
-# export LANG=en_US.UTF-8
-# Editor
-export EDITOR="nvim"
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-# =============================================================================
 # PATH CONFIGURATION
 # =============================================================================
 # Use zsh path array to dedupe and control order
@@ -41,8 +32,6 @@ fi
 # 3. User Bins
 path+=("$HOME/bin")
 path+=("/usr/local/bin") # Legacy Fallback
-# 4. Antigravity
-export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 # =============================================================================
 # SHELL OPTIONS & HISTORY
 # =============================================================================
@@ -85,7 +74,6 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias smerge="/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge"
 alias ag="antigravity"
 # Eza (better ls)
-export EZA_CONFIG_DIR="$HOME/.config/eza"
 alias ls="eza --icons=always"
 # Youtube download
 alias yt-download='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best" --merge-output-format mp4 --output "%(title)s.%(ext)s" "https://www.youtube.com/watch?v=$1"'
@@ -108,7 +96,6 @@ if command -v rbenv >/dev/null 2>&1; then
 fi
 # --- NVM (Node Version Manager) ---
 # Lazy load NVM for faster startup
-export NVM_DIR="$HOME/.nvm"
 nvm() {
   unset -f nvm node npm
   [[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ]] && . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
