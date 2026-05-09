@@ -106,6 +106,7 @@ brew install --cask font-meslo-lg-nerd-font font-jetbrains-mono-nerd-font font-f
 - [Github Desktop](https://desktop.github.com/download/) - Github Git GUI.
 - [Google Antigravity](https://antigravity.google) - Google's AI IDE.
 - [Microsoft Visual Studio Code](https://code.visualstudio.com/) - Microsoft's AI IDE.
+- [Obsidian](https://obsidian.md/) - The free and flexible app for your private thoughts.
 - [pgAdmin](https://www.pgadmin.org/) - Popular PostgreSQL admin tool.
 - [Postgres.app](http://postgresapp.com/) - Postgres for Mac.
 - [Sourcetree](https://www.sourcetreeapp.com/) - Git GUI from Atlassian.
