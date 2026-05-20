@@ -22,5 +22,5 @@ export EZA_CONFIG_DIR="$HOME/.config/eza"
 # =============================================================================
 # Added by Obsidian
 export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
-# Antigravity
-export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+# Antigravity IDE
+export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
