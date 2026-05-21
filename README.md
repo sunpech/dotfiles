@@ -12,7 +12,7 @@ You'll need to have [homebrew](https://brew.sh/) installed.
 
 Then you'll need git and stow to install this dotfiles repository.
 
-```
+```bash
 brew install git stow
 ```
 
@@ -22,7 +22,7 @@ brew install git stow
 
 *There are currently no submodules.*
 
-```
+```bash
 git clone --recurse-submodules git@github.com:sunpech/dotfiles.git
 
 mv dotfiles ~/.dotfiles
@@ -36,8 +36,8 @@ Use stow to create symlinks for config files.
 
 I disagree with running `stow .` at the top of the project directory to symlink everything. I think it's better to organize by directory where it's more modular, which is the approach of this repo.
 
-```
-stow zsh powerlevel10k starship eza nvim vim git wezterm ghostty
+```bash
+stow zsh powerlevel10k starship eza nvim vim git wezterm ghostty fastfetch
 ```
 
 After running stow above, you should be setup with your dotfiles. If you should add other configs, you'll need to run stow again to symlink from the dotfiles directory to the home directory path.
@@ -51,7 +51,7 @@ Homebrew cask available for these.
 - [Ghostty](https://ghostty.org)
 - [WezTerm](https://wezfurlong.org/wezterm/)
 
-```
+```bash
 brew install --cask wezterm ghostty
 ```
 
@@ -59,11 +59,11 @@ brew install --cask wezterm ghostty
 
 Installed via homebrew.
 
-* [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-* [Starship](https://github.com/starship/starship) - I currently use my own theme: [capsule.toml](/starship/.config/capsule.toml)
-* [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) and [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+- [Starship](https://github.com/starship/starship) - I currently use my own theme: [capsule.toml](/starship/.config/capsule.toml)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) and [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
-```
+```bash
 brew install zsh-autosuggestions zsh-syntax-highlighting powerlevel10k starship
 ```
 
@@ -82,13 +82,13 @@ These are some other important homebrew packages.
 
 #### Neovim related
 
-```
+```bash
 brew install neovim fd rg ast-grep lazygit
 ```
 
 #### Various packages
 
-```
+```bash
 brew install node nvm openssl rbenv ruby-build wget vim tig rename ssh-copy-id rename toilet tree glances go hugo fastfetch yt-dlp fzf zoxide eza gitmoji cmatrix ffmpeg exiftool
 ```
 
@@ -96,7 +96,7 @@ brew install node nvm openssl rbenv ruby-build wget vim tig rename ssh-copy-id r
 
 I'm a fan of [JetBrains Mono font](https://www.jetbrains.com/lp/mono/).
 
-```
+```bash
 brew install --cask font-meslo-lg-nerd-font font-jetbrains-mono-nerd-font font-fira-code
 ```
 
@@ -118,17 +118,17 @@ I also have a more up to date repo, [Best Software List](https://github.com/sunp
 
 You may want to:
 
-1. [Change your computer’s name or local hostname on Mac](https://support.apple.com/guide/mac-help/change-computers-local-hostname-mac-mchlp2322/mac#:~:text=On%20your%20Mac%2C%20choose%20Apple,Click%20About.&text=Select%20the%20current%20computer%20name%2C%20then%20type%20a%20new%20name.)
+1. [Change your computer's name or local hostname on Mac](https://support.apple.com/guide/mac-help/change-computers-local-hostname-mac-mchlp2322/mac#:~:text=On%20your%20Mac%2C%20choose%20Apple,Click%20About.&text=Select%20the%20current%20computer%20name%2C%20then%20type%20a%20new%20name.)
 
-2. [Disable Apple Photos from auto-launching when plugging in sdcard ](http://petapixel.com/2015/12/21/stop-apple-photos-from-auto-launching-in-os-x-with-one-command/). Run command below.
+2. [Disable Apple Photos from auto-launching when plugging in sdcard](http://petapixel.com/2015/12/21/stop-apple-photos-from-auto-launching-in-os-x-with-one-command/). Run command below.
 
-```
+```bash
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
 ```
 
 3. Prevent macOS from Creating .DS_Store on Network and USB/external Drives
 
-```
+```bash
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
 ```

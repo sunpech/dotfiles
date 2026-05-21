@@ -14,7 +14,7 @@ mv dotfiles ~/.dotfiles
 cd ~/.dotfiles
 
 # Symlink all configs
-stow zsh powerlevel10k starship nvim vim git wezterm ghostty eza
+stow zsh powerlevel10k starship nvim vim git wezterm ghostty eza fastfetch
 ```
 
 ## Repository Structure
@@ -32,6 +32,7 @@ Each directory is a stow package — files inside mirror the path structure rela
 - `wezterm/` — WezTerm terminal config
 - `ghostty/` — Ghostty terminal config
 - `eza/` — `.config/eza/` eza theme files (darkplus, onedark, default)
+- `fastfetch/` — `.config/fastfetch/config.jsonc` system info display config
 
 ## Key Details
 
