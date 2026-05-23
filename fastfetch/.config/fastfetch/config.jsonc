@@ -4,11 +4,11 @@
     "source": "macOS",
     "color": {
       "1": "38;5;51",
-      "2": "38;5;45",
-      "3": "38;5;39",
-      "4": "38;5;33",
-      "5": "38;5;27",
-      "6": "38;5;21"
+      "2": "38;5;75",
+      "3": "38;5;69",
+      "4": "38;5;63",
+      "5": "38;5;57",
+      "6": "38;5;93"
     }
   },
   "modules": [
@@ -28,20 +28,21 @@
     "break",
 
     // Software
-    { "type": "custom", "format": "\u001b[1;38;5;39m-- Software --\u001b[0m" },
-    { "type": "os",          "keyColor": "38;5;39" },
-    { "type": "kernel",      "keyColor": "38;5;39" },
-    { "type": "uptime",      "keyColor": "38;5;39" },
-    { "type": "packages",    "keyColor": "38;5;39" },
-    { "type": "shell",       "keyColor": "38;5;39" },
-    { "type": "icons",       "keyColor": "38;5;39" },
-    { "type": "terminal",    "keyColor": "38;5;39" },
-    { "type": "terminalfont","keyColor": "38;5;39" },
+    { "type": "custom", "format": "\u001b[1;38;5;69m-- Software --\u001b[0m" },
+    { "type": "os",          "keyColor": "38;5;69" },
+    { "type": "kernel",      "keyColor": "38;5;69" },
+    { "type": "uptime",      "keyColor": "38;5;69" },
+    { "type": "packages",    "keyColor": "38;5;69" },
+    { "type": "shell",       "keyColor": "38;5;69" },
+    { "type": "icons",       "keyColor": "38;5;69" },
+    { "type": "terminal",    "keyColor": "38;5;69" },
+    { "type": "terminalfont","keyColor": "38;5;69" },
     "break",
 
     // Network
-    { "type": "custom", "format": "\u001b[1;38;5;21m-- Network --\u001b[0m" },
-    { "type": "localip", "keyColor": "38;5;21" },
-    { "type": "dns",     "keyColor": "38;5;21" }
+    { "type": "custom", "format": "\u001b[1;38;5;93m-- Network --\u001b[0m" },
+    { "type": "localip", "keyColor": "38;5;93" },
+    { "type": "dns",     "keyColor": "38;5;93" },
+    { "type": "wifi",    "keyColor": "38;5;93" }
   ]
 }
