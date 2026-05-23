@@ -1,34 +1,47 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "source": "macOS",
+    "color": {
+      "1": "38;5;51",
+      "2": "38;5;45",
+      "3": "38;5;39",
+      "4": "38;5;33",
+      "5": "38;5;27",
+      "6": "38;5;21"
+    }
+  },
   "modules": [
     "title",
     "separator",
-    "os",
-    "host",
-    "kernel",
-    "uptime",
-    "packages",
-    "shell",
-    "display",
-    "de",
-    "wm",
-    "wmtheme",
-    "theme",
-    "icons",
-    "font",
-    "cursor",
-    "terminal",
-    "terminalfont",
-    "cpu",
-    "gpu",
-    "memory",
-    "swap",
-    "disk",
-    "localip",
-    "battery",
-    "poweradapter",
-    "locale",
+
+    // Hardware
+    { "type": "custom", "format": "\u001b[1;38;5;51m-- Hardware --\u001b[0m" },
+    { "type": "host",         "keyColor": "38;5;51" },
+    { "type": "display",      "keyColor": "38;5;51" },
+    { "type": "cpu",          "keyColor": "38;5;51" },
+    { "type": "gpu",          "keyColor": "38;5;51" },
+    { "type": "memory",       "keyColor": "38;5;51" },
+    { "type": "disk",         "keyColor": "38;5;51" },
+    { "type": "battery",      "keyColor": "38;5;51" },
+    { "type": "poweradapter", "keyColor": "38;5;51" },
     "break",
-    "colors"
+
+    // Software
+    { "type": "custom", "format": "\u001b[1;38;5;39m-- Software --\u001b[0m" },
+    { "type": "os",          "keyColor": "38;5;39" },
+    { "type": "kernel",      "keyColor": "38;5;39" },
+    { "type": "uptime",      "keyColor": "38;5;39" },
+    { "type": "packages",    "keyColor": "38;5;39" },
+    { "type": "shell",       "keyColor": "38;5;39" },
+    { "type": "icons",       "keyColor": "38;5;39" },
+    { "type": "terminal",    "keyColor": "38;5;39" },
+    { "type": "terminalfont","keyColor": "38;5;39" },
+    "break",
+
+    // Network
+    { "type": "custom", "format": "\u001b[1;38;5;21m-- Network --\u001b[0m" },
+    { "type": "localip", "keyColor": "38;5;21" },
+    { "type": "dns",     "keyColor": "38;5;21" }
   ]
 }
