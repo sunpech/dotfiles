@@ -18,6 +18,11 @@ brew install git stow
 
 ## Installation
 
+If you are setting up a new Mac, you may want to read: 
+
+* [Connecting to Github with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+* [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
 ### Clone repo (with submodules)
 
 *There are currently no submodules.*
