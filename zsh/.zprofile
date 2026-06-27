@@ -24,3 +24,7 @@ export EZA_CONFIG_DIR="$HOME/.config/eza"
 export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
 # Antigravity IDE
 export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+# >>> Codex installer >>>
+export PATH="/Users/sunpech/.local/bin:$PATH"
+# <<< Codex installer <<<
